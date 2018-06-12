@@ -1,0 +1,821 @@
+<html><title>objHeatMan</title><!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<div class="row no-gutters">
+<div class="col-sm-3 col-sm-push-9">
+<h2>HeatMan</h2><img class = "centre" src="../assets/images/objects/sprHeatman.png" alt="sprHeatman">
+<button data-toggle="collapse" data-target="#BossInformation"><h2>Boss Information</h2></button>
+<div id="BossInformation" class="collapse in">
+<div><h3 class="alt">Origin</h3>
+<div><i>Mega Man 2</i></div>  </div><div><h3 class="alt">HP</h3>
+<div>28</div>  </div><div><h3 class="alt">Contact Damage</h3>
+<div>8</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objHeatMan</h1>
+<a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtBoss.html">prtBoss</a> <b>&gt;</b> <a href="objHeatMan.html">objHeatMan</a>
+<h2> Description </h2>
+<p><p>Creation code (all optional):</p></p>
+<h2> Variables </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>healthpointsStart</td><td>28</td><td></td></tr>
+<tr><td>pose</td><td>sprHeatmanPose</td><td></td></tr>
+<tr><td>poseImgSpeed</td><td>12 / 60</td><td></td></tr>
+<tr><td>contactDamage</td><td>8</td><td></td></tr>
+<tr><td>ground</td><td>false</td><td></td></tr>
+<tr><td>attackTimer</td><td>0</td><td></td></tr>
+<tr><td>beginAttackTimer</td><td>false</td><td></td></tr>
+<tr><td>phase</td><td>0</td><td></td></tr>
+<tr><td>phaseTimer</td><td>0</td><td></td></tr>
+<tr><td>targetX</td><td>0</td><td></td></tr>
+</table>
+<h2> Inherited from prtBoss </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
+<tr><td>startIntro</td><td>false</td><td></td></tr>
+<tr><td>isIntro</td><td>false</td><td></td></tr>
+<tr><td>startFight</td><td>0</td><td></td></tr>
+<tr><td>isFight</td><td>false</td><td></td></tr>
+<tr><td>music</td><td>"Mega_Man_2.nsf"</td><td><p>BOSS SETTINGS !</p></td></tr>
+<tr><td>musicType</td><td>"VGM"</td><td></td></tr>
+<tr><td>musicTrackNumber</td><td>17</td><td></td></tr>
+<tr><td>musicVolume</td><td>0.8</td><td></td></tr>
+<tr><td>musicLoop</td><td>true</td><td></td></tr>
+<tr><td>musicLoopSecondsStart</td><td>8.825</td><td></td></tr>
+<tr><td>musicLoopSecondsEnd</td><td>61.575</td><td></td></tr>
+<tr><td>elementName</td><td>""</td><td></td></tr>
+<tr><td>elementScript</td><td>scrNoEffect</td><td></td></tr>
+<tr><td>elementCode</td><td>""</td><td></td></tr>
+<tr><td>introType</td><td>1</td><td></td></tr>
+<tr><td>introFade</td><td>0</td><td></td></tr>
+<tr><td>cutsceneTimer</td><td>0</td><td></td></tr>
+<tr><td>cutsceneScript</td><td>""</td><td></td></tr>
+<tr><td>useEndStageBehavior</td><td>true</td><td></td></tr>
+<tr><td>lockTransitions</td><td>true</td><td></td></tr>
+<tr><td>hitInvun</td><td>45</td><td></td></tr>
+<tr><td>forceSpreadSettings</td><td>false</td><td></td></tr>
+<tr><td>init</td><td>1</td><td></td></tr>
+<tr><td>drawBoss</td><td>false</td><td><p>Should we be visible? (Can't use the 'visible' variable as this prevents the Draw event from executing)</p></td></tr>
+<tr><td>rememberDepth</td><td>depth</td><td><p>for the MM6 intro fade to go under the health bar.</p></td></tr>
+<tr><td>maxFanOutDistance</td><td>80</td><td></td></tr>
+<tr><td>drawHealthBar</td><td>false</td><td><p>healthbar bs</p></td></tr>
+<tr><td>canFillHealthBar</td><td>true</td><td></td></tr>
+<tr><td>fillingHealthBar</td><td>false</td><td></td></tr>
+<tr><td>healthBarTimer</td><td>0</td><td><p>timer for fillup</p></td></tr>
+<tr><td>healthBarTimerMax</td><td>30</td><td><p>how long will the boss wait between finishing intro and filling healthbar?</p></td></tr>
+<tr><td>healthBarTimerSpeed</td><td>1</td><td><p>basically health per frame</p></td></tr>
+<tr><td>healthBarTimerSpeedExtra</td><td>0.25</td><td></td></tr>
+<tr><td>healthBarColorSkip</td><td>1</td><td></td></tr>
+<tr><td>manualColors</td><td>false</td><td></td></tr>
+<tr><td>healthBarHealth</td><td>0</td><td></td></tr>
+<tr><td>healthIndex</td><td>1 <i>(*)</i></td><td></td></tr>
+<tr><td>healthParent</td><td>-1</td><td></td></tr>
+<tr><td>musicStore</td><td>""</td><td><p>Music storage for restarting it after death</p></td></tr>
+<tr><td>musicTypeStore</td><td>""</td><td></td></tr>
+<tr><td>musicLoopStartStore</td><td>0</td><td></td></tr>
+<tr><td>musicLoopEndStore</td><td>1</td><td></td></tr>
+<tr><td>musicLoopStore</td><td>0</td><td></td></tr>
+<tr><td>musicVolumeStore</td><td>0.8</td><td></td></tr>
+<tr><td>musicTrackNumberStore</td><td>0</td><td></td></tr>
+<tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
+<tr><td>introLock</td><td>false</td><td></td></tr>
+</table>
+<p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
+<tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
+<tr><td>boss</td><td>1 <i>(*)</i></td><td><p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
+<p>used for some prtEntity control stuff</p></td></tr>
+<tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>28 <i>(*)</i></td><td></td></tr>
+<tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>8 <i>(*)</i></td><td></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
+<tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
+<tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
+<tr><td>attackDelay</td><td>0</td><td></td></tr>
+<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
+<tr><td>iFrames</td><td>0</td><td></td></tr>
+<tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
+<tr><td>killOverride</td><td>false</td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
+<tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
+<tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
+<tr><td>dead</td><td>false</td><td></td></tr>
+<tr><td>shiftvisible</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtBoss:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
+<tr><td>inWater</td><td>0</td><td></td></tr>
+<tr><td>bubbleTimer</td><td>0</td><td></td></tr>
+<tr><td>xspeed</td><td>0</td><td></td></tr>
+<tr><td>yspeed</td><td>0</td><td></td></tr>
+<tr><td>grav</td><td>0.25</td><td></td></tr>
+<tr><td>ground</td><td>false <i>(*)</i></td><td></td></tr>
+<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>dieToSpikes</td><td>1</td><td></td></tr>
+<tr><td>sinkin</td><td>1</td><td></td></tr>
+<tr><td>xcoll</td><td>0</td><td></td></tr>
+<tr><td>ycoll</td><td>0</td><td></td></tr>
+<tr><td>plt</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>objEnergyElement <i>(*)</i></td><td></td></tr>
+<tr><td>stopOnFlash</td><td>false <i>(*)</i></td><td></td></tr>
+<tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
+<tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
+<tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
+
+<p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
+<tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of the same faction.</p></td></tr>
+<tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
+<tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
+<tr><td><span class="cc">behaviourType</span></td><td>2 <i>(*)</i></td><td><p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></p><p>Notes for prtBoss:</p><p>
+<p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></td></tr>
+<tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
+<tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
+</table>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
+</body></div></html>

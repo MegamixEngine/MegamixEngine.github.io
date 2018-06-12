@@ -1,0 +1,28 @@
+<html><title>objSpawnCondition</title><!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>objSpawnCondition</h1>
+<p><i>This object has no parent.</i></p>
+<h2> Description </h2>
+<p></p>
+<h2> Variables </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>playerXDistance</td><td>80</td><td><p>check if the player is farther than this distance on x. -1: doesn't matter. Measured from center.</p></td></tr>
+<tr><td>playerYDistance</td><td>-1</td><td><p>check if the player is farther than this distance on y. -1: doesn't matter. Measured from center.</p></td></tr>
+<tr><td>conditionCode</td><td>""</td><td><p>if this is non-empty, the above check will not take place and instead this</p>
+
+<p>code will be string_execute'd. It must set the local variable allowSpawn.</p></td></tr>
+<tr><td>conditionScript</td><td>scrNoEffect</td><td><p>if this script is set in creation code, all above conditions will be ignored</p>
+
+<p>and this script will run. The script should set allowSpawn.</p></td></tr>
+<tr><td>conditionScriptArgC</td><td>0</td><td></td></tr>
+<tr><td>conditionScriptArgV</td><td>make_array(0)</td><td></td></tr>
+<tr><td>spawnConditionNegate</td><td>false</td><td><p>negate the spawn condition?</p></td></tr>
+<tr><td>allowSpawn</td><td>true</td><td><p>currently allowing spawn? (not for creation code)</p></td></tr>
+</table>
+
+</body></div></html>

@@ -1,0 +1,187 @@
+<html><title>objNPC</title><!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>objNPC</h1>
+<a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objNPC.html">objNPC</a>
+<h2> Description </h2>
+<p><p>creation code (technically all optional)</p>
+
+<p>name = "string here" (sets the name in their dialogue box)</p>
+
+<p>name_color = [color] (sets the color of the name in their dialogue box)</p>
+
+<p>text = "string here" (sets the text in their dialogue box)</p>
+
+<p></p>
+
+<p>mugshot_sprite = [sprite] (sets the sprite used for the mugshot in the dialogue box)</p>
+
+<p>mugshot_start = # (the starting frame of the mugshot animation)</p>
+
+<p>mugshot_end = # (the ending frame of the mugshot animation)</p>
+
+<p>mugshot_speed = # (the speed of the mugshot animation)</p>
+
+<p></p>
+
+<p>face_player = true / false (default) (constantly turns to face the player as the player moves around)</p>
+
+<p>face_player_distance (default: 16) (even if face_player is true, will not turn to face if player is closer than this)</p>
+
+<p>face_player_on_talk = true (default) / false (if true, turns towards the player when talked to, and returns to previous direction when done [unless face_player is true])</p>
+
+<p></p>
+
+<p>for tweaking its physics, use the creation code variables of prtEntity</p>
+
+<p></p>
+
+<p>idle_sprite = [sprite] (sets the sprite they use for their idle animation) (becomes the default of all of the other animations if the rest aren't set)</p>
+
+<p>idle_start = # (the starting frame of their idle animation)</p>
+
+<p>idle_end = # (the ending frame of their idle animation)</p>
+
+<p>idle_speed = # (the speed of the idle animation)</p>
+
+<p></p>
+
+<p>talk_sprite = [sprite] (sets the sprite of their talking animation) (default is the same as the idle animation)</p>
+
+<p>talk_start = # (the starting frame of their talking animation)</p>
+
+<p>talk_end = # (the ending frame of their talking animation)</p>
+
+<p>talk_speed = # (the speed of the talk animation)</p>
+
+<p></p>
+
+<p>mask = [sprite] (default: knight man) (sets the mask used for collision)</p>
+
+<p>talk_distance = 12: distance ahead that mega man checks when pressing up to talk</p>
+
+<p></p>
+
+<p>option[0-4] = "string here" (sets the option you can choose, anywhere between 1 to 5)</p>
+
+<p>option_text[0-4] = "string here" (sets the text they will say after choosing this option)</p>
+
+<p>option_script_on_talk_start[0-4] (script to execute after their dialogue starts upon choosing this option)</p>
+
+<p>option_script_on_talk_end[0-4] (script to execute after their dialogue finishes upon choosing this option)</p>
+
+<p></p>
+
+<p>script_on_talk_start</p>
+
+<p>script_on_talk_end</p></p>
+<h2> Variables </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td></td></tr>
+<tr><td>name</td><td>'Volt Man'</td><td></td></tr>
+<tr><td>name_color</td><td>c_white</td><td></td></tr>
+<tr><td>text</td><td>'I have nothing to say.'</td><td></td></tr>
+<tr><td>mugshot_sprite</td><td>sprMugshots</td><td></td></tr>
+<tr><td>mugshot_start</td><td>0</td><td></td></tr>
+<tr><td>mugshot_end</td><td>0</td><td></td></tr>
+<tr><td>mugshot_speed</td><td>0</td><td></td></tr>
+<tr><td>idle_sprite</td><td>sprite_index</td><td><p>idle animation:</p></td></tr>
+<tr><td>idle_start</td><td>0</td><td></td></tr>
+<tr><td>idle_end</td><td>sprite_get_number(idle_sprite) - idle_start</td><td></td></tr>
+<tr><td>idle_speed</td><td>0.1</td><td></td></tr>
+<tr><td>talk_sprite</td><td>sprVoltThrowShield</td><td><p>idle talking:</p></td></tr>
+<tr><td>talk_start</td><td>0</td><td></td></tr>
+<tr><td>talk_end</td><td>sprite_get_number(talk_sprite) - talk_start</td><td></td></tr>
+<tr><td>talk_speed</td><td>idle_speed</td><td></td></tr>
+<tr><td>mask</td><td>maskNPC</td><td><p>collision</p></td></tr>
+<tr><td>standard_physics</td><td>true</td><td></td></tr>
+<tr><td>talk_distance</td><td>12</td><td></td></tr>
+<tr><td>face_player</td><td>false</td><td><p>details:</p></td></tr>
+<tr><td>face_player_distance</td><td>8</td><td></td></tr>
+<tr><td>face_player_on_talk</td><td>true</td><td></td></tr>
+<tr><td>script_on_talk_start</td><td>0</td><td></td></tr>
+<tr><td>script_on_talk_end</td><td>0</td><td></td></tr>
+<tr><td>_prev_direction</td><td>1</td><td><p>private:</p></td></tr>
+<tr><td>prev_index</td><td>0</td><td><p>Used for mugshots</p></td></tr>
+<tr><td>option_chosen</td><td>-1</td><td></td></tr>
+<tr><td>option_spoken</td><td>false</td><td></td></tr>
+<tr><td>_im</td><td>0</td><td></td></tr>
+<tr><td>showarrow</td><td>0</td><td></td></tr>
+</table>
+<h2> Inherited from prtEntity </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
+<tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
+<tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
+<tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></p><p>Notes for objNPC:</p><p>
+<p> the amount of damage the Entity does to the player on collision.</p></p><p>Notes for objNPC:</p><p>
+<p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for objNPC:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for objNPC:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
+<tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
+<tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
+<tr><td>attackDelay</td><td>0</td><td></td></tr>
+<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
+<tr><td>iFrames</td><td>0</td><td></td></tr>
+<tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
+<tr><td>killOverride</td><td>false</td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
+<tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
+<tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
+<tr><td>dead</td><td>false</td><td></td></tr>
+<tr><td>shiftvisible</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
+<tr><td>inWater</td><td>0</td><td></td></tr>
+<tr><td>bubbleTimer</td><td>0</td><td></td></tr>
+<tr><td>xspeed</td><td>0</td><td></td></tr>
+<tr><td>yspeed</td><td>0</td><td></td></tr>
+<tr><td>grav</td><td>0.25</td><td></td></tr>
+<tr><td>ground</td><td>true</td><td></td></tr>
+<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>dieToSpikes</td><td>1</td><td></td></tr>
+<tr><td>sinkin</td><td>1</td><td></td></tr>
+<tr><td>xcoll</td><td>0</td><td></td></tr>
+<tr><td>ycoll</td><td>0</td><td></td></tr>
+<tr><td>plt</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>0</td><td></td></tr>
+<tr><td>stopOnFlash</td><td>true</td><td></td></tr>
+<tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
+<tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
+<tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
+
+<p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
+<tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of the same faction.</p></td></tr>
+<tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
+<tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
+<tr><td><span class="cc">behaviourType</span></td><td>0</td><td><p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></td></tr>
+<tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
+<tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
+</table>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objNPC </h2><ul>
+<li><a href="objNPC_motile.html">objNPC_motile</li>
+<li><a href="objSign.html">objSign</li>
+</ul>
+</body></div></html>

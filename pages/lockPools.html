@@ -1,0 +1,224 @@
+<html><title>~</title><!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>Lock Pools</h1>
+<h2>Purpose</h2>
+<p>In many circumstances, the player's controls are intended to become unresponsive. For example, when the player gets stunned, or enters a boss chamber, or talks to an NPC, or uses certain utilities. In previous versions of the engine, the controls status were decided by variables such as <code>canHit</code>, <code>canMove</code>, <code>canStep</code>, etc.</p>
+<p>One of several flaws with the previous system was that multiple control locks could not stack. For example, if one object locked up the player's controls, and then a second object locked them, the first object could unlock the controls and then the player would be able to move despite the fact that the second object still intended for the player to have their controls locked.</p>
+<p>Lock Pools allow multiple sources of locks to stack together and independently lock/unlock the player's controls. Other systems can also use lock pools. <code>global.frozen</code> may eventually be replace with a lock pool.</p>
+<h2>Overview</h2>
+<p>Each state that can be locked or unlocked independently (such as the player's ability to move, jump, shoot, etc.) is assigned a <em>Lock Pool</em>. A pool or set of pools can be locked by invoking <code>lockPoolLock()</code>, which returns the value of a <em>lock</em>. To unlock, this same <em>lock</em> value must later be returned (or <em>released</em>) when the the pool is to be unlocked. A lock is said to be <em>checked out</em> when it has not yet been returned. A pool is <em>unlocked</em> when there are no currently checked-out locks. As a convenience feature, multiple lock pools may be locked simultaneously, returning a single shared lock among them.</p>
+<p>Lock Pools also make use of assert statements to ensure that they are used properly. If a lock pool is misused -- for example, if a checked-out lock is returnred more than once -- then the game crashes with a helpful error message. This is intentional and is designed to force the programmer to not write code with latent unnoticed bugs.</p>
+<h2>Interface</h2>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Arguments</th>
+<th>Return Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lockPoolInit()</code></td>
+<td></td>
+<td></td>
+<td>Sets up the lock pool system. Should be called once at the beginning of the game.</td>
+</tr>
+<tr>
+<td><code>lockPoolNew()</code></td>
+<td></td>
+<td>returns the lock pool ID.</td>
+<td>Creates a new lock pool, returning its ID for later use (much like data structures in GML).</td>
+</tr>
+<tr>
+<td><code>lockPoolDestroy(pool)</code></td>
+<td><code>pool</code>: the lock pool to destroy.</td>
+<td>deletes the given pool.</td>
+<td>This is used to free up resource. ~~If there are any currently checked-out locks on the pool when it is destroyed, then it will be marked with a tombstone and the resource will only be freed when all locks are returned. Locks expire automatically on tombstoned pools when a room ends, after which returning the lock could cause undefined behaviour.~~*</td>
+</tr>
+<tr>
+<td><code>lockPoolLock(pools...)</code></td>
+<td><code>pools...</code>: the pool or set of pools to lock.</td>
+<td>the checked-out lock.</td>
+<td>Locks the given lock pool until all checked-out locks are returned.</td>
+</tr>
+<tr>
+<td><code>lockPoolRelease([pools...], lock)</code></td>
+<td><code>[pools...]</code>: an optional list of pool IDs. <code>lock</code>: a checked-out <code>lock</code>.</td>
+<td>returns the value <code>0</code>.</td>
+<td>Releases the given lock. The game wil crash if the <code>lock</code> value supplied is not a checked-out lock, so <strong>never return the same lock twice</strong>. As a convenience feature, if the value <code>0</code> is passed into the the <code>lock</code> argument, then nothing will occur. Since <code>0</code> is also returned by the lock, a typical usage will look like <code>lock = lockPoolRelease(lock)</code>. Running this line multiple times in a row will not cause a crash, whereas <code>lockPoolRelease(lock)</code> is liable to. If a list of lock pools is supplied, then the script will assert that the lock is checked out on all the given lock pools and no others, crashing the game if it is not the case. This is helpful to ensure that the lock pool system is never misused.</td>
+</tr>
+<tr>
+<td><code>lockPoolReleaseAll(pools...)</code></td>
+<td><code>pools...</code>: the list of pools to release all locks on.</td>
+<td></td>
+<td>Releases all checked-out locks on the given pool. No currently checked-out locks should be returned after this, or the game will crash. As a result, <strong>this function should not be used</strong> except in circumstances where it is possible to guarantee that no lock will ever be returned to the given pools again.</td>
+</tr>
+<tr>
+<td><code>lockPoolExists(pool)</code></td>
+<td><code>pool</code>: a lock pool ID.</td>
+<td><code>true</code> or <code>false</code></td>
+<td>Returns <code>true</code> if the given lock pool exists (has not been destroyed). ~~Tombstoned lock pools still exist.~~*</td>
+</tr>
+<tr>
+<td><code>isLocked(pools...)</code></td>
+<td><code>pools...</code>: a list of lock pools.</td>
+<td><code>true</code> or <code>false</code></td>
+<td>Returns <code>true</code> if any of the given pools are locked, and <code>false</code> if none of them are.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Tombstones are not yet implemented.</li>
+</ul>
+<h2>Example</h2>
+<p>The following code creates two lock pools, checks out three locks including one on both pools, and then returns all three of them. It then destroys the lock pool, freeing the resource.</p>
+<pre><code>// create lock pools
+lockPoolA = lockPoolNew();
+lockPoolB = lockPoolNew();
+
+print(isLocked(lockPoolA)); // false
+print(isLocked(lockPoolB)); // false
+print(isLocked(lockPoolA, lockPoolA)); // false
+
+// check out some locks
+lockA = lockPoolLock(lockPoolA);
+
+print(isLocked(lockPoolA)); // true
+print(isLocked(lockPoolB)); // false
+print(isLocked(lockPoolA, lockPoolA)); // true
+
+lockB  = lockPoolLock(lockPoolB);
+lockAB = lockPoolLock(lockPoolA, lockPoolB);
+
+print(isLocked(lockPoolA)); // true
+print(isLocked(lockPoolB)); // true
+print(isLocked(lockPoolA, lockPoolA)); // true
+
+// return one lock
+lockA = lockPoolRelease(lockPoolA);
+
+// lockPoolA is still locked due toe lockAB being checked out
+print(isLocked(lockPoolA)); // true
+
+// release all locks
+lockB = lockPoolRelease(lockPoolB, lockB); // specifying lockPoolB is optional
+lockB = lockPoolRelease(lockB); // because lockB has the value 0, this does nothing
+lockAB = lockPoolRelease(lockAB);
+
+print(isLocked(lockPoolA)); // false
+print(isLocked(lockPoolB)); // false
+print(isLocked(lockPoolA, lockPoolA)); // false
+
+// destroy lock pools
+lockPoolDestroy(lockPoolA);
+lockPoolDestroy(lockPoolB);
+lockPoolDestroy(lockPoolC);
+</code></pre>
+
+<h2>Commonly-used lock pools</h2>
+<p>Here are a list of lock pools and their descriptions. Note that the player control locks have both a
+global and an instance version. The instance version allows locking the controls for a single instance
+of <code>objMegaman</code> (e.g. if one <code>objMegaman</code> instance is caught in a honey pool and the other isn't).
+The <code>global</code> version locks the controls for all <code>objMegaman</code> instances, which is useful for cutscenes.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Owner</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>global.timeStopped</code></td>
+<td></td>
+<td>Is time stopped for enemies?</td>
+</tr>
+<tr>
+<td><code>global.playerFrozen</code></td>
+<td></td>
+<td>Is time stopped for the players?</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_MOVE]</code></td>
+<td>objMegaman</td>
+<td>Can the player walk horizontally or move in the air horizontally? This is <em>not</em> a master lock; one can lock this form of movement but still allow jumping and climbing and sliding.</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_PHYSICS]</code></td>
+<td>objMegaman</td>
+<td>(deprecated?)</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_TURN]</code></td>
+<td>objMegaman</td>
+<td>Can the player turn around? (Does not affect turning while sliding)</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_GRAVITY]</code></td>
+<td>objMegaman</td>
+<td>Does the player experience gravity?</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_SHOOT]</code></td>
+<td>objMegaman</td>
+<td>Can the player shoot?</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_SLIDE]</code></td>
+<td>objMegaman</td>
+<td>Can the player slide?</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_PAUSE]</code></td>
+<td>objMegaman</td>
+<td>Can the player pause? (Also currently used for interaction with NPCs, but this may be refactored.)</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_CLIMB]</code></td>
+<td>objMegaman</td>
+<td>Can the player climb ladders?</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_JUMP]</code></td>
+<td>objMegaman</td>
+<td>Can the player jump?</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_CHARGE]</code></td>
+<td>objMegaman</td>
+<td>Can the player charge their weapon?</td>
+</tr>
+<tr>
+<td><code>localPlayerLock[PL_LOCK_SPRITECHANGE]</code></td>
+<td>objMegaman</td>
+<td>Can the player change sprites?</td>
+</tr>
+<tr>
+<td><code>global.playerLock[...]</code></td>
+<td></td>
+<td>All the same as above, but global versions.</td>
+</tr>
+<tr>
+<td><code>global.playerLock[PL_LOCK_SPAWN]</code></td>
+<td></td>
+<td>Can players respawn currently? (Co-op). This is meaningless for individual instances of objMegaman because they are already spawned.</td>
+</tr>
+<tr>
+<td><code>PL_LOCK_MAX</code></td>
+<td></td>
+<td><strong>This is not a lock pool</strong>, but if you want to add more lock pool <code>PL_LOCK</code> constants to the player lock system then make sure that this value is greater than all the other <code>PL_LOCK_</code> constants.</td>
+</tr>
+</tbody>
+</table>
+<h2>Convenience scripts</h2>
+<p>It is a bit of a pain to type out <code>isLocked(localPlayerLock[PL_LOCK_MOVE], localPlayerLock[PL_LOCK_JUMP]) || isLocked(global.playerLock[PL_LOCK_MOVE], global.playerLock[PL_LOCK_JUMP])</code>, so the script <code>playerIsLocked()</code> is provided. This can be used like <code>playerIsLocked(PL_LOCK_MOVE, PL_LOCK_JUMP)</code>.</p>
+</body></div></html>

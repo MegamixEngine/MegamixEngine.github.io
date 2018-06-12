@@ -1,0 +1,704 @@
+<html><title>prtEnemyProjectile</title><!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>prtEnemyProjectile</h1>
+<a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtEnemyProjectile.html">prtEnemyProjectile</a>
+<h2> Description </h2>
+<p><p>This is kept because it'd be pretty heckin annoying to have to copy in everything below</p>
+
+<p>for every new prtEntity object that you want to be a projectile...</p></p>
+<h2> Variables </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>reflectable</td><td>1</td><td><p>how the projectile interacts with shields.</p>
+
+<p>0: cannot be stopped.</p>
+
+<p>1: can be reflected.</p>
+
+<p>-1: instead of reflecting, is destroyed.</p></td></tr>
+</table>
+<h2> Inherited from prtEntity </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
+<tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
+<tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
+<tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
+<tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
+<tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
+<tr><td>attackDelay</td><td>0</td><td></td></tr>
+<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
+<tr><td>iFrames</td><td>0</td><td></td></tr>
+<tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
+<tr><td>killOverride</td><td>false</td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
+<tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
+<tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p>So you can do stuff like xSpeedAim in Create</p></td></tr>
+<tr><td>dead</td><td>false</td><td></td></tr>
+<tr><td>shiftvisible</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>64 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtEnemyProjectile:</p><p>
+<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
+<tr><td>inWater</td><td>-1 <i>(*)</i></td><td></td></tr>
+<tr><td>bubbleTimer</td><td>0</td><td></td></tr>
+<tr><td>xspeed</td><td>0</td><td></td></tr>
+<tr><td>yspeed</td><td>0</td><td></td></tr>
+<tr><td>grav</td><td>0.25</td><td></td></tr>
+<tr><td>ground</td><td>true</td><td></td></tr>
+<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>dieToSpikes</td><td>1</td><td></td></tr>
+<tr><td>sinkin</td><td>1</td><td></td></tr>
+<tr><td>xcoll</td><td>0</td><td></td></tr>
+<tr><td>ycoll</td><td>0</td><td></td></tr>
+<tr><td>plt</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>0</td><td></td></tr>
+<tr><td>stopOnFlash</td><td>true</td><td></td></tr>
+<tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
+<tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
+<tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
+
+<p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
+<tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of the same faction.</p></td></tr>
+<tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
+<tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
+<tr><td><span class="cc">behaviourType</span></td><td>0</td><td><p> The strategy the enemy should use to pick which player to target</p>
+
+<p>0: generic</p>
+
+<p>1: always nearest</p>
+
+<p>2: switch every few seconds</p>
+
+<p>3: custom</p>
+
+<p>4: pick once, never switch</p></td></tr>
+<tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
+<tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
+</table>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of prtEnemyProjectile </h2><ul>
+<li><a href="objKomusoBullet.html">objKomusoBullet</li>
+<li><a href="objDompanFireworkSpark.html">objDompanFireworkSpark</li>
+<li><a href="objBalladeBalladeCracker.html">objBalladeBalladeCracker</li>
+<li><a href="objAirManGust.html">objAirManGust</li>
+<li><a href="objThrownRock.html">objThrownRock</li>
+<li><a href="objLightningLordLightning.html">objLightningLordLightning</li>
+<li><a href="objCentaurSecondaryBullet.html">objCentaurSecondaryBullet</li>
+<li><a href="objMM1MetBullet.html">objMM1MetBullet</li>
+<li><a href="objHotchkissnNeedle.html">objHotchkissnNeedle</li>
+<li><a href="objPharaohManShotBig.html">objPharaohManShotBig</li>
+<li><a href="objCrystalJoeBullet.html">objCrystalJoeBullet</li>
+<li><a href="objBombManBlast.html">objBombManBlast</li>
+<li><a href="objRembakunMissile.html">objRembakunMissile</li>
+<li><a href="objCFTFAimedBullet.html">objCFTFAimedBullet</li>
+<li><a href="objGutsBossBlockRubble.html">objGutsBossBlockRubble</li>
+<li><a href="objMM2MetBullet.html">objMM2MetBullet</li>
+<li><a href="objDanganBullet.html">objDanganBullet</li>
+<li><a href="objSpringFaceBombHead.html">objSpringFaceBombHead</li>
+<li><a href="objMetoolBullet.html">objMetoolBullet</li>
+<li><a href="objWaltriotMissile.html">objWaltriotMissile</li>
+<li><a href="objCannonBall.html">objCannonBall</li>
+<li><a href="objPlantBarrier.html">objPlantBarrier</li>
+<li><a href="objPunkDebris.html">objPunkDebris</li>
+<li><a href="objHologranVoid.html">objHologranVoid</li>
+<li><a href="objNewShotmanBullet.html">objNewShotmanBullet</li>
+<li><a href="objTwinShooterGLaser.html">objTwinShooterGLaser</li>
+<li><a href="objDachoneBullet.html">objDachoneBullet</li>
+<li><a href="objSkullBomb.html">objSkullBomb</li>
+<li><a href="objSuperCutter.html">objSuperCutter</li>
+<li><a href="objHanabiranFlower.html">objHanabiranFlower</li>
+<li><a href="objOilManPuddle.html">objOilManPuddle</li>
+<li><a href="objVoltmanShot.html">objVoltmanShot</li>
+<li><a href="objWoodFallingLeaves.html">objWoodFallingLeaves</li>
+<li><a href="objTopmanTop.html">objTopmanTop</li>
+<li><a href="objJunkDust.html">objJunkDust</li>
+<li><a href="objShrapnel.html">objShrapnel</li>
+<li><a href="objGundrillRock.html">objGundrillRock</li>
+<li><a href="objCarrot.html">objCarrot</li>
+<li><a href="objPookerProjectile.html">objPookerProjectile</li>
+<li><a href="objOctoGeneratorChild.html">objOctoGeneratorChild</li>
+<li><a href="objHarmfulExplosion.html">objHarmfulExplosion</li>
+<li><a href="objPierrobugBall.html">objPierrobugBall</li>
+<li><a href="objBenKSpear.html">objBenKSpear</li>
+<li><a href="objSakugarneRock.html">objSakugarneRock</li>
+<li><a href="objSakugarneToss.html">objSakugarneToss</li>
+<li><a href="objCargoQBall.html">objCargoQBall</li>
+<li><a href="objTheKeeperBall.html">objTheKeeperBall</li>
+<li><a href="objBigTellyBomb.html">objBigTellyBomb</li>
+<li><a href="obj100WattonBomb.html">obj100WattonBomb</li>
+<li><a href="objPalmHopperMissile.html">objPalmHopperMissile</li>
+<li><a href="objThrownBomb.html">objThrownBomb</li>
+<li><a href="objCombiloidProjectile.html">objCombiloidProjectile</li>
+<li><a href="objNumetallGlob.html">objNumetallGlob</li>
+<li><a href="objMobbyMissle.html">objMobbyMissle</li>
+<li><a href="objElecitShot.html">objElecitShot</li>
+<li><a href="objCaricarryRockBounce.html">objCaricarryRockBounce</li>
+<li><a href="objBlizzardAttack.html">objBlizzardAttack</li>
+<li><a href="objSakugarneBigRock.html">objSakugarneBigRock</li>
+<li><a href="objGSQDebris.html">objGSQDebris</li>
+<li><a href="objHandooHand.html">objHandooHand</li>
+<li><a href="objFooleyShot.html">objFooleyShot</li>
+<li><a href="objStompyProjectile.html">objStompyProjectile</li>
+<li><a href="objDoncatchDebris.html">objDoncatchDebris</li>
+<li><a href="objGamarnLaser.html">objGamarnLaser</li>
+<li><a href="objCutBullet.html">objCutBullet</li>
+<li><a href="objTheKeeperHand.html">objTheKeeperHand</li>
+<li><a href="objOctobulbJellyfish.html">objOctobulbJellyfish</li>
+<li><a href="objEscarooBomb.html">objEscarooBomb</li>
+<li><a href="objWoodLeafShield.html">objWoodLeafShield</li>
+<li><a href="objGyoraboiMissile.html">objGyoraboiMissile</li>
+<li><a href="objTheKeeperShockwave.html">objTheKeeperShockwave</li>
+<li><a href="objMelodyResponseBullet.html">objMelodyResponseBullet</li>
+<li><a href="objPointanWindow.html">objPointanWindow</li>
+<li><a href="objSRU21PDebris.html">objSRU21PDebris</li>
+<li><a href="objPharaohManShot.html">objPharaohManShot</li>
+<li><a href="objBombManBomb.html">objBombManBomb</li>
+<li><a href="objBikkyBombBall.html">objBikkyBombBall</li>
+<li><a href="objGravityShot.html">objGravityShot</li>
+<li><a href="objAuAuShot.html">objAuAuShot</li>
+<li><a href="objTosserRock.html">objTosserRock</li>
+<li><a href="objSoshiBreakerDebris.html">objSoshiBreakerDebris</li>
+<li><a href="objVoltmanDischarge.html">objVoltmanDischarge</li>
+<li><a href="objThrownJunk.html">objThrownJunk</li>
+<li><a href="objMadGrinderFire.html">objMadGrinderFire</li>
+<li><a href="objEnkerShot.html">objEnkerShot</li>
+<li><a href="objSaturnBullet.html">objSaturnBullet</li>
+<li><a href="objPicket.html">objPicket</li>
+<li><a href="objPopoHeliFire.html">objPopoHeliFire</li>
+<li><a href="objBokazurahBall.html">objBokazurahBall</li>
+<li><a href="objFireTellyShot.html">objFireTellyShot</li>
+<li><a href="objAcidDrop.html">objAcidDrop</li>
+<li><a href="objStoneManPowerStone.html">objStoneManPowerStone</li>
+<li><a href="objQuickManBoomerang.html">objQuickManBoomerang</li>
+<li><a href="objNutton.html">objNutton</li>
+<li><a href="objSplashTrident.html">objSplashTrident</li>
+<li><a href="objChillSpike.html">objChillSpike</li>
+<li><a href="objFireWave.html">objFireWave</li>
+<li><a href="objHotDogFire.html">objHotDogFire</li>
+<li><a href="objSHFallingBoulder.html">objSHFallingBoulder</li>
+<li><a href="objElectricGabyoallCurrent.html">objElectricGabyoallCurrent</li>
+<li><a href="objSparkmanProjectile.html">objSparkmanProjectile</li>
+<li><a href="objMobbyBomb.html">objMobbyBomb</li>
+<li><a href="objApacheJoeProjectile.html">objApacheJoeProjectile</li>
+<li><a href="objBariIIISoundWave.html">objBariIIISoundWave</li>
+<li><a href="objMM4MetBullet.html">objMM4MetBullet</li>
+<li><a href="objNitronFire.html">objNitronFire</li>
+<li><a href="objMechaDragonFire.html">objMechaDragonFire</li>
+<li><a href="objMetallDXBullet.html">objMetallDXBullet</li>
+<li><a href="objTKhamenDropRock.html">objTKhamenDropRock</li>
+<li><a href="objElecnSpark.html">objElecnSpark</li>
+<li><a href="objBlockySpray.html">objBlockySpray</li>
+<li><a href="objMetalManBlade.html">objMetalManBlade</li>
+<li><a href="objOctobulbBigSpark.html">objOctobulbBigSpark</li>
+<li><a href="objBeakBullet.html">objBeakBullet</li>
+<li><a href="objFireBlockFire.html">objFireBlockFire</li>
+<li><a href="objHaveSuBeeHive.html">objHaveSuBeeHive</li>
+<li><a href="objWoodRisingLeaves.html">objWoodRisingLeaves</li>
+<li><a href="objMM3MetBullet.html">objMM3MetBullet</li>
+<li><a href="objGeminiManLaser.html">objGeminiManLaser</li>
+<li><a href="objCrabbotShell.html">objCrabbotShell</li>
+<li><a href="objMM5AimedBullet.html">objMM5AimedBullet</li>
+<li><a href="objJoeBone.html">objJoeBone</li>
+<li><a href="objChangkeyDragonFire.html">objChangkeyDragonFire</li>
+<li><a href="objSFFire.html">objSFFire</li>
+<li><a href="objPharaohManShotHardmode.html">objPharaohManShotHardmode</li>
+<li><a href="objCrashBomber.html">objCrashBomber</li>
+<li><a href="objBireeSparkShot.html">objBireeSparkShot</li>
+<li><a href="obj100WattonVoid.html">obj100WattonVoid</li>
+<li><a href="objEnemyBullet.html">objEnemyBullet</li>
+<ul>
+<li><a href="objBoobeamBullet.html">objBoobeamBullet</li>
+<li><a href="objCannonjoeBullet.html">objCannonjoeBullet</li>
+<li><a href="objHunterBullet.html">objHunterBullet</li>
+<li><a href="objBigSnakeyFire.html">objBigSnakeyFire</li>
+<li><a href="objOctobossBullet.html">objOctobossBullet</li>
+<li><a href="objOctoperOABullet1.html">objOctoperOABullet1</li>
+<li><a href="objHammerJoeHammer.html">objHammerJoeHammer</li>
+<li><a href="objPunkScrewCrusher.html">objPunkScrewCrusher</li>
+</ul><li><a href="objGeminiBullet.html">objGeminiBullet</li>
+<li><a href="objHoneycombBomb.html">objHoneycombBomb</li>
+<li><a href="objCrazyCannonBullet.html">objCrazyCannonBullet</li>
+<li><a href="objWily4Laser.html">objWily4Laser</li>
+<li><a href="objGyroShot.html">objGyroShot</li>
+<li><a href="objSnakeyBullet.html">objSnakeyBullet</li>
+<li><a href="objMechaPitchanBall.html">objMechaPitchanBall</li>
+<li><a href="objRockExplosion.html">objRockExplosion</li>
+<li><a href="objHellMetallDXBullet.html">objHellMetallDXBullet</li>
+<li><a href="objGutsBossBlock.html">objGutsBossBlock</li>
+<li><a href="objHeatManFire.html">objHeatManFire</li>
+<li><a href="objOilManOilShot.html">objOilManOilShot</li>
+<li><a href="objColtonBullet.html">objColtonBullet</li>
+<li><a href="objJunkDebris.html">objJunkDebris</li>
+<li><a href="objFireBoyShot.html">objFireBoyShot</li>
+<li><a href="objCentaurShot.html">objCentaurShot</li>
+</ul>
+</body></div></html>
