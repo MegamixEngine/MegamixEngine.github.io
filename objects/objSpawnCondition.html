@@ -11,18 +11,18 @@
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>playerXDistance</td><td>80</td><td><p>check if the player is farther than this distance on x. -1: doesn't matter. Measured from center.</p></td></tr>
-<tr><td>playerYDistance</td><td>-1</td><td><p>check if the player is farther than this distance on y. -1: doesn't matter. Measured from center.</p></td></tr>
-<tr><td>conditionCode</td><td>""</td><td><p>if this is non-empty, the above check will not take place and instead this</p>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">playerXDistance</span></td><td>80</td><td><p> check if the player is farther than this distance on x. -1: doesn't matter. Measured from center.</p></td></tr>
+<tr><td><span class="cc">playerYDistance</span></td><td>-1</td><td><p> check if the player is farther than this distance on y. -1: doesn't matter. Measured from center.</p></td></tr>
+<tr><td><span class="cc">conditionCode</span></td><td>""</td><td><p> if this is non-empty, the above check will not take place and instead this</p>
 
 <p>code will be string_execute'd. It must set the local variable allowSpawn.</p></td></tr>
-<tr><td>conditionScript</td><td>scrNoEffect</td><td><p>if this script is set in creation code, all above conditions will be ignored</p>
+<tr><td>conditionScript</td><td>scrNoEffect</td><td><p>cc if this script is set in creation code, all above conditions will be ignored</p>
 
 <p>and this script will run. The script should set allowSpawn.</p></td></tr>
 <tr><td>conditionScriptArgC</td><td>0</td><td></td></tr>
 <tr><td>conditionScriptArgV</td><td>make_array(0)</td><td></td></tr>
-<tr><td>spawnConditionNegate</td><td>false</td><td><p>negate the spawn condition?</p></td></tr>
+<tr><td>spawnConditionNegate</td><td>false</td><td><p>cc negate the spawn condition?</p></td></tr>
 <tr><td>allowSpawn</td><td>true</td><td><p>currently allowing spawn? (not for creation code)</p></td></tr>
 </table>
-
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p>
 </body></div></html>

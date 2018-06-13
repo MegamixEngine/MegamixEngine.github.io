@@ -19,30 +19,36 @@
 </table>
 <h2> Inherited from objNPC </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>0 <i>(*)</i></td><td></td></tr>
-<tr><td>name</td><td>'Infobox ' + string(room * 100) <i>(*)</i></td><td></p><p>Notes for objSign:</p><p>
-<p>Variables for the text</p></td></tr>
-<tr><td>name_color</td><td>global.nesPalette[34] <i>(*)</i></td><td></td></tr>
-<tr><td>text</td><td>'- Contains no message -' <i>(*)</i></td><td></td></tr>
-<tr><td>mugshot_sprite</td><td>sprMugshots</td><td></td></tr>
-<tr><td>mugshot_start</td><td>0</td><td></td></tr>
-<tr><td>mugshot_end</td><td>0</td><td></td></tr>
-<tr><td>mugshot_speed</td><td>0</td><td></td></tr>
-<tr><td>idle_sprite</td><td>sprite_index</td><td><p>idle animation:</p></td></tr>
-<tr><td>idle_start</td><td>0</td><td></td></tr>
-<tr><td>idle_end</td><td>sprite_get_number(idle_sprite) - idle_start</td><td></td></tr>
-<tr><td>idle_speed</td><td>0.1</td><td></td></tr>
-<tr><td>talk_sprite</td><td>sprVoltThrowShield</td><td><p>idle talking:</p></td></tr>
-<tr><td>talk_start</td><td>0</td><td></td></tr>
-<tr><td>talk_end</td><td>sprite_get_number(talk_sprite) - talk_start</td><td></td></tr>
-<tr><td>talk_speed</td><td>idle_speed</td><td></td></tr>
-<tr><td>mask</td><td>maskNPC</td><td><p>collision</p></td></tr>
+<tr><td><span class="cc">name</span></td><td>'Infobox ' + string(room * 100) <i>(*)</i></td><td><p> sets the name in their dialogue box</p></p><p>Notes for objSign:</p><p>
+<p> text to display as name</p></td></tr>
+<tr><td><span class="cc">name_color</span></td><td>global.nesPalette[34] <i>(*)</i></td><td><p> sets the color of the name in their dialogue box</p></p><p>Notes for objSign:</p><p>
+<p> color of the name text</p></td></tr>
+<tr><td><span class="cc">text</span></td><td>'- Contains no message -' <i>(*)</i></td><td><p> sets the text in their dialogue box</p></p><p>Notes for objSign:</p><p>
+<p> text to display as message</p></td></tr>
+<tr><td><span class="cc">mugshot_sprite</span></td><td>sprMugshots</td><td><p> sets the sprite used for the mugshot in the dialogue box</p></p><p>Notes for objSign:</p><p>
+<p> sets the sprite used for the mugshot in the dialogue box</p></td></tr>
+<tr><td><span class="cc">mugshot_start</span></td><td>0</td><td><p> the starting frame of the mugshot animation</p></p><p>Notes for objSign:</p><p>
+<p> the starting frame of the mugshot animation</p></td></tr>
+<tr><td><span class="cc">mugshot_end</span></td><td>0</td><td><p> the ending frame of the mugshot animation</p></p><p>Notes for objSign:</p><p>
+<p> the ending frame of the mugshot animation</p></td></tr>
+<tr><td><span class="cc">mugshot_speed</span></td><td>0</td><td><p> the speed of the mugshot animation</p></p><p>Notes for objSign:</p><p>
+<p> the speed of the mugshot animation</p></td></tr>
+<tr><td><span class="cc">idle_sprite</span></td><td>sprite_index</td><td><p> sets the sprite they use for their idle animation) (becomes the default of all of the other animations if the rest aren't set</p></td></tr>
+<tr><td><span class="cc">idle_start</span></td><td>0</td><td><p> the starting frame of their idle animation</p></td></tr>
+<tr><td><span class="cc">idle_end</span></td><td>sprite_get_number(idle_sprite) - idle_start</td><td><p> the ending frame of their idle animation</p></td></tr>
+<tr><td><span class="cc">idle_speed</span></td><td>0.1</td><td><p> the speed of the idle animation</p></td></tr>
+<tr><td><span class="cc">talk_sprite</span></td><td>sprVoltThrowShield</td><td><p> sets the sprite of their talking animation (default is the same as the idle animation)</p></td></tr>
+<tr><td><span class="cc">talk_start</span></td><td>0</td><td><p> the starting frame of their talking animation</p></td></tr>
+<tr><td><span class="cc">talk_end</span></td><td>sprite_get_number(talk_sprite) - talk_start</td><td><p> the ending frame of their talking animation</p></td></tr>
+<tr><td><span class="cc">talk_speed</span></td><td>idle_speed</td><td><p> the speed of the talk animation</p></td></tr>
+<tr><td><span class="cc">mask</span></td><td>maskNPC</td><td><p> sets the mask used for collision (default: knight man)</p></td></tr>
 <tr><td>standard_physics</td><td>true</td><td></td></tr>
-<tr><td>talk_distance</td><td>12</td><td></td></tr>
-<tr><td>face_player</td><td>false</td><td><p>details:</p></td></tr>
-<tr><td>face_player_distance</td><td>8</td><td></td></tr>
-<tr><td>face_player_on_talk</td><td>true</td><td></td></tr>
-<tr><td>script_on_talk_start</td><td>0</td><td></td></tr>
-<tr><td>script_on_talk_end</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">talk_distance</span></td><td>12</td><td><p> distance ahead that mega man checks when pressing up to talk</p></td></tr>
+<tr><td><span class="cc">face_player</span></td><td>false</td><td><p> constantly turns to face the player as the player moves around</p></td></tr>
+<tr><td><span class="cc">face_player_distance</span></td><td>8</td><td><p> even if face_player is true, will not turn to face if player is closer than this</p></td></tr>
+<tr><td><span class="cc">face_player_on_talk</span></td><td>true</td><td><p> if true, turns towards the player when talked to, and returns to previous direction when done [unless face_player is true]</p></td></tr>
+<tr><td><span class="cc">script_on_talk_start</span></td><td>0</td><td><p> script to execute when talked to</p></td></tr>
+<tr><td><span class="cc">script_on_talk_end</span></td><td>0</td><td><p> script to execute when finished talking</p></td></tr>
 <tr><td>_prev_direction</td><td>1</td><td><p>private:</p></td></tr>
 <tr><td>prev_index</td><td>0</td><td><p>Used for mugshots</p></td></tr>
 <tr><td>option_chosen</td><td>-1</td><td></td></tr>
@@ -50,7 +56,7 @@
 <tr><td>_im</td><td>0</td><td></td></tr>
 <tr><td>showarrow</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for objNPC.<i></p><h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for objNPC.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
