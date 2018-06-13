@@ -14,10 +14,14 @@
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>weakness</td><td>0</td><td></td></tr>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">weakness</span></td><td>0</td><td><p> hot to use</p>
+
+<p> weakness = global.weaponID[? objWeaponObject];</p>
+
+<p> To make it a reflect block, use "weakness = -1;"</p></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
@@ -52,7 +56,7 @@
 <tr><td>grav</td><td>0.25</td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
 <tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
-<tr><td>dieToSpikes</td><td>1</td><td></td></tr>
+<tr><td>dieToSpikes</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>

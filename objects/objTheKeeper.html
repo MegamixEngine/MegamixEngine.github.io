@@ -17,9 +17,9 @@
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objTheKeeper</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objTheKeeper.html">objTheKeeper</a>
 <h2> Description </h2>
-<p><p>The Keeper</p>
+<p><p>Place him and fill the guides with solids or whatever you want, if you're not using strike man's tileset</p>
 
-<p>Creation code: type: changes it's 3rd attack; backSprite: changes the sprite it uses to connect himself to the arena, change it if you're not using strike man's tileset</p></p>
+<p>its recommended to change backSprite to match your tiles.</p></p>
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>canHit</td><td>false</td><td><p>Entity setup</p></td></tr>
 <tr><td>canDamage</td><td>false</td><td></td></tr>
@@ -29,14 +29,16 @@
 <tr><td>blockCollision</td><td>false</td><td></td></tr>
 <tr><td>grav</td><td>0</td><td></td></tr>
 <tr><td>mySolid</td><td>noone</td><td><p>Enemy specific code</p></td></tr>
-<tr><td>backSprite</td><td>noone</td><td><p>you can customize it to match your tileset</p></td></tr>
+<tr><td><span class="cc">backSprite</span></td><td>noone</td><td><p> changes the sprite it uses to connect himself to the arena,</p>
+
+<p>change it if you're not using strike man's tileset</p></td></tr>
 <tr><td>lockID</td><td>0</td><td></td></tr>
 <tr><td>leftBound</td><td>x+16</td><td></td></tr>
 <tr><td>rightBound</td><td>x-16+sprite_width</td><td></td></tr>
 <tr><td>upperBound</td><td>y+16*3+4</td><td></td></tr>
 <tr><td>xstart</td><td>x</td><td></td></tr>
 <tr><td>ystart</td><td>y</td><td></td></tr>
-<tr><td>type</td><td>0</td><td><p>Type 0: normal; Type 1: uses it's alternative 3rd attack</p></td></tr>
+<tr><td><span class="cc">type</span></td><td>0</td><td><p> Type 0: normal; Type 1: uses it's alternative 3rd attack(harder)</p></td></tr>
 <tr><td>phase</td><td>0</td><td><p>Intro</p></td></tr>
 <tr><td>timer</td><td>-1</td><td></td></tr>
 <tr><td>anim</td><td>0</td><td></td></tr>
@@ -49,7 +51,7 @@
 <tr><td>ballDir</td><td>1</td><td></td></tr>
 <tr><td>attackCount</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtMiniBoss </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>

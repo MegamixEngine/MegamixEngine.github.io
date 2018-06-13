@@ -23,7 +23,7 @@
 
 <p>objects, such as sheepman conveyors.</p>
 
-<p>Place objOctobulbYokuBlocks and give them the same id, that allows this instance to activate them</p>
+<p>You might need octobulb yoku blocks.</p>
 
 <p>The switch handler will be set to binary automatically</p>
 
@@ -39,20 +39,20 @@
 <tr><td>body</td><td>instance_create(x,y,prtAlwaysActive)</td><td><p>Enemy specific code</p></td></tr>
 <tr><td>xstart</td><td>x</td><td></td></tr>
 <tr><td>lockID</td><td>0</td><td></td></tr>
-<tr><td>myFlag</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">myFlag</span></td><td>0</td><td><p> flag of the switch handler</p></td></tr>
 <tr><td>phase</td><td>0</td><td><p>Intro</p></td></tr>
 <tr><td>timer</td><td>-1</td><td></td></tr>
 <tr><td>jellyfishTimer</td><td>0</td><td></td></tr>
 <tr><td>activeTimer</td><td>0</td><td></td></tr>
 <tr><td>energy</td><td>0</td><td></td></tr>
 <tr><td>expectedEnergy</td><td>0</td><td></td></tr>
-<tr><td>maxEnergy</td><td>-1</td><td></td></tr>
+<tr><td><span class="cc">maxEnergy</span></td><td>-1</td><td><p> How much energy it needs to be fully charged? default: 120</p></td></tr>
 <tr><td>anim</td><td>0</td><td></td></tr>
 <tr><td>animFrame</td><td>-1</td><td></td></tr>
 <tr><td>animSpeed</td><td>0</td><td></td></tr>
 <tr><td>animTimer</td><td>-1</td><td></td></tr>
 </table>
-<h2> Inherited from prtMiniBoss </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>

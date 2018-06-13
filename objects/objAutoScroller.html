@@ -14,27 +14,17 @@
 <h2> Description </h2>
 <p><p>Pretty much everyone is familiar with autoscrolling as a concept. All you have to do is place</p>
 
-<p>one of these objects with the correct creation code in your section, and it'll scroll however you want.</p>
-
-<p></p>
-
-<p>Creation code (all optional):</p>
-
-<p>dir: the direction of the autoscroll. "h" will make it go horizontally, "v" will make it go vertically. Default horizontal.</p>
-
-<p>mySpeed: the speed of the autoscroll, in pixels per frame. Negative = left or up, Positive = right or down</p>
-
-<p>waitFrames: the amount of frames to wait in between entering the autoscroll section and the scrolling actually starting.</p></p>
+<p>one of these objects with the correct creation code in your section, and it'll scroll however you want.</p></p>
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>phase</td><td>1</td><td></td></tr>
 <tr><td>counter</td><td>0</td><td></td></tr>
 <tr><td>sectionend</td><td>0</td><td></td></tr>
-<tr><td>dir</td><td>"h"</td><td><p>Customizeable variables</p></td></tr>
-<tr><td>mySpeed</td><td>0.5</td><td></td></tr>
-<tr><td>waitFrames</td><td>64</td><td></td></tr>
+<tr><td><span class="cc">dir</span></td><td>"h"</td><td><p> the direction of the autoscroll. "h" will make it go horizontally, "v" will make it go vertically. Default horizontal.</p></td></tr>
+<tr><td><span class="cc">mySpeed</span></td><td>0.5</td><td><p> the speed of the autoscroll, in pixels per frame. Negative = left or up, Positive = right or down</p></td></tr>
+<tr><td><span class="cc">waitFrames</span></td><td>64</td><td><p> the amount of frames to wait in between entering the autoscroll section and the scrolling actually starting.</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>

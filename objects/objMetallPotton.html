@@ -17,17 +17,11 @@
 <div>6</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objMetallPotton</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objMetallPotton.html">objMetallPotton</a>
 <h2> Description </h2>
-<p><p>Creation code (all optional):</p>
+<p><p>A big mettal maker, will randomly choose between two types of mets</p>
 
-<p>dir = <number> (1 = face right (default); -1 = face left)</p>
+<p>Mett1 and Mett2 can be set to any object, but it is recommended to stick to metalls, or in the contrary</p>
 
-<p></p>
-
-<p>Mett1 and Mett2 can be set to any object, but it is recommended to stick to metalls</p>
-
-<p>Met1 = <object index></p>
-
-<p>Met2 = <object index></p></p>
+<p>change its sprite with one that matches the new objects</p></p>
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>respawn</td><td>true</td><td></td></tr>
 <tr><td>healthpointsStart</td><td>15</td><td></td></tr>
@@ -36,12 +30,12 @@
 <tr><td>grav</td><td>0</td><td></td></tr>
 <tr><td>blockCollision</td><td>false</td><td></td></tr>
 <tr><td>dir</td><td>image_xscale</td><td><p>Enemy specific code</p></td></tr>
-<tr><td>Met1</td><td>objMetallRunAndGun</td><td></td></tr>
-<tr><td>Met2</td><td>objMetallJump</td><td></td></tr>
+<tr><td><span class="cc">Met1</span></td><td>objMetallRunAndGun</td><td><p> object_index to use as first option</p></td></tr>
+<tr><td><span class="cc">Met2</span></td><td>objMetallJump</td><td><p> //@cc object_index to use as second option</p></td></tr>
 <tr><td>shootTimer</td><td>0</td><td></td></tr>
 <tr><td>Met</td><td>noone</td><td></td></tr>
 </table>
-<h2> Inherited from prtMiniBoss </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>

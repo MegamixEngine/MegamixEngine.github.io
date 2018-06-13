@@ -19,15 +19,7 @@
 <h2> Description </h2>
 <p><p>Creation code (all optional):</p>
 
-<p>image_xscale = 1 or -1 //(Use editor for this!!) // determines the direction Truck Joe is locked in.</p>
-
-<p>spdF = <number>; // The speed Truck Joe runs forwards</p>
-
-<p>spdB = <number>; // The speed Truck Joe runs backwards.</p>
-
-<p>destroyTerrain = false; // If set to false, Truck Joe will not destroy terrain he collides with.</p>
-
-<p>introType = <number> // 0 = teleport in / 1 = move in</p></p>
+<p>image_xscale = 1 or -1 //(Use editor for this!!) // determines the direction Truck Joe is locked in.</p></p>
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>respawn</td><td>true</td><td></td></tr>
 <tr><td>healthpointsStart</td><td>18</td><td></td></tr>
@@ -52,10 +44,10 @@
 <tr><td>shotsFired</td><td>0</td><td></td></tr>
 <tr><td>attackTimer</td><td>0</td><td></td></tr>
 <tr><td>moveDir</td><td>image_xscale</td><td></td></tr>
-<tr><td>destroyTerrain</td><td>true</td><td></td></tr>
-<tr><td>introType</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">destroyTerrain</span></td><td>true</td><td><p> If set to false, Truck Joe will not destroy terrain he collides with</p></td></tr>
+<tr><td><span class="cc">introType</span></td><td>0</td><td><p> 0 = teleport in / 1 = move in</p></td></tr>
 </table>
-<h2> Inherited from prtMiniBoss </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>true</td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>

@@ -17,14 +17,18 @@
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objStoneHead</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objStoneHead.html">objStoneHead</a>
 <h2> Description </h2>
-<p></p>
+<p><p>A big rolling ball, it must be placed over objSHBoulder, he will begin his pattern shaking the rocks</p>
+
+<p>causing them to fall randomly(the first rock always falls over megaman.</p>
+
+<p>Note: see objSHBoulder for more info</p></p>
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>healthpointsStart</td><td>15</td><td></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
 <tr><td>contactDamage</td><td>4</td><td></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
-<tr><td>SPEED</td><td>3.6125</td><td><p>Enemy specific code</p></td></tr>
-<tr><td>prevDrop</td><td>-1</td><td></td></tr>
+<tr><td><span class="cc">SPEED</span></td><td>3.6125</td><td><p> Rolling speed, if too fast he might miss the ground and just keep his momentum</p></td></tr>
+<tr><td>prevDrop</td><td>-1</td><td><p>Don't change any of these</p></td></tr>
 <tr><td>repeatedCounter</td><td>0</td><td></td></tr>
 <tr><td>velx</td><td>0</td><td></td></tr>
 <tr><td>vely</td><td>0</td><td></td></tr>
@@ -45,7 +49,7 @@
 <tr><td>boulderStart</td><td>noone</td><td></td></tr>
 <tr><td>boulderEnd</td><td>noone</td><td></td></tr>
 </table>
-<h2> Inherited from prtMiniBoss </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>false <i>(*)</i></td><td></td></tr>
