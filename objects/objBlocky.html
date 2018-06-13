@@ -17,17 +17,19 @@
 <div>8</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objBlocky</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objBlocky.html">objBlocky</a>
 <h2> Description </h2>
-<p></p>
+<p><p>A bunch of blocks togheter, this enemy will dance and move forwards, if his vulnerable part is hit</p>
+
+<p>he will fall and the blocks will spread, if he's still alive he will regenerate.</p></p>
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>collapseTimer</td><td>180</td><td></td></tr>
 <tr><td>collapsed</td><td>false</td><td></td></tr>
 <tr><td>catchTimes</td><td>0</td><td></td></tr>
-<tr><td>canTurn</td><td>true</td><td><p>set to false to disable turning</p></td></tr>
+<tr><td><span class="cc">canTurn</span></td><td>true</td><td><p> set to false to disable turning</p></td></tr>
 <tr><td>calibrated</td><td>0</td><td></td></tr>
-<tr><td>col</td><td>0</td><td><p>0 = blue; 1 = gray</p></td></tr>
+<tr><td><span class="cc">col</span></td><td>0</td><td><p> 0 = blue; 1 = gray</p></td></tr>
 <tr><td>init</td><td>1</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
@@ -87,7 +89,8 @@
 <p>3: custom</p>
 
 <p>4: pick once, never switch</p></td></tr>
-<tr><td><span class="cc">facePlayerOnSpawn</span></td><td>true <i>(*)</i></td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayerOnSpawn</span></td><td>true <i>(*)</i></td><td><p></p></p><p>Notes for objBlocky:</p><p>
+<p></p></td></tr>
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
 </table>

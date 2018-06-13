@@ -17,30 +17,26 @@
 <div>3</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objElectricGabyoall</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objElectricGabyoall.html">objElectricGabyoall</a>
 <h2> Description </h2>
-<p><p>Creation code (all optional):</p>
+<p><p>two indestructible electric Gabyoalls, one on the floor and one on the ceiling,</p>
 
-<p>height = <number> (Height the electric gabyoall covers in tiles. Includes the tiles the electric gabyoall itself occupies) (this can be used to have gabyoalls that have a range that goes through blocks)</p>
-
-<p>spd = <number> (Speed of the gabyoall (default 0.6)) (optional)</p>
-
-<p>shootWait = <number> (how long the gabyoall waits in between shooting electricity (default 100)) (optional)</p>
-
-<p>col = <number> (0 = red (default); 1 = orange; 2 = blue) (optional)</p></p>
+<p>that fire arcs of electricity between them</p></p>
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>phase</td><td>-1</td><td><p>enemy specific</p></td></tr>
-<tr><td>height</td><td>0</td><td></td></tr>
-<tr><td>col</td><td>0</td><td><p>0 = orange (default); 1 = red;</p></td></tr>
+<tr><td><span class="cc">height</span></td><td>0</td><td><p> Height the electric gabyoall covers in tiles. Includes the tiles the electric gabyoall itself occupies.</p>
+
+<p>This can be used to have gabyoalls that have a range that goes through blocks</p></td></tr>
+<tr><td><span class="cc">col</span></td><td>0</td><td><p> 0 = orange (default); 1 = red;</p></td></tr>
 <tr><td>init</td><td>1</td><td></td></tr>
 <tr><td>partner</td><td>noone</td><td></td></tr>
-<tr><td>spd</td><td>0.6</td><td></td></tr>
-<tr><td>shootWait</td><td>70</td><td></td></tr>
+<tr><td><span class="cc">spd</span></td><td>0.6</td><td><p> Speed of the gabyoall (default 0.6))</p></td></tr>
+<tr><td><span class="cc">shootWait</span></td><td>70</td><td><p> how long the gabyoall waits in between shooting electricity (default 100)</p></td></tr>
 <tr><td>shootWaitTimer</td><td>shootWait</td><td></td></tr>
 <tr><td>blinks</td><td>2</td><td></td></tr>
 <tr><td>electricityList</td><td>noone</td><td></td></tr>
 <tr><td>imgSpd</td><td>0.3</td><td></td></tr>
 <tr><td>imgIndex</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>

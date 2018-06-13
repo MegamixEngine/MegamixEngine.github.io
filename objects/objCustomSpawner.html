@@ -16,24 +16,26 @@
 <div>0</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objCustomSpawner</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objCustomSpawner.html">objCustomSpawner</a>
 <h2> Description </h2>
-<p><p>Custom Spawners are very versatile. They can be set to spawn virtually anything, and with strange use, can even</p>
-
-<p>just be used as objects that execute a script every frame. Their purpose should be fairly self explanatory.</p>
-
-<p></p></p>
+<p></p>
 <h2> Variables </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>object</td><td>objLifeEnergyBig</td><td><p>Enemy specific code</p></td></tr>
-<tr><td>startWait</td><td>0</td><td></td></tr>
-<tr><td>spawnWait</td><td>480</td><td></td></tr>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">object</span></td><td>objLifeEnergyBig</td><td><p> The object to spawn.</p></td></tr>
+<tr><td><span class="cc">startWait</span></td><td>0</td><td><p> How long until the spawner starts spawning objects normally.</p></td></tr>
+<tr><td><span class="cc">spawnWait</span></td><td>480</td><td><p> The wait time between each object spawn.</p></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
-<tr><td>limit</td><td>0</td><td></td></tr>
-<tr><td>countOwn</td><td>false</td><td></td></tr>
-<tr><td>script</td><td>scrNoEffect</td><td></td></tr>
-<tr><td>code</td><td>""</td><td></td></tr>
+<tr><td><span class="cc">limit</span></td><td>0</td><td><p> The limit to how many of the object the spawner can spawn. 0 = infinite (default: 0)</p></td></tr>
+<tr><td><span class="cc">countOwn</span></td><td>false</td><td><p> whether to only count objects this spawner created for the limit. (default: false)</p></td></tr>
+<tr><td><span class="cc">script</span></td><td>scrNoEffect</td><td><p> The Game Maker script to execute within the object. If you put, say, xspeed = -3 in your script called scrMySpawner,</p>
+
+<p>and the object is set to objEnemyBullet, then the spawner will create a bullet moving left. (This is an alternative to the code variable above,</p>
+
+<p>and is more reliable since GML code execution from a string is not fully-featured.)</p></td></tr>
+<tr><td><span class="cc">code</span></td><td>""</td><td><p> string containing GML code to execute. If you put, say, code = "xspeed = -3" and the object is set to objEnemyBullet,</p>
+
+<p>then the spawner will create a bullet moving left.</p></td></tr>
 <tr><td>spawnN</td><td>0</td><td><p>size of the spawned object list</p></td></tr>
 <tr><td>spawnedCount</td><td>0</td><td><p>number of spawned objects still alive</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
@@ -58,27 +60,9 @@
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for objCustomSpawner:</p><p>
-<p>Creation code (all optional):</p>
+<p>Custom Spawners are very versatile. They can be set to spawn virtually anything, and with strange use, can even</p>
 
-<p>object - The object to spawn.</p>
-
-<p>startWait - How long until the spawner starts spawning objects normally.</p>
-
-<p>spawnWait - The wait time between each object spawn.</p>
-
-<p>limit - The limit to how many of the object the spawner can spawn. 0 = infinite (default: 0)</p>
-
-<p>countOwn - whether to only count objects this spawner created for the limit. (default: false)</p>
-
-<p>code - a string containing GML code to execute. If you put, say, code = "xspeed = -3" and the object is set to objEnemyBullet,</p>
-
-<p>then the spawner will create a bullet moving left.</p>
-
-<p>script - The Game Maker script to execute within the object. If you put, say, xspeed = -3 in your script called scrMySpawner,</p>
-
-<p>and the object is set to objEnemyBullet, then the spawner will create a bullet moving left. (This is an alternative to the code variable above,</p>
-
-<p>and is more reliable since GML code execution from a string is not fully-featured.)</p></td></tr>
+<p>just be used as objects that execute a script every frame. Their purpose should be fairly self explanatory.</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
