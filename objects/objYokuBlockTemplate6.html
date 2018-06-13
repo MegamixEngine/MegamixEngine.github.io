@@ -20,19 +20,21 @@
 <h2> Variables </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from objYokuBlock </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>startup</td><td>300 <i>(*)</i></td><td><p>creation code setup stuff</p></p><p>Notes for objYokuBlockTemplate6:</p><p>
-<p>creation code setup stuff</p></td></tr>
-<tr><td>active</td><td>120</td><td></td></tr>
-<tr><td>neverDespawn</td><td>true</td><td></td></tr>
-<tr><td>wait</td><td>360 <i>(*)</i></td><td></td></tr>
-<tr><td>sprite</td><td>noone</td><td></td></tr>
-<tr><td>doSFX</td><td>true</td><td></td></tr>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">startup</span></td><td>300 <i>(*)</i></td><td><p> the amount of frames it takes for the Yoku Block to first appear</p></p><p>Notes for objYokuBlockTemplate6:</p><p>
+<p> the amount of frames it takes for the Yoku Block to first appear</p></td></tr>
+<tr><td><span class="cc">active</span></td><td>120</td><td><p> the amount of frames the Yoku Block is active before disappearing</p></p><p>Notes for objYokuBlockTemplate6:</p><p>
+<p> the amount of frames the Yoku Block is active before disappearing</p></td></tr>
+<tr><td><span class="cc">neverDespawn</span></td><td>true</td><td><p> (optional) true = will reappear after disappearing for the first time (default); false = only appears once (setting this to false will eliminate the need to set the wait variable)</p></td></tr>
+<tr><td><span class="cc">wait</span></td><td>360 <i>(*)</i></td><td><p> the amount of frames the Yoku Block needs to reappear after disappearing</p></p><p>Notes for objYokuBlockTemplate6:</p><p>
+<p> the amount of frames the Yoku Block needs to reappear after disappearing</p></td></tr>
+<tr><td><span class="cc">sprite</span></td><td>noone</td><td><p> the sprite to use (optional)</p></td></tr>
+<tr><td><span class="cc">doSFX</span></td><td>true</td><td><p> if false no sound will play once it appears (optional)</p></td></tr>
 <tr><td>spike</td><td>false</td><td><p>don't set creation code to make yoku spikes, use the objYokuSpike object</p></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td><p>0 = waiting to appear; 1 = active; 2 = waiting to reappear after disappearing; 3 = inactive;</p></td></tr>
 <tr><td>mySolid</td><td>-12</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for objYokuBlock.<i></p><h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for objYokuBlock.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
@@ -146,6 +148,7 @@
 <tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
+<tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objYokuBlockTemplate6 </h2><ul>
 <li><a href="objYokuSpikeTemplate6.html">objYokuSpikeTemplate6</li>

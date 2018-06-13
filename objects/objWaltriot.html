@@ -17,16 +17,22 @@
 <div>3</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objWaltriot</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objWaltriot.html">objWaltriot</a>
 <h2> Description </h2>
-<p><p>Walriot</p>
+<p><p>Put this enemy on a wall or he will commit seppuku</p>
 
-<p>Put this enemy on a wall or he will commit seppuku</p></p>
+<p>Note: don't change its image_xscale/image_yscale in the editor, rotate it instead</p>
+
+<p>Note: make sure its aligned with the solid you want it to move on</p></p>
 <h2> Variables </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>spd</td><td>1.65</td><td><p>Speed</p></td></tr>
-<tr><td>leftLimit</td><td>32</td><td><p>how much it moves in each direction(from it's perspective) -1 ->unlimited</p></td></tr>
-<tr><td>rightLimit</td><td>32</td><td></td></tr>
-<tr><td>shootAfter</td><td>128</td><td><p>How many pixels it moves before shooting</p></td></tr>
-<tr><td>startDir</td><td>1</td><td><p>1:right, -1:left;</p></td></tr>
-<tr><td>col</td><td>0</td><td><p>0:blue, 1:pink</p></td></tr>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">spd</span></td><td>1.65</td><td><p>Speed</p></td></tr>
+<tr><td><span class="cc">leftLimit</span></td><td>32</td><td><p> how much it moves in each direction(from it's perspective) -1 ->unlimited</p></td></tr>
+<tr><td><span class="cc">rightLimit</span></td><td>32</td><td><p></p></td></tr>
+<tr><td><span class="cc">shootAfter</span></td><td>128</td><td><p> How many pixels it moves before launching a missile</p></td></tr>
+<tr><td><span class="cc">startDir</span></td><td>1</td><td><p> Direction in which it will move when it spawns(from its perspective);</p>
+
+<p> 1:right, -1:left;</p></td></tr>
+<tr><td><span class="cc">col</span></td><td>0</td><td><p> Color</p>
+
+<p> 0:blue, 1:pink</p></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>dir</td><td>1</td><td></td></tr>
@@ -34,7 +40,7 @@
 <tr><td>myMissile</td><td>noone</td><td></td></tr>
 <tr><td>animFrame</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
@@ -97,6 +103,7 @@
 <tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
+<tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>

@@ -17,10 +17,12 @@
 <div>2</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objPointan</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objPointan.html">objPointan</a>
 <h2> Description </h2>
-<p></p>
+<p><p>This cursor enemy will cycle through 3 patterns, once he finishes he will move to his inital position</p>
+
+<p>and start over.</p></p>
 <h2> Variables </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>pattern</td><td>0</td><td></td></tr>
-<tr><td>initialPattern</td><td>0</td><td></td></tr>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">initialPattern</span></td><td>0</td><td><p> 0(default): square, 1: vertical line, 2: horizontal line.</p></td></tr>
+<tr><td>pattern</td><td>0</td><td></td></tr>
 <tr><td>vdir</td><td>0</td><td></td></tr>
 <tr><td>nextX</td><td>0</td><td></td></tr>
 <tr><td>nextY</td><td>0</td><td></td></tr>
@@ -30,7 +32,7 @@
 <tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>windowDir</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
@@ -93,6 +95,7 @@
 <tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
+<tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>
