@@ -1,4 +1,4 @@
-<html><title>objFooley</title><!-- Latest compiled and minified CSS -->
+<html><title>objOuOu</title><!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -8,36 +8,42 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9">
-<h2>Fooley</h2><img class = "centre" src="../assets/images/objects/sprFooley.png" alt="sprFooley">
+<h2>OuOu</h2><img class = "centre" src="../assets/images/objects/sprOuOu.png" alt="sprOuOu">
 <button data-toggle="collapse" data-target="#EnemyInformation"><h2>Enemy Information</h2></button>
 <div id="EnemyInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
 <div>Gameboy games</div>  </div><div><h3 class="alt">HP</h3>
-<div>2</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>2</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objFooley</h1>
-<a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objFooley.html">objFooley</a>
+<div>9</div>  </div><div><h3 class="alt">Contact Damage</h3>
+<div>3</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objOuOu</h1>
+<a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objOuOu.html">objOuOu</a>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>moveTimer</td><td>60</td><td></td></tr>
-<tr><td>shootTimer</td><td>30</td><td></td></tr>
-<tr><td>timeSlow</td><td>2</td><td></td></tr>
-<tr><td>drawTimer</td><td>4</td><td></td></tr>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imgIndex</td><td>0</td><td></td></tr>
+<tr><td>imgSpd</td><td>0.2</td><td></td></tr>
+<tr><td>radius</td><td>4 * 16</td><td></td></tr>
+<tr><td>moveTimer</td><td>60</td><td></td></tr>
+<tr><td>phase</td><td>0</td><td></td></tr>
+<tr><td>animBack</td><td>false</td><td></td></tr>
+<tr><td>attackTimer</td><td>30</td><td></td></tr>
+<tr><td>bounces</td><td>0</td><td></td></tr>
+<tr><td>hasAttacked</td><td>false</td><td></td></tr>
+<tr><td>ball</td><td>noone</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
-<tr><td><span class="cc">healthpointsStart</span></td><td>2 <i>(*)</i></td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>9 <i>(*)</i></td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td><span class="cc">contactDamage</span></td><td>2 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>3 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
 <tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>"flying" <i>(*)</i></td><td></td></tr>
+<tr><td>category</td><td>"aquatic, bulky" <i>(*)</i></td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
@@ -54,9 +60,9 @@
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
-<tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
+<tr><td>grav</td><td>0.25</td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>false <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
