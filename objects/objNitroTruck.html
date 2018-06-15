@@ -6,15 +6,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
 <body><div class="page">
-<div class="row no-gutters">
-<div class="col-sm-3 col-sm-push-9">
-<h2>NitroTruck</h2><img class = "centre" src="../assets/images/objects/sprNitroTruck.png" alt="sprNitroTruck">
-<button data-toggle="collapse" data-target="#EnemyInformation"><h2>Enemy Information</h2></button>
-<div id="EnemyInformation" class="collapse in">
-<div><h3 class="alt">Origin</h3>
-<div><i>Mega Man 10</i></div>  </div><div><h3 class="alt">HP</h3>
-<div>5</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>5</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objNitroTruck</h1>
+<h1>objNitroTruck</h1>
 <a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objNitroTruck.html">objNitroTruck</a>
 <h2> Description </h2>
 <p></p>
@@ -23,6 +15,7 @@
 <tr><td>begun_move</td><td>false</td><td></td></tr>
 <tr><td>slowdeath_timer</td><td>0</td><td><p>when positive, runs slow death animation explosion</p></td></tr>
 <tr><td>has_honked</td><td>false</td><td></td></tr>
+<tr><td>damageOffset</td><td>1</td><td><p>I megaman collides with this truck and his bbox_bottom is > bbox_top+damageOffset megaman would get hit</p></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -89,5 +82,5 @@
 <tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p>
 </body></div></html>
