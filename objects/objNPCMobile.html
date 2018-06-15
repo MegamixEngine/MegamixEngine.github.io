@@ -1,4 +1,4 @@
-<html><title>objNPC</title><!-- Latest compiled and minified CSS -->
+<html><title>objNPCMobile</title><!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -6,39 +6,54 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
 <body><div class="page">
-<h1>objNPC</h1>
-<a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objNPC.html">objNPC</a>
+<h1>objNPCMobile</h1>
+<a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objNPC.html">objNPC</a> <b>&gt;</b> <a href="objNPCMobile.html">objNPCMobile</a>
 <h2> Description </h2>
-<p><p>for tweaking its physics, use the creation code variables of prtEntity</p>
-
 <p></p>
+<h2> Variables </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>behaviour</td><td>"wander"</td><td><p>behaviours</p></td></tr>
+<tr><td>avoids_pits</td><td>true</td><td></td></tr>
+<tr><td>jumps_pits</td><td>true</td><td></td></tr>
+<tr><td>ignores_pits</td><td>false</td><td></td></tr>
+<tr><td><span class="cc">move_speed</span></td><td>noone</td><td><p>gets defaulted in step code on first frame</p></td></tr>
+<tr><td><span class="cc">jump_speed</span></td><td>-4.8</td><td><p> the speed they jump up with</p></td></tr>
+<tr><td><span class="cc">walk_sprite</span></td><td>sprNPCKnightmanWalk</td><td><p> sets the sprite that's used for their walking animation (default is the same as the idle animation)</p></td></tr>
+<tr><td><span class="cc">jump_sprite</span></td><td>sprNPCKnightmanJump</td><td><p> sets the sprite that's use for their jumping animation (default is the same as the idle animation)</p></td></tr>
+<tr><td><span class="cc">walk_start</span></td><td>0</td><td><p> the starting frame of their walking animation</p></td></tr>
+<tr><td><span class="cc">walk_end</span></td><td>sprite_get_number(walk_sprite) - walk_start</td><td><p> the ending frame of their walking animation</p></td></tr>
+<tr><td><span class="cc">walk_speed</span></td><td>idle_speed</td><td><p> the speed of the walk animation</p></td></tr>
+<tr><td><span class="cc">jump_start</span></td><td>0</td><td><p> the only frame for their jump animation (can't have it animated)</p></td></tr>
+<tr><td>only_jumps</td><td>false</td><td></td></tr>
+<tr><td>mode</td><td>0</td><td><p>private:</p></td></tr>
+<tr><td>mode_timer</td><td>0</td><td></td></tr>
+<tr><td>mode_timer_end</td><td>0</td><td></td></tr>
+<tr><td>despawnRange</td><td>700000</td><td></td></tr>
+</table>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from objNPC </h2>
+<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td></td></tr>
+<tr><td><span class="cc">name</span></td><td>'Knight Man' <i>(*)</i></td><td><p> sets the name in their dialogue box</p></p><p>Notes for objNPCMobile:</p><p>
+<p>Same as objNPC but in motion</p>
 
 <p>option[0-4] = "string here" (sets the option you can choose, anywhere between 1 to 5)</p>
 
-<p>option_text[0-4] = "string here" (sets the text they will say after choosing this option)</p>
-
-<p>option_script_on_talk_start[0-4] (script to execute after their dialogue starts upon choosing this option)</p>
-
-<p>option_script_on_talk_end[0-4] (script to execute after their dialogue finishes upon choosing this option)</p></p>
-<h2> Variables </h2>
-<table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td></td></tr>
-<tr><td><span class="cc">name</span></td><td>'Volt Man'</td><td><p> sets the name in their dialogue box</p></td></tr>
+<p>option_text[0-4] = "string here" (sets the text they will say after choosing this option)</p></td></tr>
 <tr><td><span class="cc">name_color</span></td><td>c_white</td><td><p> sets the color of the name in their dialogue box</p></td></tr>
 <tr><td><span class="cc">text</span></td><td>'I have nothing to say.'</td><td><p> sets the text in their dialogue box</p></td></tr>
 <tr><td><span class="cc">mugshot_sprite</span></td><td>sprMugshots</td><td><p> sets the sprite used for the mugshot in the dialogue box</p></td></tr>
 <tr><td><span class="cc">mugshot_start</span></td><td>0</td><td><p> the starting frame of the mugshot animation</p></td></tr>
 <tr><td><span class="cc">mugshot_end</span></td><td>0</td><td><p> the ending frame of the mugshot animation</p></td></tr>
 <tr><td><span class="cc">mugshot_speed</span></td><td>0</td><td><p> the speed of the mugshot animation</p></td></tr>
-<tr><td><span class="cc">idle_sprite</span></td><td>sprite_index</td><td><p> sets the sprite they use for their idle animation) (becomes the default of all of the other animations if the rest aren't set</p></td></tr>
+<tr><td><span class="cc">idle_sprite</span></td><td>sprNPCKnightmanIdle <i>(*)</i></td><td><p> sets the sprite they use for their idle animation) (becomes the default of all of the other animations if the rest aren't set</p></p><p>Notes for objNPCMobile:</p><p>
+<p>animation:</p></td></tr>
 <tr><td><span class="cc">idle_start</span></td><td>0</td><td><p> the starting frame of their idle animation</p></td></tr>
 <tr><td><span class="cc">idle_end</span></td><td>sprite_get_number(idle_sprite) - idle_start</td><td><p> the ending frame of their idle animation</p></td></tr>
 <tr><td><span class="cc">idle_speed</span></td><td>0.1</td><td><p> the speed of the idle animation</p></td></tr>
-<tr><td><span class="cc">talk_sprite</span></td><td>sprVoltThrowShield</td><td><p> sets the sprite of their talking animation (default is the same as the idle animation)</p></td></tr>
+<tr><td><span class="cc">talk_sprite</span></td><td>idle_sprite <i>(*)</i></td><td><p> sets the sprite of their talking animation (default is the same as the idle animation)</p></td></tr>
 <tr><td><span class="cc">talk_start</span></td><td>0</td><td><p> the starting frame of their talking animation</p></td></tr>
 <tr><td><span class="cc">talk_end</span></td><td>sprite_get_number(talk_sprite) - talk_start</td><td><p> the ending frame of their talking animation</p></td></tr>
 <tr><td><span class="cc">talk_speed</span></td><td>idle_speed</td><td><p> the speed of the talk animation</p></td></tr>
 <tr><td><span class="cc">mask</span></td><td>maskNPC</td><td><p> sets the mask used for collision (default: knight man)</p></td></tr>
-<tr><td>standard_physics</td><td>true</td><td></td></tr>
+<tr><td>standard_physics</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td><span class="cc">talk_distance</span></td><td>12</td><td><p> distance ahead that mega man checks when pressing up to talk</p></td></tr>
 <tr><td><span class="cc">face_player</span></td><td>false</td><td><p> constantly turns to face the player as the player moves around</p></td></tr>
 <tr><td><span class="cc">face_player_distance</span></td><td>8</td><td><p> even if face_player is true, will not turn to face if player is closer than this</p></td></tr>
@@ -52,7 +67,7 @@
 <tr><td>_im</td><td>0</td><td></td></tr>
 <tr><td>showarrow</td><td>0</td><td></td></tr>
 </table>
-<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for objNPC.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
@@ -80,7 +95,7 @@
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>700000 <i>(*)</i></td><td></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
@@ -121,8 +136,5 @@
 <tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objNPC </h2><ul>
-<li><a href="objNPCMobile.html">objNPCMobile</li>
-<li><a href="objSign.html">objSign</li>
-</ul>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p>
 </body></div></html>
