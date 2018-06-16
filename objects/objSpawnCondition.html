@@ -11,7 +11,13 @@
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">playerXDistance</span></td><td>80</td><td><p> check if the player is farther than this distance on x. -1: doesn't matter. Measured from center.</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">despawnType</span></td><td>0</td><td><p> if 0 beenOutsideView will be false if the object is not allowed to spawn</p>
+
+<p> if 1 beenOutiseView will be true if the object is not allowed to spawn</p></td></tr>
+<tr><td><span class="cc">faction</span></td><td>-1</td><td><p> if different from -1 it will only affect entities with that faction</p>
+
+<p> otherwise everything but players and player projectiles would be affected</p></td></tr>
+<tr><td><span class="cc">playerXDistance</span></td><td>80</td><td><p> check if the player is farther than this distance on x. -1: doesn't matter. Measured from center.</p></td></tr>
 <tr><td><span class="cc">playerYDistance</span></td><td>-1</td><td><p> check if the player is farther than this distance on y. -1: doesn't matter. Measured from center.</p></td></tr>
 <tr><td><span class="cc">conditionCode</span></td><td>""</td><td><p> if this is non-empty, the above check will not take place and instead this</p>
 
