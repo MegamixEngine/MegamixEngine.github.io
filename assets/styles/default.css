@@ -180,3 +180,8 @@ tr code{
 tr:nth-child(odd) code {
 	background: #335387;
 }
+
+a.dropdown {
+	color: white;
+	font-weight: bold;
+}
