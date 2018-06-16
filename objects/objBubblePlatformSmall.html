@@ -19,11 +19,11 @@
 
 <p>PopTime = <number></p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>PopTime</td><td>60 * 1</td><td></td></tr>
-<tr><td>timer</td><td>0</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>timer</td><td>0</td><td></td></tr>
+<tr><td>pop</td><td>0</td><td></td></tr>
+<tr><td>popTime</td><td>60</td><td></td></tr>
 <tr><td>imgSpeed</td><td>0.15</td><td></td></tr>
 <tr><td>img</td><td>0</td><td></td></tr>
-<tr><td>Pop</td><td>false</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -33,8 +33,7 @@
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
 <tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for objBubblePlatformSmall:</p><p>
-<p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
@@ -45,22 +44,20 @@
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
 <tr><td>killOverride</td><td>false</td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
-<tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for objBubblePlatformSmall:</p><p>
-<p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
+<tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
-<tr><td>inWater</td><td>0</td><td></td></tr>
+<tr><td>inWater</td><td>-1 <i>(*)</i></td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>-1 <i>(*)</i></td><td></td></tr>
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></p><p>Notes for objBubblePlatformSmall:</p><p>
-<p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
@@ -72,9 +69,6 @@
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>issolid</td><td>2 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
-
-<p>0: not solid. 1: fully solid. 2: top-solid.</p></p><p>Notes for objBubblePlatformSmall:</p><p>
-<p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
 <p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
 <tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of the same faction.</p></td></tr>
@@ -96,7 +90,5 @@
 <tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objBubblePlatformSmall </h2><ul>
-<li><a href="objBubblePlatformLarge.html">objBubblePlatformLarge</li>
-</ul></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>
