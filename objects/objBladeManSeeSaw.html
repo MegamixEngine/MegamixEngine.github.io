@@ -17,15 +17,19 @@
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>pux</td><td>27</td><td><p>shift for upper platform</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>resawn</td><td>true</td><td></td></tr>
+<tr><td>pux</td><td>27</td><td><p>shift for upper platform</p></td></tr>
 <tr><td>puy</td><td>19</td><td></td></tr>
 <tr><td>pdx</td><td>29</td><td><p>shift for lower platform</p></td></tr>
 <tr><td>pdy</td><td>10</td><td></td></tr>
 <tr><td>changeDir</td><td>false</td><td><p>true - change direction to opposite</p></td></tr>
-<tr><td>backtrackTimer</td><td>0</td><td></td></tr>
+<tr><td>canBacktrack</td><td>0</td><td></td></tr>
 <tr><td>backtrackTimerMax</td><td>300</td><td><p>Waiting time before backtracking</p></td></tr>
 <tr><td>mySpeedMax</td><td>1</td><td></td></tr>
 <tr><td>Phase</td><td>7</td><td></td></tr>
+<tr><td>backtrackTimer</td><td>0</td><td></td></tr>
+<tr><td>firstPlatform</td><td>noone</td><td></td></tr>
+<tr><td>secondPlatform</td><td>noone</td><td></td></tr>
 <tr><td>canDraw</td><td>true</td><td></td></tr>
 <tr><td>animImage</td><td>0</td><td></td></tr>
 </table>
@@ -35,8 +39,11 @@
 <tr><td>init</td><td>1</td><td></td></tr>
 <tr><td>dir</td><td>"none"</td><td><p>left, up, down, right</p></td></tr>
 <tr><td>startDir</td><td>dir</td><td></td></tr>
-<tr><td>xOffset</td><td>8</td><td><p>distance from the x and y position to check by</p></td></tr>
-<tr><td>yOffset</td><td>8</td><td></td></tr>
+<tr><td>xOffset</td><td>6 <i>(*)</i></td><td><p>distance from the x and y position to check by</p></td></tr>
+<tr><td>yOffset</td><td>6 <i>(*)</i></td><td></td></tr>
+<tr><td>lastRail</td><td>noone</td><td><p>Helpful variable to use in childs</p></td></tr>
+<tr><td>prevRail</td><td>noone</td><td></td></tr>
+<tr><td>bumped</td><td>false</td><td></td></tr>
 <tr><td>fallMomentum</td><td>0.25</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtRailPlatform.<i></p><h2> Inherited from prtEntity </h2>
@@ -67,15 +74,11 @@
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
-<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
-<p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
+<tr><td><span class="cc">respawnRange</span></td><td>32 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
 <p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
 <p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
 <p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
-<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
-<p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
+<tr><td><span class="cc">despawnRange</span></td><td>32 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
 <p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
 <p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for prtRailPlatform:</p><p>
 <p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
