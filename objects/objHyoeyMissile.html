@@ -30,7 +30,6 @@
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
-<tr><td>miniboss</td><td>0</td><td><p>boolean, is it a miniboss</p></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
@@ -74,8 +73,11 @@
 <tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
 <p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
-<tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of the same faction.</p></td></tr>
+<tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of faction that it is friendly towards.</p>
+
+<p>set it to 2 for the opposite</p></td></tr>
 <tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
+<tr><td>deadTimer</td><td>0</td><td></td></tr>
 <tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
 <tr><td><span class="cc">behaviourType</span></td><td>0</td><td><p> The strategy the enemy should use to pick which player to target</p>
 
@@ -90,7 +92,6 @@
 <p>4: pick once, never switch</p></td></tr>
 <tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
-<tr><td>killObject</td><td>-1</td><td><p>Whatever object triggered its event user 10</p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
