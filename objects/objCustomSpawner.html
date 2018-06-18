@@ -19,32 +19,32 @@ objects <b>/</b> Enemies <b>/</b> objCustomSpawner<br/><a href="prtEntity.html">
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>object</td><td>objLifeEnergyBig</td><td><p>cc The object to spawn.</p></td></tr>
-<tr><td>startWait</td><td>0</td><td><p>cc How long until the spawner starts spawning objects normally.</p></td></tr>
-<tr><td>spawnWait</td><td>480</td><td><p>cc The wait time between each object spawn.</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">object</span></td><td>objLifeEnergyBig</td><td><p> The object to spawn.</p></td></tr>
+<tr><td><span class="cc">startWait</span></td><td>0</td><td><p> How long until the spawner starts spawning objects normally.</p></td></tr>
+<tr><td><span class="cc">spawnWait</span></td><td>480</td><td><p> The wait time between each object spawn.</p></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
-<tr><td>limit</td><td>0</td><td><p>cc The limit to how many of the object the spawner can spawn. 0 = infinite (default: 0)</p></td></tr>
-<tr><td>countOwn</td><td>false</td><td><p>cc whether to only count objects this spawner created for the limit. (default: false)</p></td></tr>
-<tr><td>script</td><td>scrNoEffect</td><td><p>cc The Game Maker script to execute within the object. If you put, say, xspeed = -3 in your script called scrMySpawner,</p>
+<tr><td><span class="cc">limit</span></td><td>0</td><td><p> The limit to how many of the object the spawner can spawn. 0 = infinite (default: 0)</p></td></tr>
+<tr><td><span class="cc">countOwn</span></td><td>false</td><td><p> whether to only count objects this spawner created for the limit. (default: false)</p></td></tr>
+<tr><td><span class="cc">script</span></td><td>scrNoEffect</td><td><p> The Game Maker script to execute within the object. If you put, say, xspeed = -3 in your script called scrMySpawner,</p>
 
 <p>and the object is set to objEnemyBullet, then the spawner will create a bullet moving left. (This is an alternative to the code variable above,</p>
 
 <p>and is more reliable since GML code execution from a string is not fully-featured.)</p></td></tr>
-<tr><td>code</td><td>""</td><td><p>cc string containing GML code to execute. If you put, say, code = "xspeed = -3" and the object is set to objEnemyBullet,</p>
+<tr><td><span class="cc">code</span></td><td>""</td><td><p> string containing GML code to execute. If you put, say, code = "xspeed = -3" and the object is set to objEnemyBullet,</p>
 
 <p>then the spawner will create a bullet moving left.</p></td></tr>
 <tr><td>spawnN</td><td>0</td><td><p>size of the spawned object list</p></td></tr>
 <tr><td>spawnedCount</td><td>0</td><td><p>number of spawned objects still alive</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
-<tr><td>healthpointsStart</td><td>1</td><td><p>cc the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td>contactDamage</td><td>0</td><td><p>cc the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td>canHit</td><td>false <i>(*)</i></td><td><p>cc Boolean. If false, the entity won't take damage.</p></td></tr>
-<tr><td>canDamage</td><td>true</td><td><p>cc If false, the entity won't deal damage</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
@@ -57,9 +57,9 @@ objects <b>/</b> Enemies <b>/</b> objCustomSpawner<br/><a href="prtEntity.html">
 <tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
-<tr><td>noFlicker</td><td>false</td><td><p>cc If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td>respawnRange</td><td>4</td><td><p>cc Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td>despawnRange</td><td>-1 <i>(*)</i></td><td><p>cc Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for objCustomSpawner:</p><p>
+<tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for objCustomSpawner:</p><p>
 <p>Custom Spawners are very versatile. They can be set to spawn virtually anything, and with strange use, can even</p>
 
 <p>just be used as objects that execute a script every frame. Their purpose should be fairly self explanatory.</p></td></tr>
@@ -79,7 +79,7 @@ objects <b>/</b> Enemies <b>/</b> objCustomSpawner<br/><a href="prtEntity.html">
 <tr><td>itemDrop</td><td>0</td><td></td></tr>
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
-<tr><td>canIce</td><td>true</td><td><p>cc is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
@@ -90,7 +90,7 @@ objects <b>/</b> Enemies <b>/</b> objCustomSpawner<br/><a href="prtEntity.html">
 <tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
 <tr><td>deadTimer</td><td>0</td><td></td></tr>
 <tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
-<tr><td>behaviourType</td><td>0</td><td><p>cc The strategy the enemy should use to pick which player to target</p>
+<tr><td><span class="cc">behaviourType</span></td><td>0</td><td><p> The strategy the enemy should use to pick which player to target</p>
 
 <p>0: generic</p>
 
@@ -101,9 +101,9 @@ objects <b>/</b> Enemies <b>/</b> objCustomSpawner<br/><a href="prtEntity.html">
 <p>3: custom</p>
 
 <p>4: pick once, never switch</p></td></tr>
-<tr><td>facePlayerOnSpawn</td><td>false</td><td><p>cc</p></td></tr>
-<tr><td>facePlayer</td><td>false</td><td><p>cc</p></td></tr>
+<tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>

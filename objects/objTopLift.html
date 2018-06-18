@@ -20,17 +20,17 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objTopLift<br/><a href="prtEntit
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>alarmturn</td><td>16</td><td></td></tr>
 <tr><td>turnSpeed</td><td>0.76</td><td></td></tr>
-<tr><td>dir</td><td>-1</td><td><p>cc -1: up; 1:down;</p></td></tr>
+<tr><td><span class="cc">dir</span></td><td>-1</td><td><p> -1: up; 1:down;</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
-<tr><td>healthpointsStart</td><td>1</td><td><p>cc the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td>contactDamage</td><td>0</td><td><p>cc the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td>canHit</td><td>false <i>(*)</i></td><td><p>cc Boolean. If false, the entity won't take damage.</p></td></tr>
-<tr><td>canDamage</td><td>true</td><td><p>cc If false, the entity won't deal damage</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
@@ -43,9 +43,9 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objTopLift<br/><a href="prtEntit
 <tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
-<tr><td>noFlicker</td><td>false</td><td><p>cc If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td>respawnRange</td><td>4</td><td><p>cc Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td>despawnRange</td><td>4</td><td><p>cc Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
@@ -62,7 +62,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objTopLift<br/><a href="prtEntit
 <tr><td>itemDrop</td><td>0</td><td></td></tr>
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
-<tr><td>canIce</td><td>true</td><td><p>cc is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>issolid</td><td>2 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
@@ -73,7 +73,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objTopLift<br/><a href="prtEntit
 <tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
 <tr><td>deadTimer</td><td>0</td><td></td></tr>
 <tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
-<tr><td>behaviourType</td><td>0</td><td><p>cc The strategy the enemy should use to pick which player to target</p>
+<tr><td><span class="cc">behaviourType</span></td><td>0</td><td><p> The strategy the enemy should use to pick which player to target</p>
 
 <p>0: generic</p>
 
@@ -84,9 +84,9 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objTopLift<br/><a href="prtEntit
 <p>3: custom</p>
 
 <p>4: pick once, never switch</p></td></tr>
-<tr><td>facePlayerOnSpawn</td><td>false</td><td><p>cc</p></td></tr>
-<tr><td>facePlayer</td><td>false</td><td><p>cc</p></td></tr>
+<tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>

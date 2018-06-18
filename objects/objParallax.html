@@ -12,19 +12,19 @@ objects <b>/</b> Level Objects <b>/</b> Aesthetic <b>/</b> objParallax<br/><a hr
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>mybg</td><td>-1</td><td><p>cc  my background, if not set the object will be destroyed</p></td></tr>
-<tr><td>bgl</td><td>0</td><td><p>left</p></td></tr>
-<tr><td>bgt</td><td>0</td><td><p>top</p></td></tr>
-<tr><td>bgh</td><td>0</td><td><p>height</p></td></tr>
-<tr><td>bgw</td><td>0</td><td><p>width</p></td></tr>
-<tr><td>resourceType</td><td>0</td><td><p>cc 1: background. 2: sprite. 3: surface. 0: infer.</p></td></tr>
-<tr><td>xspeed</td><td>0</td><td><p>cc Horizontal speed</p></td></tr>
-<tr><td>yspeed</td><td>0</td><td><p>cc Vertical speed</p></td></tr>
-<tr><td>offsetX</td><td>0</td><td><p>cc distance offset (from alignment with room's 0 coordinate)</p>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">mybg</span></td><td>-1</td><td><p>  my background, if not set the object will be destroyed</p></td></tr>
+<tr><td><span class="cc">bgl</span></td><td>0</td><td><p>left</p></td></tr>
+<tr><td><span class="cc">bgt</span></td><td>0</td><td><p>top</p></td></tr>
+<tr><td><span class="cc">bgh</span></td><td>0</td><td><p>height</p></td></tr>
+<tr><td><span class="cc">bgw</span></td><td>0</td><td><p>width</p></td></tr>
+<tr><td><span class="cc">resourceType</span></td><td>0</td><td><p> 1: background. 2: sprite. 3: surface. 0: infer.</p></td></tr>
+<tr><td><span class="cc">xspeed</span></td><td>0</td><td><p> Horizontal speed</p></td></tr>
+<tr><td><span class="cc">yspeed</span></td><td>0</td><td><p> Vertical speed</p></td></tr>
+<tr><td><span class="cc">offsetX</span></td><td>0</td><td><p> distance offset (from alignment with room's 0 coordinate)</p>
 
 <p>positive number shifts to the right/down.</p></td></tr>
-<tr><td>offsetY</td><td>0</td><td><p>cc</p></td></tr>
-<tr><td>parallaxX</td><td>1</td><td><p>cc parallax coefficients.</p>
+<tr><td><span class="cc">offsetY</span></td><td>0</td><td><p></p></td></tr>
+<tr><td><span class="cc">parallaxX</span></td><td>1</td><td><p> parallax coefficients.</p>
 
 <p>negative: scrolls in opposite direction as camera</p>
 
@@ -35,15 +35,15 @@ objects <b>/</b> Level Objects <b>/</b> Aesthetic <b>/</b> objParallax<br/><a hr
 <p>1: scrolls with camera (same parallax depth as game world)</p>
 
 <p>greater than 1: scrolls faster than camera (parallax foreground)</p></td></tr>
-<tr><td>parallaxY</td><td>1</td><td><p>cc</p></td></tr>
-<tr><td>imgInterval</td><td>4</td><td><p>Delay between images (sprite only). -1: fixed.</p></td></tr>
-<tr><td>snaptogrid</td><td>0</td><td><p>align to 16x16 grid</p></td></tr>
-<tr><td>areaLeft</td><td>-1</td><td><p>cc define a custom area; for each value unused, the retrospective border</p>
+<tr><td><span class="cc">parallaxY</span></td><td>1</td><td><p></p></td></tr>
+<tr><td><span class="cc">imgInterval</span></td><td>4</td><td><p>Delay between images (sprite only). -1: fixed.</p></td></tr>
+<tr><td><span class="cc">snaptogrid</span></td><td>0</td><td><p>align to 16x16 grid</p></td></tr>
+<tr><td><span class="cc">areaLeft</span></td><td>-1</td><td><p> define a custom area; for each value unused, the retrospective border</p>
 
 <p>of the current section where the object is placed is used as the default</p></td></tr>
-<tr><td>areaRight</td><td>-1</td><td><p>cc</p></td></tr>
-<tr><td>areaTop</td><td>-1</td><td><p>cc</p></td></tr>
-<tr><td>areaBottom</td><td>-1</td><td><p>cc</p></td></tr>
+<tr><td><span class="cc">areaRight</span></td><td>-1</td><td><p></p></td></tr>
+<tr><td><span class="cc">areaTop</span></td><td>-1</td><td><p></p></td></tr>
+<tr><td><span class="cc">areaBottom</span></td><td>-1</td><td><p></p></td></tr>
 <tr><td>img</td><td>0</td><td><p>don't edit these:</p></td></tr>
 <tr><td>alarmimg</td><td>0</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
@@ -53,7 +53,7 @@ objects <b>/</b> Level Objects <b>/</b> Aesthetic <b>/</b> objParallax<br/><a hr
 <tr><td>xshift</td><td>0</td><td></td></tr>
 <tr><td>yshift</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtAlwaysActive </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtAlwaysActive </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 </table>
 
