@@ -1,4 +1,4 @@
-<html><title>objKamapot</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objMercuryBlock</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,32 +9,24 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9">
-<h2>Kamapot</h2><img class = "centre" src="../assets/images/objects/sprKamapot.png" alt="sprKamapot">
+<h2>MercuryBlock</h2><img class = "centre" src="../assets/images/objects/sprMercuryBlock.png" alt="sprMercuryBlock">
 <button data-toggle="collapse" data-target="#GimmickInformation"><h2>Gimmick Information</h2></button>
 <div id="GimmickInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
-<div>Gameboy games</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objKamapot</h1>
-objects <b>/</b> Gimmicks <b>/</b> GB <b>/</b> Don't Use <b>/</b> objKamapot<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objKamapot.html">objKamapot</a>
+<div>Gameboy games</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objMercuryBlock</h1>
+objects <b>/</b> Gimmicks <b>/</b> GB <b>/</b> Don't Use <b>/</b> objMercuryBlock<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objMercuryBlock.html">objMercuryBlock</a>
 <h2> Description </h2>
-<p></p>
+<p><p>A block that drops from the ceiling, landing on the ground. If it hits Mega Man while falling, it will damage him.</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>delayDisplay</td><td>2</td><td></td></tr>
-<tr><td>speedSet</td><td>noone</td><td></td></tr>
-<tr><td>jitter</td><td>true</td><td></td></tr>
-<tr><td>jitterTime</td><td>4</td><td></td></tr>
-<tr><td>moveTimer</td><td>0</td><td></td></tr>
-<tr><td>imgIndex</td><td>0</td><td></td></tr>
-<tr><td>imgSpd</td><td>0.3</td><td></td></tr>
-<tr><td>child</td><td>noone</td><td></td></tr>
-</table>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
-<tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
-<tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td>faction</td><td>7 <i>(*)</i></td><td><p>Used for entities colliding with each other</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>3 <i>(*)</i></td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>3 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
@@ -56,20 +48,20 @@ objects <b>/</b> Gimmicks <b>/</b> GB <b>/</b> Don't Use <b>/</b> objKamapot<br/
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
-<tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
+<tr><td>grav</td><td>0.25</td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>false <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
 <tr><td>plt</td><td>0</td><td></td></tr>
-<tr><td>itemDrop</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>-1 <i>(*)</i></td><td></td></tr>
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
-<tr><td>issolid</td><td>true <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
+<tr><td>issolid</td><td>1 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
 <p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
 <tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of faction that it is friendly towards.</p>
