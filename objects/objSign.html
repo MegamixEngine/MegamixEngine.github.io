@@ -15,9 +15,7 @@ objects <b>/</b> Level Objects <b>/</b> NPC <b>/</b> objSign<br/><a href="prtEnt
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imgsp</td><td>0.33</td><td></td></tr>
-<tr><td>sinx</td><td>0</td><td></td></tr>
-<tr><td>showArrow</td><td>0</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>sinx</td><td>0</td><td></td></tr>
 </table>
 <h2> Inherited from objNPC </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>0 <i>(*)</i></td><td></td></tr>
@@ -38,17 +36,18 @@ objects <b>/</b> Level Objects <b>/</b> NPC <b>/</b> objSign<br/><a href="prtEnt
 <tr><td><span class="cc">idle_sprite</span></td><td>sprite_index</td><td><p> sets the sprite they use for their idle animation) (becomes the default of all of the other animations if the rest aren't set</p></td></tr>
 <tr><td><span class="cc">idle_start</span></td><td>0</td><td><p> the starting frame of their idle animation</p></td></tr>
 <tr><td><span class="cc">idle_end</span></td><td>sprite_get_number(idle_sprite) - idle_start</td><td><p> the ending frame of their idle animation</p></td></tr>
-<tr><td><span class="cc">idle_speed</span></td><td>0.1</td><td><p> the speed of the idle animation</p></td></tr>
+<tr><td><span class="cc">idle_speed</span></td><td>0.33 <i>(*)</i></td><td><p> the speed of the idle animation</p></td></tr>
 <tr><td><span class="cc">talk_sprite</span></td><td>sprVoltThrowShield</td><td><p> sets the sprite of their talking animation (default is the same as the idle animation)</p></td></tr>
 <tr><td><span class="cc">talk_start</span></td><td>0</td><td><p> the starting frame of their talking animation</p></td></tr>
 <tr><td><span class="cc">talk_end</span></td><td>sprite_get_number(talk_sprite) - talk_start</td><td><p> the ending frame of their talking animation</p></td></tr>
 <tr><td><span class="cc">talk_speed</span></td><td>idle_speed</td><td><p> the speed of the talk animation</p></td></tr>
 <tr><td><span class="cc">mask</span></td><td>maskNPC</td><td><p> sets the mask used for collision (default: knight man)</p></td></tr>
-<tr><td>standard_physics</td><td>true</td><td></td></tr>
+<tr><td>standard_physics</td><td>false <i>(*)</i></td><td></p><p>Notes for objSign:</p><p>
+<p>set defaults</p></td></tr>
 <tr><td><span class="cc">talk_distance</span></td><td>12</td><td><p> distance ahead that mega man checks when pressing up to talk</p></td></tr>
 <tr><td><span class="cc">face_player</span></td><td>false</td><td><p> constantly turns to face the player as the player moves around</p></td></tr>
 <tr><td><span class="cc">face_player_distance</span></td><td>8</td><td><p> even if face_player is true, will not turn to face if player is closer than this</p></td></tr>
-<tr><td><span class="cc">face_player_on_talk</span></td><td>true</td><td><p> if true, turns towards the player when talked to, and returns to previous direction when done [unless face_player is true]</p></td></tr>
+<tr><td><span class="cc">face_player_on_talk</span></td><td>false <i>(*)</i></td><td><p> if true, turns towards the player when talked to, and returns to previous direction when done [unless face_player is true]</p></td></tr>
 <tr><td><span class="cc">script_on_talk_start</span></td><td>0</td><td><p> script to execute when talked to</p></td></tr>
 <tr><td><span class="cc">script_on_talk_end</span></td><td>0</td><td><p> script to execute when finished talking</p></td></tr>
 <tr><td>_prev_direction</td><td>1</td><td><p>private:</p></td></tr>
