@@ -1,4 +1,4 @@
-<html><title>objKillerBulletSpawner</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objMolmoleSpawner</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,23 +9,16 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9">
-<h2>KillerBulletSpawner</h2><img class = "centre" src="../assets/images/objects/sprKillerBullet.png" alt="sprKillerBullet">
-<button data-toggle="collapse" data-target="#EnemyInformation"><h2>Enemy Information</h2></button>
-<div id="EnemyInformation" class="collapse in">
-<div><h3 class="alt">Origin</h3>
-<div><i>Mega Man</i></div>  </div><div><h3 class="alt">HP</h3>
-<div>1</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>0</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objKillerBulletSpawner</h1>
-objects <b>/</b> Enemies <b>/</b> MM1 <b>/</b> Spawners + Controllers <b>/</b> objKillerBulletSpawner<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objKillerBulletSpawner.html">objKillerBulletSpawner</a>
+<h2>MolmoleSpawner</h2><img class = "centre" src="../assets/images/objects/sprMolmole.png" alt="sprMolmole">
+</div><div class="col-sm-9 col-sm-pull-3"><h1>objMolmoleSpawner</h1>
+objMolmoleSpawner<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objMolmoleSpawner.html">objMolmoleSpawner</a>
 <h2> Description </h2>
 <p><p>Creation code (all optional):</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>dir</td><td>-1</td><td></td></tr>
-<tr><td>i</td><td>noone</td><td></td></tr>
-<tr><td>timer</td><td>0</td><td></td></tr>
-<tr><td>delay</td><td>64</td><td></td></tr>
-<tr><td>obj</td><td>objKillerBullet</td><td></td></tr>
-<tr><td>col</td><td>0</td><td><p>0 = red; 1 = blue; 2 = orange</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>shoottimer</td><td>0</td><td><p>Enemy specific code</p></td></tr>
+<tr><td>molelimit</td><td>8</td><td></td></tr>
+<tr><td>yscale</td><td>1</td><td></td></tr>
+<tr><td>preyy</td><td>0</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -34,8 +27,7 @@ objects <b>/</b> Enemies <b>/</b> MM1 <b>/</b> Spawners + Controllers <b>/</b> o
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
 <tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td><span class="cc">canHit</span></td><td>0 <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for objKillerBulletSpawner:</p><p>
-<p>Enemy specific code</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
@@ -94,10 +86,5 @@ objects <b>/</b> Enemies <b>/</b> MM1 <b>/</b> Spawners + Controllers <b>/</b> o
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objKillerBulletSpawner </h2><ul>
-<li><a href="objPipiSpawner.html">objPipiSpawner</li>
-<li><a href="objSwalloweggSpawner.html">objSwalloweggSpawner</li>
-<li><a href="objFlyingShellSpawner.html">objFlyingShellSpawner</li>
-<li><a href="objPengSpawner.html">objPengSpawner</li>
-</ul></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>
