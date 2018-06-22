@@ -1,4 +1,4 @@
-<html><title>objTheKeeperHand</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objSHBoulderDownRight</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,42 +9,50 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9">
-<h2>TheKeeperHand</h2><img class = "centre" src="../assets/images/objects/sprTheKeeperHand.png" alt="sprTheKeeperHand">
+<h2>SHBoulderDownRight</h2><img class = "centre" src="../assets/images/objects/sprSHBoulderDownRight.png" alt="sprSHBoulderDownRight">
 <button data-toggle="collapse" data-target="#MinibossInformation"><h2>Miniboss Information</h2></button>
 <div id="MinibossInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
-<div><i>Mega Man 10</i></div>  </div><div><h3 class="alt">HP</h3>
+<div><i>Mega Man 9</i></div>  </div><div><h3 class="alt">HP</h3>
 <div>1</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>0</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objTheKeeperHand</h1>
-objects <b>/</b> Minibosses <b>/</b> MM10 <b>/</b> Don't Use <b>/</b> objTheKeeperHand<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtEnemyProjectile.html">prtEnemyProjectile</a> <b>&gt;</b> <a href="objTheKeeperHand.html">objTheKeeperHand</a>
+<div>0</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objSHBoulderDownRight</h1>
+objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> Setup <b>/</b> objSHBoulderDownRight<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objSHBoulder.html">objSHBoulder</a> <b>&gt;</b> <a href="objSHBoulderDownRight.html">objSHBoulderDownRight</a>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>animSpeed</td><td>0.065</td><td></td></tr>
-<tr><td>phase</td><td>0</td><td></td></tr>
-<tr><td>dir</td><td>1</td><td></td></tr>
-<tr><td>subPhase</td><td>0</td><td></td></tr>
-<tr><td>timer</td><td>0</td><td></td></tr>
-<tr><td>fallOnPlayer</td><td>true</td><td></td></tr>
-<tr><td>parent</td><td>noone</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
+<h2> Inherited from objSHBoulder </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>init</td><td>0</td><td></td></tr>
+<tr><td>isEnd</td><td>false</td><td></td></tr>
+<tr><td>isStart</td><td>false</td><td></td></tr>
+<tr><td>endRef</td><td>noone</td><td></td></tr>
+<tr><td>startRef</td><td>noone</td><td></td></tr>
+<tr><td>boulderCount</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">customSprite</span></td><td>noone</td><td><p> custom sprite</p></td></tr>
+<tr><td><span class="cc">particleSprite</span></td><td>sprStoneHeadParticle</td><td><p> particle used to mark stone head's position</p></td></tr>
+<tr><td><span class="cc">dir</span></td><td>1</td><td><p> this indicates if this boulder connects from left to right (1)or from right to left (-1)</p></td></tr>
+<tr><td><span class="cc">nextYdir</span></td><td>0</td><td><p> indicates exaclty where the other boulders are, use the templates instead of this object to not</p>
+
+<p>worry about this</p></td></tr>
+<tr><td>nextXdir</td><td>1</td><td></td></tr>
+<tr><td>prevXdir</td><td>0 <i>(*)</i></td><td></td></tr>
+<tr><td>prevYdir</td><td>1 <i>(*)</i></td><td></td></tr>
+<tr><td><span class="cc">customDrop</span></td><td>-1</td><td><p> object_index of the object to drop</p></td></tr>
+<tr><td><span class="cc">dropXspeed</span></td><td>0</td><td><p> initial xspeed of the dropped object</p></td></tr>
+<tr><td><span class="cc">dropYspeed</span></td><td>0</td><td><p> initial yspeed of the dropped object</p></td></tr>
+<tr><td><span class="cc">dropGrav</span></td><td>0.15</td><td><p> gravity of the dropped object</p></td></tr>
+<tr><td><span class="cc">dropBlockCollision</span></td><td>false</td><td><p> collision of the dropped object</p></td></tr>
+<tr><td><span class="cc">code</span></td><td>""</td><td><p> code to execute on the dropped object</p></td></tr>
+<tr><td><span class="cc">script</span></td><td>noone</td><td><p> script to execute on the dropped object</p></td></tr>
 </table>
-<h2> Inherited from prtEnemyProjectile </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>reflectable</td><td>0 <i>(*)</i></td><td><p>how the projectile interacts with shields.</p>
-
-<p>0: cannot be stopped.</p>
-
-<p>1: can be reflected.</p>
-
-<p>-1: instead of reflecting, is destroyed.</p></td></tr>
-</table>
-<p><i>* value is modified from the default for prtEnemyProjectile.<i></p><h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for objSHBoulder.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
-<tr><td>faction</td><td>7 <i>(*)</i></td><td><p>Used for entities colliding with each other</p></td></tr>
+<tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
 <tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
@@ -55,21 +63,20 @@ objects <b>/</b> Minibosses <b>/</b> MM10 <b>/</b> Don't Use <b>/</b> objTheKeep
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
 <tr><td>killOverride</td><td>true</td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
-<tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
-<p>So you can do stuff like xSpeedAim in Create</p></td></tr>
+<tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>64 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
-<tr><td>inWater</td><td>-1 <i>(*)</i></td><td></td></tr>
+<tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
@@ -80,7 +87,7 @@ objects <b>/</b> Minibosses <b>/</b> MM10 <b>/</b> Don't Use <b>/</b> objTheKeep
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
-<tr><td>issolid</td><td>1 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
+<tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
 <p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
 <tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of faction that it is friendly towards.</p>

@@ -20,11 +20,16 @@ objects <b>/</b> Enemies <b>/</b> MM4 <b>/</b> objBiree<br/><a href="prtEntity.h
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imgSpd</td><td>-1</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imgSpd</td><td>0.25</td><td></td></tr>
 <tr><td>calibrated</td><td>0</td><td></td></tr>
-<tr><td>horver</td><td>choose('v', 'h')</td><td></td></tr>
 <tr><td>dir</td><td>choose(1, -1)</td><td></td></tr>
+<tr><td>_dir</td><td>dir</td><td></td></tr>
 <tr><td>sp</td><td>1</td><td></td></tr>
+<tr><td>db</td><td>0</td><td></td></tr>
+<tr><td>_velX</td><td>0</td><td><p>Variables for snapToGround</p></td></tr>
+<tr><td>_velY</td><td>0</td><td></td></tr>
+<tr><td>_prevCollision</td><td>true</td><td></td></tr>
+<tr><td>_groundDir</td><td>-1</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -57,7 +62,7 @@ objects <b>/</b> Enemies <b>/</b> MM4 <b>/</b> objBiree<br/><a href="prtEntity.h
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>true <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>

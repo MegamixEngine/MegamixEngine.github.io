@@ -22,9 +22,15 @@ objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> Setup <b>/</b> objSHBoulder<br
 
 <p>if changed please also change its sprite_index.</p>
 
-<p>Note: These rocks are connected, by default they connect from left to right, but you can change</p>
+<p>Note: These rocks are connected, use the templates to not worry about creation code,</p>
 
-<p>this by setting dir and vertical in creation code</p></p>
+<p>follow the guides and the names, the directions in the name indicate first where the previous rock</p>
+
+<p>should be and at last where the next boulder should be, if any.</p>
+
+<p>To invert the direction in which the templates connect change its image_xscale or image_yscale in the editor</p>
+
+<p>Note: be careful not to make an infinite loop between the boulders, that would crash the game</p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>init</td><td>0</td><td></td></tr>
 <tr><td>isEnd</td><td>false</td><td></td></tr>
@@ -32,11 +38,15 @@ objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> Setup <b>/</b> objSHBoulder<br
 <tr><td>endRef</td><td>noone</td><td></td></tr>
 <tr><td>startRef</td><td>noone</td><td></td></tr>
 <tr><td>boulderCount</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">customSprite</span></td><td>noone</td><td><p> custom sprite</p></td></tr>
 <tr><td><span class="cc">particleSprite</span></td><td>sprStoneHeadParticle</td><td><p> particle used to mark stone head's position</p></td></tr>
-<tr><td><span class="cc">vertical</span></td><td>false</td><td><p> this indicates if this boulder connects to others vertically(true) or horizontally(false)</p></td></tr>
-<tr><td><span class="cc">dir</span></td><td>1</td><td><p> this indicates in which direction the next boulder dropper is</p>
+<tr><td><span class="cc">dir</span></td><td>1</td><td><p> this indicates if this boulder connects from left to right (1)or from right to left (-1)</p></td></tr>
+<tr><td><span class="cc">nextYdir</span></td><td>0</td><td><p> indicates exaclty where the other boulders are, use the templates instead of this object to not</p>
 
-<p>1: right/bottom, -1: left/up</p></td></tr>
+<p>worry about this</p></td></tr>
+<tr><td>nextXdir</td><td>1</td><td></td></tr>
+<tr><td>prevXdir</td><td>-1</td><td></td></tr>
+<tr><td>prevYdir</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">customDrop</span></td><td>-1</td><td><p> object_index of the object to drop</p></td></tr>
 <tr><td><span class="cc">dropXspeed</span></td><td>0</td><td><p> initial xspeed of the dropped object</p></td></tr>
 <tr><td><span class="cc">dropYspeed</span></td><td>0</td><td><p> initial yspeed of the dropped object</p></td></tr>
@@ -111,5 +121,12 @@ objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> Setup <b>/</b> objSHBoulder<br
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objSHBoulder </h2><ul>
+<li><a href="objSHBouldertUpRight.html">objSHBouldertUpRight</li>
+<li><a href="objSHBoulderUpDown.html">objSHBoulderUpDown</li>
+<li><a href="objSHBoulderDownRight.html">objSHBoulderDownRight</li>
+<li><a href="objSHBoulderLeftDown.html">objSHBoulderLeftDown</li>
+<li><a href="objSHBoulderLeftRight.html">objSHBoulderLeftRight</li>
+<li><a href="objSHBoulderLeftUp.html">objSHBoulderLeftUp</li>
+</ul></div></div>
 </body></div></html>
