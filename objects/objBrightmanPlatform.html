@@ -28,19 +28,19 @@ objects <b>/</b> Gimmicks <b>/</b> MM4 <b>/</b> objBrightmanPlatform<br/><a href
 
 <p></p>
 
-<p>Wait = ;</p>
+<p>wait = ;</p>
 
-<p>Direction = ; (1 = start on left, -1 start on right)</p></p>
+<p>direction = ; (1 = start on left, -1 start on right)</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>Offset</td><td>0</td><td></td></tr>
-<tr><td><span class="cc">Wait</span></td><td>5</td><td><p></p></td></tr>
-<tr><td><span class="cc">Distance</span></td><td>16 * 3</td><td><p></p></td></tr>
-<tr><td><span class="cc">Direction</span></td><td>1</td><td><p></p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>offset</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">wait</span></td><td>5</td><td><p></p></td></tr>
+<tr><td><span class="cc">distance</span></td><td>16 * 3</td><td><p></p></td></tr>
+<tr><td><span class="cc">direction</span></td><td>1</td><td><p></p></td></tr>
 <tr><td><span class="cc">init</span></td><td>1</td><td><p></p></td></tr>
-<tr><td>Phase</td><td>0</td><td></td></tr>
-<tr><td>WaitMemory</td><td>Wait</td><td></td></tr>
-<tr><td>StartDistance</td><td>Distance</td><td></td></tr>
-<tr><td>StartDirection</td><td>Direction</td><td></td></tr>
+<tr><td>phase</td><td>0</td><td></td></tr>
+<tr><td>waitMemory</td><td>wait</td><td></td></tr>
+<tr><td>startDistance</td><td>distance</td><td></td></tr>
+<tr><td>startDirection</td><td>direction</td><td></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -64,8 +64,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM4 <b>/</b> objBrightmanPlatform<br/><a href
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>

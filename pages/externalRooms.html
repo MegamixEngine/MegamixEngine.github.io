@@ -1,0 +1,74 @@
+<html><title>~</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>External Room Loading</h1>
+<h2>Overview</h2>
+<p>A huge issue encountered during the development of MaGMML2 was the problem that the GMS 1.4 IDE takes a very long time
+to load and save a project with rooms containing many objects and tiles. This is because the IDE validates each object and
+tile in the room every time the project is loaded and saved. Notably, the number and dimensions of the rooms don't contribute
+significantly to the loading times -- only the number of objects and tiles in the room.</p>
+<p>To try to reduce loading and saving times, a system was devised wherin the room file can be stored in the <em>external data</em> asset
+folder rather than the <em>Rooms</em> asset folder. The rooms are then loaded from the game during runtime, rather than during compile
+time or during IDE load/save time.</p>
+<h2>Disadvantages</h2>
+<p>There are four main drawbacks to using external room loading.</p>
+<p>The first is that the room cannot be edited within the Game Maker IDE unless
+it is returned to the Rooms asset folder, which is inconvenient because it takes a minute or two to do so.</p>
+<p>The next main drawback
+is that the room must be loaded during runtime, which can briefly cause the game to lag if a very large room is loaded. The 
+developer may choose to load the room at any point prior to the player entering the room, including the frame before or during
+the game's startup.</p>
+<p>The third problem is that creation code in the room will now be executed using <code>string_execute_partial</code>, which has its own complications, and
+is missing some functionality. Read the documentation for <code>string_execute_partial</code> to find out more.</p>
+<p>Finally, there is a potential security risk where hackers can replace the room file with their own malicious one. See the
+"Security Risks" section below for a way to prevent this.</p>
+<h2>How to make a room externally loaded</h2>
+<p>From the resources menu bar, or by right clicking in the external data part of the resource tree, add a new external data file.
+In the file select dialogue, navigate to the <code>rooms/</code> folder for your project on your hard-drive. Select the <code>.room.gmx</code> file
+corresponding to the room you wish to make externally loaded. Then place the <code>.room.gmx</code> file anywhere you wish in the external
+data files asset tree. Finally, delete this room in the the Rooms asset folder so that it does not appear in two places.</p>
+<p>To access the external room in the game, use the script <code>room_external_load(filename)</code>, which takes as input the path to the room
+file to load externally relative to the external data files asset folder.
+You should drop the <code>.room.gmx</code> extension from the filename. For example, if you placed <code>lvlMyLevel.room.gmx</code> in <code>Levels/</code>
+sub-folder of the external data files asset folder, then you should do <code>room_external_load("Levels/lvlMyLevel")</code>. This
+function returns the ID for the loaded room, which can then be used anywhere you'd normally put the room's ID directly in code.</p>
+<p>For example, where in a teleporter you might have previously done this:</p>
+<pre><code>// Teleporter Creation Code -- Internally-loaded room
+Room = lvlMyLevel;
+</code></pre>
+
+<p>You should now do this:</p>
+<pre><code>// Teleporter Creation Code -- Externally-loaded room
+Room = room_external_load(&quot;Levels/lvlMyLevel&quot;);
+</code></pre>
+
+<p>Note that the room is cached for subsequent loads, so it will only load the room the first time
+the <code>room_external_load</code> script is called. If you desire to re-load the room (for example, if you intend
+to edit the room file during runtime), then use <code>room_external_clear</code> to clear the cache.</p>
+<h2>How to restore an Externally-Loaded room to be Interally-Loaded</h2>
+<p>Open the <code>datafiles/</code> folder of your project on your hard drive and locate the <code>.room.gmx</code> file, then drag it
+into game maker. This will prompt you to import the room. After it is imported, delete the version that's in 
+the external data files asset folder. Be sure to delete the external data file from within the Game Maker IDE,
+not through your normal file browser.</p>
+<p>Don't forget to replace instances of <code>room_external_load("Levels/lvlMyLevel")</code> with <code>lvlMyLevel</code>, etc.</p>
+<h2>Security risks</h2>
+<p>It's fairly simple for a hacker to edit the game's external data files and replace <code>lvlMyLevel</code> with their
+own malicious level. This is especially problematic due to the use of <code>string_execute_partial</code> to run creation
+code in the room. Fortunately, there is a security feature in place to obstruct this, if you desire, called <em>hashing</em>.</p>
+<p>Any text data has a corresponding pmd5 hash](http://www.miraclesalad.com/webtools/md5.php), including the <code>.room.gmx</code> file. When
+a room is loaded externally, the hash of the file is printed out to the console in GMS. Copy this value and add it as a second
+argument to the <code>room_load_external()</code> script. Now a hacker cannot edit the <code>.room.gmx</code> file without also inadvertently editing
+its md5 hash. The game will throw an error if it tries to load an external room and the hash is incorrect.</p>
+<p>For example, here is a secure way to have a teleporter pointed at an externally load a room.</p>
+<pre><code>// Teleporter Creation Code -- Externally-loaded room, secure version
+Room = room_external_load(&quot;Levels/lvlMyLevel&quot;, &quot;43ec517d68b6edd3015b3edc9a11367b&quot;);
+</code></pre>
+
+<p>Note that the hash check is only checked the first time the script is called. After that, the externally-loaded room is cached.</p>
+</body></div></html>

@@ -25,18 +25,18 @@ objects <b>/</b> Minibosses <b>/</b> MM6 <b>/</b> objMetallPotton<br/><a href="p
 <p>change its sprite with one that matches the new objects</p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>dir</td><td>image_xscale</td><td><p>Enemy specific code</p></td></tr>
-<tr><td><span class="cc">Met1</span></td><td>objMetallRunAndGun</td><td><p> object_index to use as first option</p></td></tr>
-<tr><td><span class="cc">Met2</span></td><td>objMetallJump</td><td><p> //@cc object_index to use as second option</p></td></tr>
+<tr><td><span class="cc">met1</span></td><td>objMetallRunAndGun</td><td><p> object_index to use as first option</p></td></tr>
+<tr><td><span class="cc">met2</span></td><td>objMetallJump</td><td><p> //@cc object_index to use as second option</p></td></tr>
 <tr><td>shootTimer</td><td>0</td><td></td></tr>
-<tr><td>Met</td><td>noone</td><td></td></tr>
+<tr><td>met</td><td>noone</td><td></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>
 <tr><td>killed</td><td>false</td><td></td></tr>
-<tr><td>IntroSprite</td><td>sprHotDogTeleport</td><td></td></tr>
-<tr><td>IntroTimer</td><td>288 + 15</td><td><p>288 is the height above, 15 is the extra frames for teleporting in.</p></td></tr>
+<tr><td>introSprite</td><td>sprHotDogTeleport</td><td></td></tr>
+<tr><td>introTimer</td><td>288 + 15</td><td><p>288 is the height above, 15 is the extra frames for teleporting in.</p></td></tr>
 <tr><td>_init</td><td>1</td><td></td></tr>
 <tr><td>xplX</td><td>-100</td><td></td></tr>
 <tr><td>xplY</td><td>-100</td><td></td></tr>
@@ -63,8 +63,8 @@ objects <b>/</b> Minibosses <b>/</b> MM6 <b>/</b> objMetallPotton<br/><a href="p
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>

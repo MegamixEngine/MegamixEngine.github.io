@@ -18,11 +18,11 @@ objects <b>/</b> Gimmicks <b>/</b> MM5 <b>/</b> objFallingPlatform<br/><a href="
 <h2> Description </h2>
 <p><p>Note: if the block leftmost block has a different sprite_index, then all the falling blocks next to it will have the same sprite.</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>Wait</td><td>30</td><td></td></tr>
-<tr><td>StartWait</td><td>Wait</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>wait</td><td>30</td><td></td></tr>
+<tr><td>startWait</td><td>wait</td><td></td></tr>
 <tr><td>active</td><td>false</td><td></td></tr>
-<tr><td>Count</td><td>1</td><td></td></tr>
-<tr><td>i</td><td>instance_place(x + 16 * Count, y, objFallingPlatform)</td><td></td></tr>
+<tr><td>count</td><td>1</td><td></td></tr>
+<tr><td>i</td><td>instance_place(x + 16 * count, y, objFallingPlatform)</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -46,8 +46,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM5 <b>/</b> objFallingPlatform<br/><a href="
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>1 <i>(*)</i></td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>

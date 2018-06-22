@@ -18,8 +18,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objGeminiEgg<br/><a href="prtEnt
 <h2> Description </h2>
 <p><p>Spawns [objTadpole](objTadpole.html) when is shot</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>Spawned</td><td>false</td><td></td></tr>
-</table>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from objDustmanBlock </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from prtEntity </h2>
@@ -44,8 +43,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objGeminiEgg<br/><a href="prtEnt
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>1 <i>(*)</i></td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> Distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>-1 <i>(*)</i></td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
@@ -70,7 +69,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objGeminiEgg<br/><a href="prtEnt
 <tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of faction that it is friendly towards.</p>
 
 <p>set it to 2 for the opposite</p></td></tr>
-<tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
+<tr><td>spawned</td><td>false <i>(*)</i></td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
 <tr><td>deadTimer</td><td>0</td><td></td></tr>
 <tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
 <tr><td><span class="cc">behaviourType</span></td><td>0</td><td><p> The strategy the enemy should use to pick which player to target</p>
