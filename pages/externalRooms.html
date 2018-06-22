@@ -61,11 +61,11 @@ not through your normal file browser.</p>
 <p>It's fairly simple for a hacker to edit the game's external data files and replace <code>lvlMyLevel</code> with their
 own malicious level. This is especially problematic due to the use of <code>string_execute_partial</code> to run creation
 code in the room. Fortunately, there is a security feature in place to obstruct this, if you desire, called <em>hashing</em>.</p>
-<p>Any text data has a corresponding pmd5 hash](http://www.miraclesalad.com/webtools/md5.php), including the <code>.room.gmx</code> file. When
+<p>Any text data has a corresponding <a href="http://www.miraclesalad.com/webtools/md5.php">md5 hash</a>, including the <code>.room.gmx</code> file. When
 a room is loaded externally, the hash of the file is printed out to the console in GMS. Copy this value and add it as a second
 argument to the <code>room_load_external()</code> script. Now a hacker cannot edit the <code>.room.gmx</code> file without also inadvertently editing
 its md5 hash. The game will throw an error if it tries to load an external room and the hash is incorrect.</p>
-<p>For example, here is a secure way to have a teleporter pointed at an externally load a room.</p>
+<p>For example, here is a secure way to have a teleporter pointed at an externally-loaded room.</p>
 <pre><code>// Teleporter Creation Code -- Externally-loaded room, secure version
 Room = room_external_load(&quot;Levels/lvlMyLevel&quot;, &quot;43ec517d68b6edd3015b3edc9a11367b&quot;);
 </code></pre>
