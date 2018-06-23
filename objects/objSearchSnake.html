@@ -15,12 +15,15 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> Weapons <b>/</b> MaG48HMML <
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>firstFrame</td><td>true</td><td></td></tr>
-<tr><td>attached</td><td>false</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>calibrated</td><td>false</td><td></td></tr>
+<tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>animTimer</td><td>0</td><td></td></tr>
-<tr><td>mainSpeed</td><td>3</td><td></td></tr>
-<tr><td>dir</td><td>0</td><td></td></tr>
-<tr><td>freeMovement</td><td>0</td><td></td></tr>
+<tr><td>spd</td><td>3</td><td></td></tr>
+<tr><td>_groundDir</td><td>-1</td><td><p>Variables for snapToGround()</p></td></tr>
+<tr><td>_dir</td><td>1</td><td></td></tr>
+<tr><td>_velX</td><td>0</td><td></td></tr>
+<tr><td>_velY</td><td>0</td><td></td></tr>
+<tr><td>_prevCollision</td><td>0</td><td></td></tr>
 </table>
 <h2> Inherited from prtPlayerProjectile </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>bulletLimitCost</td><td>1</td><td><p>how much this contributes to the bullet limit. >1 used for charge shot</p></td></tr>
@@ -57,7 +60,7 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> Weapons <b>/</b> MaG48HMML <
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
-<tr><td>grav</td><td>0.3 <i>(*)</i></td><td></td></tr>
+<tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
 <tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>0 <i>(*)</i></td><td></td></tr>
