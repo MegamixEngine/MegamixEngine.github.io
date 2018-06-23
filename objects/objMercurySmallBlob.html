@@ -15,19 +15,24 @@
 <div><h3 class="alt">Origin</h3>
 <div>Gameboy games</div>  </div><div><h3 class="alt">HP</h3>
 <div>1</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>2</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objMercurySmallBlob</h1>
+<div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objMercurySmallBlob</h1>
 objects <b>/</b> Bosses <b>/</b> GB <b>/</b> MMV <b>/</b> Projectiles <b>/</b> objMercurySmallBlob<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objMercurySmallBlob.html">objMercurySmallBlob</a>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>blobMove</td><td>noone</td><td><p>Movement set in Mercury's Step</p></td></tr>
+<tr><td>attackTimer</td><td>0</td><td></td></tr>
+<tr><td>phase</td><td>0</td><td></td></tr>
+<tr><td>big</td><td>false</td><td><p>For use when Mercury is using his bouncing pattern</p></td></tr>
+<tr><td>blobID</td><td>0</td><td><p>Used to establish "dominant" blob when bouncing</p></td></tr>
+</table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td><span class="cc">contactDamage</span></td><td>2 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>4 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
 <tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
