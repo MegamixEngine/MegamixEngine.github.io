@@ -20,13 +20,14 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objTileScrollSolid<br/><a href="
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from objTileScrollBG </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td></td></tr>
-<tr><td>xshift</td><td>image_xscale</td><td></td></tr>
-<tr><td>tile</td><td>30</td><td></td></tr>
-<tr><td>init</td><td>1</td><td></td></tr>
-<tr><td>_sl</td><td>x</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>stepInit</td><td>1</td><td></td></tr>
+<tr><td>drawInit</td><td>1</td><td></td></tr>
+<tr><td>_sl</td><td>x</td><td><p>section boundaries</p></td></tr>
 <tr><td>sr</td><td>x</td><td></td></tr>
 <tr><td>tileID</td><td>0</td><td></td></tr>
+<tr><td>xshift</td><td>0</td><td></td></tr>
+<tr><td>tile</td><td>30</td><td><p>customizeable variables</p></td></tr>
+<tr><td>spd</td><td>1</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -48,7 +49,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objTileScrollSolid<br/><a href="
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
 <tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
-<tr><td>shiftvisible</td><td>1 <i>(*)</i></td><td></td></tr>
+<tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
