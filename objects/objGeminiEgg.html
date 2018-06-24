@@ -18,7 +18,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objGeminiEgg<br/><a href="prtEnt
 <h2> Description </h2>
 <p><p>Spawns [objTadpole](objTadpole.html) when is shot</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>isSpawned</td><td>false</td><td></td></tr>
+</table>
 <h2> Inherited from objDustmanBlock </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from prtEntity </h2>
@@ -69,7 +70,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM3 <b>/</b> objGeminiEgg<br/><a href="prtEnt
 <tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of faction that it is friendly towards.</p>
 
 <p>set it to 2 for the opposite</p></td></tr>
-<tr><td>spawned</td><td>false <i>(*)</i></td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
+<tr><td>spawned</td><td>-1</td><td><p>parameter for spawn event; -1 indicates never spawned</p></td></tr>
 <tr><td>deadTimer</td><td>0</td><td></td></tr>
 <tr><td>target</td><td>noone</td><td><p>the enemy object this entity currently sees as its primary target. Useful for programming any kind of enemy AI which responds to the player.</p></td></tr>
 <tr><td><span class="cc">behaviourType</span></td><td>0</td><td><p> The strategy the enemy should use to pick which player to target</p>
