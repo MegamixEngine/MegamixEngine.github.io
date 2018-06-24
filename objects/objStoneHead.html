@@ -9,7 +9,7 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9">
-<h2>StoneHead</h2><img class = "centre" src="../assets/images/objects/sprStoneheadPreview.png" alt="sprStoneheadPreview">
+<h2>StoneHead</h2><img class = "centre" src="../assets/images/objects/sprStoneHead.png" alt="sprStoneHead">
 <button data-toggle="collapse" data-target="#MinibossInformation"><h2>Miniboss Information</h2></button>
 <div id="MinibossInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
@@ -18,42 +18,31 @@
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objStoneHead</h1>
 objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> objStoneHead<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objStoneHead.html">objStoneHead</a>
 <h2> Description </h2>
-<p><p>A big rolling boulder, it must be placed over [objSHBoulder](objSHBoulder.html), he will begin his pattern shaking the rocks,</p>
-
-<p>causing them to fall randomly(the first rock always falls over megaman).</p>
-
-<p>Whe it's rolling it will track solids</p>
-
-<p>Note: see objSHBoulder for more info</p></p>
+<p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">SPEED</span></td><td>3.7</td><td><p> Rolling speed, if too fast he might miss the ground and just keep his momentum</p></td></tr>
-<tr><td>_groundDir</td><td>270</td><td><p>Ground direction</p></td></tr>
-<tr><td><span class="cc">dropInterval</span></td><td>16</td><td><p> Interval between drops</p></td></tr>
-<tr><td>prevDrop</td><td>-1</td><td><p>Don't change any of these</p></td></tr>
-<tr><td>repeatedCounter</td><td>0</td><td></td></tr>
-<tr><td>_velX</td><td>0</td><td></td></tr>
-<tr><td>_velY</td><td>0</td><td></td></tr>
-<tr><td>_prevCollision</td><td>true</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>IntroSprite</td><td>sprStoneHead</td><td><p>Creation code (all optional):</p></td></tr>
+<tr><td>lockTransitions</td><td>true</td><td></td></tr>
+<tr><td>SPEED</td><td>3.5</td><td><p>Enemy specific code</p></td></tr>
+<tr><td>velx</td><td>0</td><td></td></tr>
+<tr><td>vely</td><td>0</td><td></td></tr>
 <tr><td>dropCount</td><td>0</td><td></td></tr>
 <tr><td>dropMax</td><td>11</td><td></td></tr>
-<tr><td>_dir</td><td>image_xscale</td><td></td></tr>
+<tr><td>rollDir</td><td>image_xscale</td><td></td></tr>
 <tr><td>init</td><td>1</td><td></td></tr>
 <tr><td>cooldownTimer</td><td>0</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
-<tr><td>messedUp</td><td>false</td><td></td></tr>
 <tr><td>nextPosOffset</td><td>0</td><td></td></tr>
 <tr><td>currentBoulder</td><td>noone</td><td></td></tr>
 <tr><td>moveCount</td><td>0</td><td></td></tr>
 <tr><td>boulderStart</td><td>noone</td><td></td></tr>
 <tr><td>boulderEnd</td><td>noone</td><td></td></tr>
 </table>
-<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
+<h2> Inherited from prtMiniBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>killed</td><td>false</td><td></td></tr>
-<tr><td>introSprite</td><td>sprStoneHead <i>(*)</i></td><td></p><p>Notes for objStoneHead:</p><p>
-<p>Creation code (all optional):</p></td></tr>
+<tr><td>introSprite</td><td>sprHotDogTeleport</td><td></td></tr>
 <tr><td>introTimer</td><td>288 + 15</td><td><p>288 is the height above, 15 is the extra frames for teleporting in.</p></td></tr>
 <tr><td>_init</td><td>1</td><td></td></tr>
 <tr><td>xplX</td><td>-100</td><td></td></tr>
