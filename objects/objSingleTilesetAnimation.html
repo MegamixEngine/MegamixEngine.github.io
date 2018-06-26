@@ -1,0 +1,46 @@
+<html><title>objSingleTilesetAnimation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>objSingleTilesetAnimation</h1>
+objects <b>/</b> Level Objects <b>/</b> Aesthetic <b>/</b> objSingleTilesetAnimation<br/><a href="prtAlwaysActive.html">prtAlwaysActive</a> <b>&gt;</b> <a href="objSingleTilesetAnimation.html">objSingleTilesetAnimation</a>
+<h2> Description </h2>
+<p><p>An alternative to the original tile animator that animates tiles with only one background</p>
+
+<p>and you can do more than one animation with one object, its recomended to keep the animated tiles in their</p>
+
+<p>own layer for better load times(might slow with a lot of tiles + an object setter, but faster than the original tileAnimation).</p>
+
+<p></p>
+
+<p>How to use</p>
+
+<p>Set up the variables bellow, you need to provide the top left coordinate in the background</p>
+
+<p>from the region the animation starts, as well as the size of the animated region.</p>
+
+<p></p>
+
+<p>Note: This only uses one background per animation, for switching bagrounds use the original objTileAnimation.</p>
+
+<p>Note2: the tileIDs can't be shared between animations using the same background</p>
+
+<p></p>
+
+<p>The following arrays must have the same size and be set in creation code</p></p>
+<h2> Variables </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">animLayer</span></td><td>1000000</td><td><p> sets the layer of the animations, this object will only replace the tiles in this layer</p></td></tr>
+<tr><td><span class="cc">animateOnTransition</span></td><td>true</td><td><p></p></td></tr>
+<tr><td><span class="cc">stopOnFlash</span></td><td>false</td><td><p></p></td></tr>
+<tr><td>init</td><td>0</td><td><p>Internal use only</p></td></tr>
+</table>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtAlwaysActive </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
+</table>
+
+</body></div></html>
