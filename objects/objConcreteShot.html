@@ -1,4 +1,4 @@
-<html><title>prtPlayerProjectile</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objConcreteShot</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,11 +9,19 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9">
-<h2>PlayerProjectile</h2><i>This object has no sprite.</i></div><div class="col-sm-9 col-sm-pull-3"><h1>prtPlayerProjectile</h1>
-objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtPlayerProjectile<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtPlayerProjectile.html">prtPlayerProjectile</a>
+<h2>ConcreteShot</h2><img class = "centre" src="../assets/images/objects/sprConcreteShot.png" alt="sprConcreteShot">
+</div><div class="col-sm-9 col-sm-pull-3"><h1>objConcreteShot</h1>
+objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> Weapons <b>/</b> MaG48HMML <b>/</b> objConcreteShot<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtPlayerProjectile.html">prtPlayerProjectile</a> <b>&gt;</b> <a href="objConcreteShot.html">objConcreteShot</a>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>phase</td><td>0</td><td></td></tr>
+<tr><td>isBlock</td><td>false</td><td><p>Object specific</p></td></tr>
+<tr><td>destroyTimer</td><td>0</td><td></td></tr>
+<tr><td>animTimer</td><td>0</td><td></td></tr>
+<tr><td>nextgrav</td><td>0</td><td></td></tr>
+</table>
+<h2> Inherited from prtPlayerProjectile </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>bulletLimitCost</td><td>1</td><td><p>how much this contributes to the bullet limit. >1 used for charge shot</p></td></tr>
 <tr><td>player_id</td><td>0</td><td></td></tr>
 <tr><td>costumeID</td><td>0</td><td></td></tr>
@@ -25,10 +33,10 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtPlayerProj
 <tr><td>faction</td><td>2 <i>(*)</i></td><td><p>Used for entities colliding with each other</p></td></tr>
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td><span class="cc">contactDamage</span></td><td>1 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>3 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
 <tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
-<tr><td>pierces</td><td>0 <i>(*)</i></td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
+<tr><td>pierces</td><td>1 <i>(*)</i></td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
 <tr><td>category</td><td>""</td><td></td></tr>
@@ -48,9 +56,9 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtPlayerProj
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
-<tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
+<tr><td>grav</td><td>0.25</td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
@@ -85,60 +93,5 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtPlayerProj
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of prtPlayerProjectile </h2><ul>
-<li><a href="objBrickWeapon.html">objBrickWeapon</li>
-<li><a href="objSearchSnake.html">objSearchSnake</li>
-<li><a href="objRainFlush.html">objRainFlush</li>
-<li><a href="objChillShot.html">objChillShot</li>
-<li><a href="objMetalBlade.html">objMetalBlade</li>
-<li><a href="objWeaponExplosion.html">objWeaponExplosion</li>
-<li><a href="objMagneticShockwave.html">objMagneticShockwave</li>
-<li><a href="objTopSpin.html">objTopSpin</li>
-<li><a href="objBlackHoleBomb.html">objBlackHoleBomb</li>
-<li><a href="objGeminiLaser.html">objGeminiLaser</li>
-<li><a href="objWireAdapter.html">objWireAdapter</li>
-<li><a href="objLaserTrident.html">objLaserTrident</li>
-<li><a href="objBusterShot.html">objBusterShot</li>
-<li><a href="objChillSpikeLanded.html">objChillSpikeLanded</li>
-<li><a href="objBusterShotCharged.html">objBusterShotCharged</li>
-<li><a href="objSlashClaw.html">objSlashClaw</li>
-<ul>
-<li><a href="objTenguBlade.html">objTenguBlade</li>
-</ul><li><a href="objMagicCard.html">objMagicCard</li>
-<li><a href="objThunderWool.html">objThunderWool</li>
-<li><a href="objIceWall.html">objIceWall</li>
-<li><a href="objBombPottonExplosion.html">objBombPottonExplosion</li>
-<li><a href="objGrabBuster.html">objGrabBuster</li>
-<li><a href="objFlashStopper.html">objFlashStopper</li>
-<li><a href="objSkeletuppinPakkajoe.html">objSkeletuppinPakkajoe</li>
-<li><a href="objWaterShield.html">objWaterShield</li>
-<li><a href="objRushCycle.html">objRushCycle</li>
-<li><a href="objGloopBreaker.html">objGloopBreaker</li>
-<li><a href="objSparkShock.html">objSparkShock</li>
-<li><a href="objRushTeleport.html">objRushTeleport</li>
-<li><a href="objTornadoBlow.html">objTornadoBlow</li>
-<li><a href="objTenguDash.html">objTenguDash</li>
-<li><a href="objSakugarne.html">objSakugarne</li>
-<li><a href="objBreakDash.html">objBreakDash</li>
-<li><a href="objConcreteShot.html">objConcreteShot</li>
-<li><a href="objMagnetBeam.html">objMagnetBeam</li>
-<li><a href="objRushJet.html">objRushJet</li>
-<li><a href="objWheelCutter.html">objWheelCutter</li>
-<li><a href="objTimeStopper.html">objTimeStopper</li>
-<li><a href="objBusterShotHalfCharged.html">objBusterShotHalfCharged</li>
-<li><a href="objJewelSatellite.html">objJewelSatellite</li>
-<li><a href="objGrabBusterPickup.html">objGrabBusterPickup</li>
-<li><a href="objTenguDisk.html">objTenguDisk</li>
-<li><a href="objPharaohShot.html">objPharaohShot</li>
-<li><a href="objSparkChaser.html">objSparkChaser</li>
-<li><a href="objThunderBeam.html">objThunderBeam</li>
-<li><a href="objSuperArrow.html">objSuperArrow</li>
-<li><a href="objFlameMixer.html">objFlameMixer</li>
-<li><a href="objRushCoil.html">objRushCoil</li>
-<li><a href="objHornetChaser.html">objHornetChaser</li>
-<li><a href="objIceSlasher.html">objIceSlasher</li>
-<li><a href="objSaltWater.html">objSaltWater</li>
-<li><a href="objSolarBlaze.html">objSolarBlaze</li>
-<li><a href="objTripleBlade.html">objTripleBlade</li>
-</ul></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>
