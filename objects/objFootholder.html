@@ -18,13 +18,22 @@ objects <b>/</b> Gimmicks <b>/</b> MM1 <b>/</b> objFootholder<br/><a href="prtEn
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>xDir</td><td>-1</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>myFlag</td><td>0</td><td></td></tr>
+<tr><td>xDir</td><td>-1</td><td></td></tr>
 <tr><td>xs</td><td>0.75</td><td></td></tr>
 <tr><td>yDir</td><td>-1</td><td></td></tr>
 <tr><td>ys</td><td>0.1</td><td></td></tr>
 <tr><td>init</td><td>1</td><td></td></tr>
+<tr><td>startMode</td><td>0</td><td></td></tr>
 <tr><td>alarmTurn</td><td>0</td><td></td></tr>
+<tr><td>moveTarget</td><td>noone</td><td></td></tr>
+<tr><td>prevMoveTarget</td><td>noone</td><td></td></tr>
 <tr><td><span class="cc">variation</span></td><td>1</td><td><p> 1: normal, 2: shoots bullets from the sides</p></td></tr>
+<tr><td><span class="cc">mode</span></td><td>0</td><td><p> 0: random stuff, 1: guided movement, it will pick the closest objFootholderguide</p>
+
+<p>with its myFlag and will move towards it</p></td></tr>
+<tr><td><span class="cc">mySpeed</span></td><td>1</td><td><p> speed for mode 1</p></td></tr>
+<tr><td><span class="cc">targetMode</span></td><td>0</td><td><p> target behavior for mode 1. 0:random if repeated, 1: always pick nearest target</p></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
