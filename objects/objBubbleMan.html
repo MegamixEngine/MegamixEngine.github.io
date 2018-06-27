@@ -24,7 +24,13 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objBubbleMan<br/><a href="prtEntit
 <tr><td>poseImgSpeed</td><td>0.1</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>attackTimer</td><td>0</td><td></td></tr>
-<tr><td>bubbles</td><td>0</td><td><p>Number of Bubble Lead shots to fire</p></td></tr>
+<tr><td>bubbles</td><td>0</td><td></td></tr>
+<tr><td>bubbleLimit</td><td>choose(0,1,2)</td><td><p>Number of Bubble Lead shots to fire</p></td></tr>
+<tr><td>targX</td><td>0</td><td></td></tr>
+<tr><td>imgIndex</td><td>0</td><td></td></tr>
+<tr><td>yCount</td><td>0</td><td><p>How far to swim up before shooting</p></td></tr>
+<tr><td>shooting</td><td>false</td><td></td></tr>
+<tr><td>animBack</td><td>false</td><td></td></tr>
 </table>
 <h2> Inherited from prtBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
@@ -142,7 +148,7 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objBubbleMan<br/><a href="prtEntit
 
 <p>4: pick once, never switch</p></td></tr>
 <tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
-<tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayer</span></td><td>true <i>(*)</i></td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
