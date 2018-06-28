@@ -1,4 +1,4 @@
-<html><title>prtBoss</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objFireMan</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,77 +9,36 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9">
-<h2>Boss</h2><i>This object has no sprite.</i></div><div class="col-sm-9 col-sm-pull-3"><h1>prtBoss</h1>
-objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtBoss.html">prtBoss</a>
+<h2>FireMan</h2><img class = "centre" src="../assets/images/objects/sprFireManIdle.png" alt="sprFireManIdle">
+<button data-toggle="collapse" data-target="#BossInformation"><h2>Boss Information</h2></button>
+<div id="BossInformation" class="collapse in">
+<div><h3 class="alt">Origin</h3>
+<div><i>Mega Man</i></div>  </div><div><h3 class="alt">HP</h3>
+<div>28</div>  </div><div><h3 class="alt">Contact Damage</h3>
+<div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objFireMan</h1>
+objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objFireMan<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtBoss.html">prtBoss</a> <b>&gt;</b> <a href="objFireMan.html">objFireMan</a>
 <h2> Description </h2>
-<p><p>The master control object for any boss.</p>
+<p><p>Creation code (all optional):</p>
 
-<p></p>
-
-<p>Creation code:</p>
-
-<p>healthpoints: The Boss health. Default is 28. This can be used for enemies, too, but I'm restating it here because why not.</p>
-
-<p>hitInvun: the length of the hit invulnerablilty of the boss, in frames. If this is 1 or lower, they don't have any.</p>
-
-<p></p>
-
-<p>music: just the file name of the music you're using for the boss. MUST BE A STRING</p>
-
-<p>musicType: Type of file to load. "OGG" loads OGGs, "VGM" loads NSFs/SPCs/VGMs/GBSs</p>
-
-<p>musicTrackNumber: If musicType is "VGM", it'll use this as the track for the NSF/SPC/VGM/GBS</p>
-
-<p>musicVolume: 0-1 (the volume of the music; optional)</p>
-
-<p>musicLoopSecondsStart: 0-song point in seconds (the starting loop point of the music in seconds; optional)</p>
-
-<p>musicLoopSecondsEnd: 0-song length in seconds (the ending of the loop of the music in seconds; if musicLoopSecondsStart is used, this one is required)</p>
-
-<p></p>
-
-<p>introType: Type of intro animation.</p>
-
-<p>// 0 = none (healthbar only fills up when you manually set that the intro is over),</p>
-
-<p>// 1 = drop in (default), 2 = pop in, 3 = dramatic MM6 animation, 4 = Tier Boss cutscene</p>
-
-<p>// More info for introType 4 can be found in event user 6.</p>
-
-<p>cutsceneScript: If set, introType 4 will call this code rather than event user 6.</p>
-
-<p>lockTransitions: Default true, if it's true, all boss gates and screen transitons lock when the boss is onscreen.</p>
-
-<p>useEndStageBehavior: Default true, if it's true, ALL music will stop and transitons stay locked on defeat. Otherwise, stage music and transitions resume.</p>
-
-<p>itemDrop: Can be used for enemies, but important here. The thing the boss drops, as an object. Default objEnergyElement.</p>
-
-<p>elementName: If itemDrop is objEnergyElement, this is the name of the EE they drop.</p>
-
-<p>elementScript: If itemDrop is objEnergyElement, this is the script of the EE they drop.</p>
-
-<p>elementCode: If itemDrop is objEnergyElement, this is the code string of the EE they drop.</p>
-
-<p>stopOnFlash: If set to true, the enemy will be affected by timestopping weapons. Default false.</p>
-
-<p>healthParent: Whatever object ID this is set to, that object will take damage instead of this object when it's hit. Object ID, NOT object NAME. Used for stuff like Weapons Archive.</p>
-
-<p></p>
-
-<p>healthBarPrimaryColor[1]: Primary color of the boss' first healthbar. THE [1] IS IMPORTANT. Use the number of the color you want that's on the NES palette reference.</p>
-
-<p>healthBarSecondaryColor[1]: Secondary color of the boss' first healthbar. THE [1] IS IMPORTANT. Use the number of the color you want that's on the NES palette reference.</p>
-
-<p>healthBarColorSkip: The number that the healthbar color increments by when a new healthbar is reached, referring to the color numbers in global.nesPalette. Only applies if using automatic coloring.</p>
-
-<p></p>
-
-<p>manualColors: If set to true, you can define the colors of each healthbar of the boss manually. Instead of</p>
-
-<p>it relying on the global.nesPalette array, you use make_color_rgb.</p>
-
-<p>// Example: healthBarPrimaryColor[2] = make_color_rgb(0,0,0). The second healthbar will use that color for primary. Etc.</p></p>
+<p>hasKnockback = true; -  use this if you want to enable cut man's knockback</p></p>
 <h2> Variables </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>pose</td><td>sprFireManIdle</td><td></td></tr>
+<tr><td>poseImgSpeed</td><td>6/60</td><td></td></tr>
+<tr><td>attackTimer</td><td>0</td><td></td></tr>
+<tr><td>jumpTimer</td><td>0</td><td></td></tr>
+<tr><td>jumpAmount</td><td>0</td><td></td></tr>
+<tr><td>canInitShoot</td><td>true</td><td></td></tr>
+<tr><td>phase</td><td>0</td><td><p>0 = nothing; 1 = running; 2 = shooting;</p></td></tr>
+<tr><td><span class="cc">spriteIdle</span></td><td>sprFireManIdle</td><td><p></p></td></tr>
+<tr><td><span class="cc">spriteRun</span></td><td>sprFireManRun</td><td><p></p></td></tr>
+<tr><td><span class="cc">spriteShoot</span></td><td>sprFireManShoot</td><td><p></p></td></tr>
+<tr><td>phaseTimer</td><td>15</td><td></td></tr>
+<tr><td>moveTimer</td><td>15</td><td></td></tr>
+<tr><td>hitWall</td><td>1</td><td></td></tr>
+<tr><td>hitWallSide</td><td>'none'</td><td></td></tr>
+<tr><td>firstShoot</td><td>1</td><td></td></tr>
+</table>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
 <tr><td>startIntro</td><td>false</td><td></td></tr>
 <tr><td>isIntro</td><td>false</td><td></td></tr>
@@ -117,7 +76,7 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 <tr><td>healthBarColorSkip</td><td>1</td><td></td></tr>
 <tr><td>manualColors</td><td>false</td><td></td></tr>
 <tr><td>healthBarHealth</td><td>0</td><td></td></tr>
-<tr><td>healthIndex</td><td>0</td><td></td></tr>
+<tr><td>healthIndex</td><td>1 <i>(*)</i></td><td></td></tr>
 <tr><td>healthParent</td><td>-1</td><td></td></tr>
 <tr><td>musicStore</td><td>""</td><td><p>Music storage for restarting it after death</p></td></tr>
 <tr><td>musicTypeStore</td><td>""</td><td></td></tr>
@@ -129,14 +88,14 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 <tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
 <tr><td>introLock</td><td>false</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>1 <i>(*)</i></td><td><p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
 <p>used for some prtEntity control stuff</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
-<tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
-<tr><td>healthpoints</td><td>28 <i>(*)</i></td><td></td></tr>
-<tr><td><span class="cc">contactDamage</span></td><td>0</td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>28 <i>(*)</i></td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>4 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
 <tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
@@ -160,7 +119,7 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0.25</td><td></td></tr>
-<tr><td>ground</td><td>true</td><td></td></tr>
+<tr><td>ground</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
@@ -194,65 +153,8 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 
 <p>4: pick once, never switch</p></td></tr>
 <tr><td><span class="cc">facePlayerOnSpawn</span></td><td>false</td><td><p></p></td></tr>
-<tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
+<tr><td><span class="cc">facePlayer</span></td><td>1 <i>(*)</i></td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of prtBoss </h2><ul>
-<li><a href="objFlashMan.html">objFlashMan</li>
-<li><a href="objBoobeamControl.html">objBoobeamControl</li>
-<li><a href="objGravityMan.html">objGravityMan</li>
-<li><a href="objIronBall.html">objIronBall</li>
-<li><a href="objEnker.html">objEnker</li>
-<li><a href="objPharaohMan.html">objPharaohMan</li>
-<li><a href="objCentaurMan.html">objCentaurMan</li>
-<li><a href="objKamegoroMaker.html">objKamegoroMaker</li>
-<li><a href="objPunk.html">objPunk</li>
-<li><a href="objChillMan.html">objChillMan</li>
-<li><a href="objMechaDragon.html">objMechaDragon</li>
-<li><a href="objGeminiMan.html">objGeminiMan</li>
-<ul>
-<li><a href="objGemineighbour.html">objGemineighbour</li>
-</ul><li><a href="objGiantSuzy.html">objGiantSuzy</li>
-<li><a href="objMercury.html">objMercury</li>
-<li><a href="objAirMan.html">objAirMan</li>
-<li><a href="objBlizzardMan.html">objBlizzardMan</li>
-<li><a href="objQuint.html">objQuint</li>
-<li><a href="objYamatoMan.html">objYamatoMan</li>
-<li><a href="objPicoControl.html">objPicoControl</li>
-<li><a href="objRounderV2.html">objRounderV2</li>
-<li><a href="objFireMan.html">objFireMan</li>
-<li><a href="objGreyDevil.html">objGreyDevil</li>
-<li><a href="objPowerPiston.html">objPowerPiston</li>
-<li><a href="objBubbleMan.html">objBubbleMan</li>
-<li><a href="objQuickMan.html">objQuickMan</li>
-<li><a href="objGyroMan.html">objGyroMan</li>
-<li><a href="objGutsDozer.html">objGutsDozer</li>
-<li><a href="objBallade.html">objBallade</li>
-<li><a href="objToadMan.html">objToadMan</li>
-<li><a href="objMetalMan.html">objMetalMan</li>
-<li><a href="objCutMan.html">objCutMan</li>
-<li><a href="objPlantMan.html">objPlantMan</li>
-<li><a href="objCrashMan.html">objCrashMan</li>
-<li><a href="objHeatMan.html">objHeatMan</li>
-<li><a href="objOilMan.html">objOilMan</li>
-<li><a href="objKomusoMan.html">objKomusoMan</li>
-<li><a href="objTopMan.html">objTopMan</li>
-<li><a href="objDanganMan.html">objDanganMan</li>
-<li><a href="objDynaMan.html">objDynaMan</li>
-<li><a href="objStoneMan.html">objStoneMan</li>
-<li><a href="objGutsMan.html">objGutsMan</li>
-<li><a href="objSparkMan.html">objSparkMan</li>
-<li><a href="objHoneyWoman.html">objHoneyWoman</li>
-<li><a href="objUranus.html">objUranus</li>
-<li><a href="objBombMan.html">objBombMan</li>
-<li><a href="objSaturn.html">objSaturn</li>
-<li><a href="objVoltMan.html">objVoltMan</li>
-<li><a href="objSplashWoman.html">objSplashWoman</li>
-<li><a href="objHunterA.html">objHunterA</li>
-<li><a href="objHornetMan.html">objHornetMan</li>
-<li><a href="objWoodMan.html">objWoodMan</li>
-<li><a href="objHunterB.html">objHunterB</li>
-<ul>
-<li><a href="objHunterBPartner.html">objHunterBPartner</li>
-</ul></ul></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>
