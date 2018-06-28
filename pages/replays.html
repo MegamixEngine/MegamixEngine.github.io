@@ -1,0 +1,51 @@
+<html><title>~</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>Action Replay System</h1>
+<h2>Overview</h2>
+<p>The Action Replay system allows for user input recording and playback. Here are some use cases:</p>
+<ul>
+<li>Players can record and share an Action Replay to show off their talent without having to use external recording software which can slow their computers and provide low-framerate or blurry playback.</li>
+<li>Demos can be played during the start menu</li>
+<li>In-level clipscenes can be authored with minimal programming</li>
+<li>Unit tests can run Action Replays to ensure code quality</li>
+</ul>
+<h2>Usage</h2>
+<p>To begin recording, enter the debug menu (2) and select the recording button. There are then two options: "Record-Here" and "Record-Reset."
+<strong>Record-Reset</strong> will restart the game from the last checkpoint to begin recording. It is the safer option and is more likely to give high-fidelity playback.
+<strong>Record-Here</strong> will begin recording from the player's current co-ordinates -- however, on playback, all objects will be re-created and return to their original positions. This means
+that it is only safe to use "record here" if the player is in a section which does not have any enemies, gimmicks, or pick-ups on screen and furthermore <em>would not</em> have any
+such objects on screen if they were allowed to respawn.</p>
+<p>In short, <strong>Record-Reset</strong> is the recommended option.</p>
+<p>Once you have decided on a recording type, you must enter in a file. You can save this anywhere, but if you are using version
+control, mind that you not save it in the repository unless you are sure you want it there. </p>
+<p>The recording file will be appended to every frame, so even if the game crashes during recording, the recording will still take.</p>
+<p>To finish a recording, press pause again.</p>
+<h2>Playback</h2>
+<p>From the room selector, select "Play Recording..." and select the file. Press pause to quit the recording early.</p>
+<h2>Playback Failed? (Low-Fi)</h2>
+<p>The Action Replay recording file keeps track of the player's control inputs and dubs them in during playback.
+The only other data saved in the recording is a minimal snapshot of the game when the recording begins. This snapshot
+does not contain information such as the positions of enemies. This means there are a number of ways that the playback can desync from the original recording.</p>
+<p>There are two probable causes of recording failures:
+ - Randomness
+ - Global data not stored in the recording.</p>
+<p>There are also other possibilities, such as:
+ - Floating Point Errors</p>
+<p>### Randomness</p>
+<p>It is forbidden to use the <code>randomize()</code> function at any time during a level, recording or no. It is also forbidden
+ to use any kind of random function during the create event of an object. If that is needed, defer its use to the spawn event.
+ Breaking either of these rules can result in low-fidelity playback.</p>
+<p>### Global Data</p>
+<p>To fix, simply add this data to the save/load script for recordings.</p>
+<p>### Floating-Point Error Accumulation</p>
+<p>The other possiblity is accumulating floating-point errors, however there is very little that can be done about this.
+ This will only show up as a problem if the recording was created on a computer with a different architecture than yours,
+ and it is still altogether unlikely to have a noticable effect.</p>
+</body></div></html>
