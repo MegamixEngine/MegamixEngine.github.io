@@ -10,13 +10,17 @@
 <h1>objGlobalControl</h1>
 objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> objGlobalControl<br/><a href="prtAlwaysActive.html">prtAlwaysActive</a> <b>&gt;</b> <a href="objGlobalControl.html">objGlobalControl</a>
 <h2> Description </h2>
-<p><p>global variable setup</p></p>
+<p><p>initialization</p>
+
+<p></p>
+
+<p>global initialization ////</p>
+
+<p></p>
+
+<p>set random seed</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>lr</td><td>room_add()</td><td><p>last room marker:</p></td></tr>
-<tr><td>pickups</td><td>ds_list_create()</td><td></td></tr>
-<tr><td>lb</td><td>background_duplicate(bgNESPalette)</td><td><p>last background marker:</p></td></tr>
-<tr><td>setfrozen</td><td>0</td><td></td></tr>
-<tr><td>fadealpha</td><td>0</td><td><p>fade in/out</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>fadealpha</td><td>0</td><td><p>fade in/out</p></td></tr>
 <tr><td>fadestep</td><td>0.2</td><td></td></tr>
 <tr><td>fadeinterval</td><td>3</td><td></td></tr>
 <tr><td>fadetimer</td><td>0</td><td></td></tr>
@@ -29,6 +33,8 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> objGlobalControl<br/><a href="
 <tr><td>depthAlter</td><td>0</td><td></td></tr>
 <tr><td>saveTimer</td><td>-1</td><td><p>save icon</p></td></tr>
 <tr><td>saveFrame</td><td>0</td><td></td></tr>
+<tr><td>pickups</td><td>ds_list_create()</td><td><p>list of pickups (prevents pickup respawning)</p></td></tr>
+<tr><td>setfrozen</td><td>0</td><td><p>used for pausing</p></td></tr>
 </table>
 <h2> Inherited from prtAlwaysActive </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
