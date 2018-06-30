@@ -1,4 +1,4 @@
-<html><title>objOctobulb</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objOctobulbRailSpark</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,65 +9,43 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9" style="padding-left:3px;">
-<h1>Octobulb</h1><img class = "centre" src="../assets/images/objects/sprOctobulbPreview.png" alt="sprOctobulbPreview">
+<h1>OctobulbRailSpark</h1><img class = "centre" src="../assets/images/objects/sprOctobulbBigSpark.png" alt="sprOctobulbBigSpark">
 <button data-toggle="collapse" data-target="#MinibossInformation"><h2>Miniboss Information</h2></button>
 <div id="MinibossInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
 <div><i>Mega Man 10</i></div>  </div><div><h3 class="alt">HP</h3>
-<div>20</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objOctobulb</h1>
-objects <b>/</b> Minibosses <b>/</b> MM10 <b>/</b> objOctobulb<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objOctobulb.html">objOctobulb</a>
+<div>1</div>  </div><div><h3 class="alt">Contact Damage</h3>
+<div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objOctobulbRailSpark</h1>
+objects <b>/</b> Minibosses <b>/</b> MM10 <b>/</b> Projectiles <b>/</b> objOctobulbRailSpark<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtRailPlatform.html">prtRailPlatform</a> <b>&gt;</b> <a href="objOctobulbRailSpark.html">objOctobulbRailSpark</a>
 <h2> Description </h2>
-<p><p>Octobulb</p>
-
-<p>Mandatory creation code: myFlag: the id of the switch handler, wich is activated by other</p>
-
-<p>objects, such as sheepman conveyors.</p>
-
-<p>You might need octobulb yoku blocks.</p>
-
-<p>The switch handler will be set to binary automatically</p>
-
-<p>You can optionally change maxEnergy.</p></p>
+<p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">myFlag</span></td><td>0</td><td><p> flag of the switch handler</p></td></tr>
-<tr><td><span class="cc">useRails</span></td><td>false</td><td><p> weather its sparks use the rail system</p></td></tr>
-<tr><td>body</td><td>instance_create(x, y, prtAlwaysActive)</td><td></td></tr>
-<tr><td>xstart</td><td>x</td><td></td></tr>
-<tr><td>lockID</td><td>0</td><td></td></tr>
-<tr><td>phase</td><td>0</td><td><p>Intro</p></td></tr>
-<tr><td>timer</td><td>-1</td><td></td></tr>
-<tr><td>jellyfishTimer</td><td>0</td><td></td></tr>
-<tr><td>activeTimer</td><td>0</td><td></td></tr>
-<tr><td>energy</td><td>0</td><td></td></tr>
-<tr><td>expectedEnergy</td><td>0</td><td></td></tr>
-<tr><td><span class="cc">maxEnergy</span></td><td>-1</td><td><p> How much energy it needs to be fully charged? default: 120</p></td></tr>
-<tr><td>anim</td><td>0</td><td></td></tr>
-<tr><td>animFrame</td><td>-1</td><td></td></tr>
-<tr><td>animSpeed</td><td>0</td><td></td></tr>
-<tr><td>animTimer</td><td>-1</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imgSpeed</td><td>0.4</td><td></td></tr>
+<tr><td>reflectable</td><td>false</td><td></td></tr>
+<tr><td>parent</td><td>noone</td><td></td></tr>
 </table>
-<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
-<tr><td>lockTransition</td><td>true</td><td></td></tr>
-<tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>
-<tr><td>killed</td><td>false</td><td></td></tr>
-<tr><td>introSprite</td><td>sprHotDogTeleport</td><td></td></tr>
-<tr><td>introTimer</td><td>288 + 15</td><td><p>288 is the height above, 15 is the extra frames for teleporting in.</p></td></tr>
-<tr><td>_init</td><td>1</td><td></td></tr>
-<tr><td>xplX</td><td>-100</td><td></td></tr>
-<tr><td>xplY</td><td>-100</td><td></td></tr>
+<h2> Inherited from prtRailPlatform </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>startingDirection</td><td>-1</td><td></td></tr>
+<tr><td>mySpeed</td><td>1</td><td></td></tr>
+<tr><td>init</td><td>1</td><td></td></tr>
+<tr><td>dir</td><td>"none"</td><td><p>left, up, down, right</p></td></tr>
+<tr><td>startDir</td><td>dir</td><td></td></tr>
+<tr><td>xOffset</td><td>8</td><td><p>distance from the x and y position to check by</p></td></tr>
+<tr><td>yOffset</td><td>8</td><td></td></tr>
+<tr><td>lastRail</td><td>noone</td><td><p>Helpful variable to use in childs</p></td></tr>
+<tr><td>prevRail</td><td>noone</td><td></td></tr>
+<tr><td>bumped</td><td>false</td><td></td></tr>
+<tr><td>fallMomentum</td><td>0.25</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtMiniBoss.<i></p><h2> Inherited from prtEntity </h2>
+<h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
-<tr><td><span class="cc">healthpointsStart</span></td><td>20 <i>(*)</i></td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
-<tr><td>healthpoints</td><td>20 <i>(*)</i></td><td></td></tr>
+<tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
+<tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
 <tr><td><span class="cc">contactDamage</span></td><td>4 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></p><p>Notes for objOctobulb:</p><p>
-<p>Entity setup</p></td></tr>
-<tr><td><span class="cc">canDamage</span></td><td>false <i>(*)</i></td><td><p> If false, the entity won't deal damage</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
@@ -75,13 +53,13 @@ objects <b>/</b> Minibosses <b>/</b> MM10 <b>/</b> objOctobulb<br/><a href="prtE
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
-<tr><td>killOverride</td><td>false <i>(*)</i></td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
+<tr><td>killOverride</td><td>true</td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
-<tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
+<tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
@@ -96,11 +74,10 @@ objects <b>/</b> Minibosses <b>/</b> MM10 <b>/</b> objOctobulb<br/><a href="prtE
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
 <tr><td>plt</td><td>0</td><td></td></tr>
-<tr><td>itemDrop</td><td>-1 <i>(*)</i></td><td></td></tr>
+<tr><td>itemDrop</td><td>0</td><td></td></tr>
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
-<tr><td><span class="cc">canIce</span></td><td>false <i>(*)</i></td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></p><p>Notes for prtMiniBoss:</p><p>
-<p>Shouldn't be able to freeze minibosses</p></td></tr>
+<tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
