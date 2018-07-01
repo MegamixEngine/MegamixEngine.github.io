@@ -21,14 +21,26 @@ objects <b>/</b> Gimmicks <b>/</b> MM2 <b>/</b> objQuickLaserSpawner<br/><a href
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">sprite</span></td><td>-1</td><td><p> sets the sprite for the laser that's fired.</p></td></tr>
 <tr><td><span class="cc">imageSpeed</span></td><td>-1</td><td><p> sets how fast the laser sprite animates</p></td></tr>
 <tr><td><span class="cc">delay</span></td><td>30</td><td><p> How many frames until the laser fires.</p></td></tr>
-<tr><td><span class="cc">mySpeed</span></td><td>4</td><td><p> How fast the laser travels.</p></td></tr>
+<tr><td><span class="cc">extendSpeed</span></td><td>4</td><td><p> How fast the laser travels.</p></td></tr>
 <tr><td><span class="cc">variation</span></td><td>1</td><td><p> 0 = damage, 1 = drain</p></td></tr>
 <tr><td><span class="cc">damage</span></td><td>9999</td><td><p> How much damage the laser does. (Does nothing unless variation is 0 (damage))</p></td></tr>
 <tr><td><span class="cc">drainCooldown</span></td><td>4</td><td><p> How many frames until the laser drains another life point. (Does nothing unless the variation is 1 (drain))</p></td></tr>
-<tr><td><span class="cc">pixelPrecise</span></td><td>false</td><td><p> Whether the laser's individual pixels can be stopped separately or not. WARNING: RESOURCE INTENSIVE! MAY CAUSE LAG!!</p></td></tr>
+<tr><td><span class="cc">rotateSpeed</span></td><td>0</td><td><p> How fast the laser rotates.</p></td></tr>
+<tr><td><span class="cc">rotateStartDir</span></td><td>0</td><td><p> Which direction the laser starts rotating first.</p></td></tr>
+<tr><td><span class="cc">rotateStartRange</span></td><td>0</td><td><p> The lowest part of the range the laser can rotate in.</p></td></tr>
+<tr><td><span class="cc">rotateEndRange</span></td><td>0</td><td><p> The highest part of the range the laser can rotate in.</p></td></tr>
+<tr><td><span class="cc">rotateAccel</span></td><td>0.2</td><td><p> How fast the laser slows down / speeds back up upon reaching an edge of the rotate range.</p></td></tr>
+<tr><td><span class="cc">rotatePause</span></td><td>20</td><td><p> How long the laser waits after reaching an edge of the rotate range before moving again.</p></td></tr>
+<tr><td><span class="cc">pixelPrecise</span></td><td>false</td><td><p> Whether the laser's individual pixels can be stopped separately or not. WARNING: VERY CPU INTENSIVE!! This WILL cause lag, and it WILL be your fault if your stage lags because of it!!!!</p></td></tr>
+<tr><td>init</td><td>1</td><td></td></tr>
 <tr><td>phase</td><td>1</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
-<tr><td>init</td><td>1</td><td></td></tr>
+<tr><td>startingRotateSpeed</td><td>0</td><td></td></tr>
+<tr><td>currentRotateSpeed</td><td>0</td><td></td></tr>
+<tr><td>rotateDir</td><td>0</td><td></td></tr>
+<tr><td>startAngle</td><td>0</td><td></td></tr>
+<tr><td>rotateStartRangeTurn</td><td>0</td><td></td></tr>
+<tr><td>rotateEndRangeTurn</td><td>0</td><td></td></tr>
 <tr><td>myLasers</td><td>ds_list_create()</td><td></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
