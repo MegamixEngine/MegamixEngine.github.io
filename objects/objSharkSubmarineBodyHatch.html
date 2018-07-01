@@ -16,7 +16,7 @@
 <div><i>Mega Man 9</i></div>  </div><div><h3 class="alt">HP</h3>
 <div>14</div>  </div><div><h3 class="alt">Contact Damage</h3>
 <div>5</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objSharkSubmarineBodyHatch</h1>
-objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> Don't Use <b>/</b> objSharkSubmarineBodyHatch<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objSharkSubmarineBodyHatch.html">objSharkSubmarineBodyHatch</a>
+objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> Don't Use <b>/</b> objSharkSubmarineBodyHatch<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objSharkSubmarineBodyHatch.html">objSharkSubmarineBodyHatch</a>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
@@ -28,7 +28,18 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> Don't Use <b>/</b> objSharkSubmari
 <tr><td>timer</td><td>phaseMultiple * 7</td><td><p>Timer for making a dolphin.</p></td></tr>
 <tr><td>hatchIndex</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<h2> Inherited from prtMiniBoss </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>true</td><td></td></tr>
+<tr><td>lockTransition</td><td>false <i>(*)</i></td><td></td></tr>
+<tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>
+<tr><td>killed</td><td>false</td><td></td></tr>
+<tr><td>introSprite</td><td>sprHotDogTeleport</td><td></td></tr>
+<tr><td>introTimer</td><td>288 + 15</td><td><p>288 is the height above, 15 is the extra frames for teleporting in.</p></td></tr>
+<tr><td>_init</td><td>1</td><td></td></tr>
+<tr><td>xplX</td><td>-100</td><td></td></tr>
+<tr><td>xplY</td><td>-100</td><td></td></tr>
+</table>
+<p><i>* value is modified from the default for prtMiniBoss.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -68,7 +79,8 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> Don't Use <b>/</b> objSharkSubmari
 <tr><td>itemDrop</td><td>-1 <i>(*)</i></td><td></td></tr>
 <tr><td>stopOnFlash</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
-<tr><td><span class="cc">canIce</span></td><td>false <i>(*)</i></td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td><span class="cc">canIce</span></td><td>false <i>(*)</i></td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></p><p>Notes for prtMiniBoss:</p><p>
+<p>Shouldn't be able to freeze minibosses</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>issolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
