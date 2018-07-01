@@ -20,13 +20,17 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> objSharkSubmarineHead<br/><a href=
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>cannon</td><td>noone</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>blinkMultiple</td><td>4</td><td><p>Interval tracked by blinkTimer.</p></td></tr>
+<tr><td>cannon</td><td>noone</td><td></td></tr>
+<tr><td>startFiring</td><td>false</td><td><p>Can the cannon shoot yet?</p></td></tr>
+<tr><td>eyeIndex</td><td>0</td><td><p>0 = Open, 1 = Half open/closed, 2 = closed.</p></td></tr>
+<tr><td>blinkTimer</td><td>blinkMultiple * 2</td><td><p>Controls blink animation.</p></td></tr>
 </table>
 <h2> Inherited from prtSharkSubmarine </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>visible</td><td>true</td><td></td></tr>
 <tr><td>speedToMove</td><td>0.5</td><td><p>The absolute value for yspeed;</p></td></tr>
 <tr><td>yHighOffset</td><td>-48</td><td><p>Smallest number yCurrOffset can reach.</p></td></tr>
-<tr><td>yLowOffset</td><td>24 <i>(*)</i></td><td><p>Largest number yCurrOffset can reach.</p></td></tr>
+<tr><td>yLowOffset</td><td>56 <i>(*)</i></td><td><p>Largest number yCurrOffset can reach.</p></td></tr>
 <tr><td>leftShark</td><td>noone</td><td><p>The shark part that keeps track of all connected shark parts.</p></td></tr>
 <tr><td>sharkNum</td><td>0</td><td><p>The shark part's number in sharkPartsAlive[].</p></td></tr>
 <tr><td>attackTimer</td><td>0</td><td></td></tr>
@@ -109,7 +113,7 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> objSharkSubmarineHead<br/><a href=
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
 <tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
-<tr><td>shiftvisible</td><td>3 <i>(*)</i></td><td></td></tr>
+<tr><td>shiftvisible</td><td>1 <i>(*)</i></td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
