@@ -1,4 +1,4 @@
-<html><title>objEnemyBullet</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objHardManKnuckle</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,19 +9,26 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9" style="padding-left:3px;">
-<h1>EnemyBullet</h1><img class = "centre" src="../assets/images/objects/sprEnemyBullet.png" alt="sprEnemyBullet">
-<button data-toggle="collapse" data-target="#EnemyInformation"><h2>Enemy Information</h2></button>
-<div id="EnemyInformation" class="collapse in">
-<div><h3 class="alt">HP</h3>
+<h1>HardManKnuckle</h1><img class = "centre" src="../assets/images/objects/sprHardManKnuckle.png" alt="sprHardManKnuckle">
+<button data-toggle="collapse" data-target="#BossInformation"><h2>Boss Information</h2></button>
+<div id="BossInformation" class="collapse in">
+<div><h3 class="alt">Origin</h3>
+<div><i>Mega Man 3</i></div>  </div><div><h3 class="alt">HP</h3>
 <div>1</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>2</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objEnemyBullet</h1>
-objects <b>/</b> Enemies <b>/</b> Don't Use <b>/</b> objEnemyBullet<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtEnemyProjectile.html">prtEnemyProjectile</a> <b>&gt;</b> <a href="objEnemyBullet.html">objEnemyBullet</a>
+<div>3</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objHardManKnuckle</h1>
+objects <b>/</b> Bosses <b>/</b> MM3 <b>/</b> Projectiles <b>/</b> objHardManKnuckle<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtEnemyProjectile.html">prtEnemyProjectile</a> <b>&gt;</b> <a href="objEnemyBullet.html">objEnemyBullet</a> <b>&gt;</b> <a href="objHardManKnuckle.html">objHardManKnuckle</a>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>strMMX</td><td>0</td><td></td></tr>
+<tr><td>attackTimer</td><td>0</td><td></td></tr>
+<tr><td>hasFired</td><td>false</td><td></td></tr>
+<tr><td>moveToY</td><td>target.y</td><td></td></tr>
+</table>
+<h2> Inherited from objEnemyBullet </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imageSpeed</td><td>-1</td><td></td></tr>
 <tr><td>dir</td><td>-10000</td><td></td></tr>
-<tr><td>spd</td><td>0</td><td></td></tr>
+<tr><td>spd</td><td>3 <i>(*)</i></td><td></td></tr>
 <tr><td>explodeOnContact</td><td>0</td><td></td></tr>
 <tr><td>dieOnHit</td><td>false</td><td></td></tr>
 <tr><td>explosionSFX</td><td>sfxMM9Explosion</td><td></td></tr>
@@ -29,7 +36,7 @@ objects <b>/</b> Enemies <b>/</b> Don't Use <b>/</b> objEnemyBullet<br/><a href=
 <tr><td>script</td><td>scrNoEffect</td><td></td></tr>
 <tr><td>code</td><td>""</td><td></td></tr>
 </table>
-<h2> Inherited from prtEnemyProjectile </h2>
+<p><i>* value is modified from the default for objEnemyBullet.<i></p><h2> Inherited from prtEnemyProjectile </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>reflectable</td><td>1</td><td><p>how the projectile interacts with shields.</p>
 
 <p>0: cannot be stopped.</p>
@@ -44,7 +51,7 @@ objects <b>/</b> Enemies <b>/</b> Don't Use <b>/</b> objEnemyBullet<br/><a href=
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td><span class="cc">contactDamage</span></td><td>2 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>3 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
 <tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
@@ -70,7 +77,7 @@ objects <b>/</b> Enemies <b>/</b> Don't Use <b>/</b> objEnemyBullet<br/><a href=
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>false <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
@@ -105,15 +112,5 @@ objects <b>/</b> Enemies <b>/</b> Don't Use <b>/</b> objEnemyBullet<br/><a href=
 <tr><td><span class="cc">facePlayer</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>specialDamageValuesTotal</td><td>0</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objEnemyBullet </h2><ul>
-<li><a href="objBoobeamBullet.html">objBoobeamBullet</li>
-<li><a href="objHardManKnuckle.html">objHardManKnuckle</li>
-<li><a href="objCannonjoeBullet.html">objCannonjoeBullet</li>
-<li><a href="objHunterBullet.html">objHunterBullet</li>
-<li><a href="objBigSnakeyFire.html">objBigSnakeyFire</li>
-<li><a href="objOctobossBullet.html">objOctobossBullet</li>
-<li><a href="objOctoperOABullet1.html">objOctoperOABullet1</li>
-<li><a href="objHammerJoeHammer.html">objHammerJoeHammer</li>
-<li><a href="objPunkScrewCrusher.html">objPunkScrewCrusher</li>
-</ul></div></div>
+<p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p></div></div>
 </body></div></html>
