@@ -1,4 +1,4 @@
-<html><title>objMM5SpinningPlatform</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objControllableLift</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,31 +9,25 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9" style="padding-left:3px;">
-<h1>MM5SpinningPlatform</h1><img class = "centre" src="../assets/images/objects/sprMM5SpinningPlatformRed.png" alt="sprMM5SpinningPlatformRed">
+<h1>ControllableLift</h1><img class = "centre" src="../assets/images/objects/sprControllableElevator.png" alt="sprControllableElevator">
 <button data-toggle="collapse" data-target="#GimmickInformation"><h2>Gimmick Information</h2></button>
 <div id="GimmickInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
-<div><i>Mega Man 5</i></div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objMM5SpinningPlatform</h1>
-objects <b>/</b> Gimmicks <b>/</b> MM5 <b>/</b> objMM5SpinningPlatform<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objMM5SpinningPlatform.html">objMM5SpinningPlatform</a>
+<div><i>Mega Man 7</i></div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objControllableLift</h1>
+objects <b>/</b> Gimmicks <b>/</b> MM7 <b>/</b> objControllableLift<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objControllableLift.html">objControllableLift</a>
 <h2> Description </h2>
-<p><p>X = ;</p>
-
-<p>Y = ;</p>
-
-<p>length = ;</p>
-
-<p>wait = ;</p></p>
+<p><p>An elevator from MM7 Wily 4. If you're fully standing on it, you can press Up or Down to move it around.</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>X</td><td>x</td><td><p>Target X - where does it go?</p></td></tr>
-<tr><td>Y</td><td>y</td><td><p>Target Y - where does it go?</p></td></tr>
-<tr><td>length</td><td>64</td><td></td></tr>
-<tr><td>wait</td><td>64</td><td></td></tr>
-<tr><td>phase</td><td>0</td><td><p>What state (idle, moving, dropping) is it in</p></td></tr>
-<tr><td>waitMemory</td><td>wait</td><td></td></tr>
-<tr><td>alarmTimer</td><td>-1</td><td><p>Countdown until movement stops</p></td></tr>
-<tr><td>init</td><td>1</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>Enemy-specific variables</p></td></tr>
+<tr><td>dir</td><td>0</td><td></td></tr>
+<tr><td>spd</td><td>2</td><td></td></tr>
+<tr><td>deltaY</td><td>0</td><td></td></tr>
+<tr><td>lockPool</td><td>-1</td><td></td></tr>
+<tr><td><span class="cc">range</span></td><td>64</td><td><p> the amount of blocks the elevator will go down every input</p></td></tr>
+<tr><td><span class="cc">yMin</span></td><td>ystart</td><td><p> the coordinates of the upper boundary of the elevator's range (default starting position)</p></td></tr>
+<tr><td><span class="cc">yMax</span></td><td>ystart + (range * 4)</td><td><p> the coordinates of the lower boundary of the elevator's range (default ystart plus 4 times its range ala MM7)</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -53,10 +47,10 @@ objects <b>/</b> Gimmicks <b>/</b> MM5 <b>/</b> objMM5SpinningPlatform<br/><a hr
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
 <tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
-<tr><td>shiftvisible</td><td>0</td><td></td></tr>
+<tr><td>shiftvisible</td><td>1 <i>(*)</i></td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
@@ -75,10 +69,9 @@ objects <b>/</b> Gimmicks <b>/</b> MM5 <b>/</b> objMM5SpinningPlatform<br/><a hr
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
-<tr><td>issolid</td><td>2 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
+<tr><td>issolid</td><td>1 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
-<p>0: not solid. 1: fully solid. 2: top-solid.</p></p><p>Notes for objMM5SpinningPlatform:</p><p>
-<p>Is it solid?</p></td></tr>
+<p>0: not solid. 1: fully solid. 2: top-solid.</p></td></tr>
 <tr><td>fnsolid</td><td>0</td><td><p>if set to true, will only be solid to entities of faction that it is friendly towards.</p>
 
 <p>set it to 2 for the opposite</p></td></tr>
