@@ -21,6 +21,12 @@ objects <b>/</b> Gimmicks <b>/</b> MM2 <b>/</b> objMM2FallingPlatform<br/><a hre
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>droptimer</td><td>16</td><td></td></tr>
 <tr><td>dir</td><td>0</td><td></td></tr>
+<tr><td>superArmFlashTimer</td><td>0</td><td></td></tr>
+<tr><td>superArmFlashInterval</td><td>1</td><td></td></tr>
+<tr><td>superArmFlashOwner</td><td>noone</td><td></td></tr>
+<tr><td>superArmHoldOwner</td><td>noone</td><td></td></tr>
+<tr><td>superArmDeathOnDrop</td><td>true</td><td></td></tr>
+<tr><td>superArmThrown</td><td>false</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -34,7 +40,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM2 <b>/</b> objMM2FallingPlatform<br/><a hre
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>category</td><td>"superArmTarget" <i>(*)</i></td><td></p><p>Notes for objMM2FallingPlatform:</p><p>
+<p>super arm interaction</p></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>

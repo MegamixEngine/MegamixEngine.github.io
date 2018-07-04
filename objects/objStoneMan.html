@@ -34,6 +34,13 @@ objects <b>/</b> Bosses <b>/</b> MM5 <b>/</b> objStoneMan<br/><a href="prtEntity
 <tr><td>radius</td><td>72</td><td></td></tr>
 <tr><td>strMMX</td><td>x</td><td></td></tr>
 <tr><td>strMMY</td><td>y</td><td></td></tr>
+<tr><td>superArmFlashTimer</td><td>0</td><td></td></tr>
+<tr><td>superArmFlashOwner</td><td>noone</td><td></td></tr>
+<tr><td>superArmFlashInterval</td><td>1</td><td></td></tr>
+<tr><td>superArmHoldOwner</td><td>noone</td><td></td></tr>
+<tr><td>superArmDeathOnDrop</td><td>false</td><td></td></tr>
+<tr><td>superArmThrown</td><td>false</td><td></td></tr>
+<tr><td>superArmSquirmTimer</td><td>0</td><td></td></tr>
 </table>
 <h2> Inherited from prtBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
@@ -99,7 +106,8 @@ objects <b>/</b> Bosses <b>/</b> MM5 <b>/</b> objStoneMan<br/><a href="prtEntity
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>category</td><td>"superArmTarget" <i>(*)</i></td><td></p><p>Notes for objStoneMan:</p><p>
+<p>super arm interaction</p></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
