@@ -25,7 +25,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM7 <b>/</b> objControllableLift<br/><a href=
 <tr><td>lockPool</td><td>-1</td><td></td></tr>
 <tr><td><span class="cc">range</span></td><td>64</td><td><p> the amount of blocks the elevator will go down every input</p></td></tr>
 <tr><td><span class="cc">yMin</span></td><td>ystart</td><td><p> the coordinates of the upper boundary of the elevator's range (default starting position)</p></td></tr>
-<tr><td><span class="cc">yMax</span></td><td>ystart + (range * 4)</td><td><p> the coordinates of the lower boundary of the elevator's range (default ystart plus 4 times its range ala MM7)</p></td></tr>
+<tr><td><span class="cc">yMax</span></td><td>-1</td><td><p> the coordinates of the lower boundary of the elevator's range (default ystart plus 4 times its range ala MM7, this is set in the step event unless changed via creation code)</p></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -59,7 +59,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM7 <b>/</b> objControllableLift<br/><a href=
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
 <tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
-<tr><td>dieToSpikes</td><td>false</td><td></td></tr>
+<tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>

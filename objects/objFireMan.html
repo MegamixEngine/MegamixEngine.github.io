@@ -9,7 +9,7 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9" style="padding-left:3px;">
-<h1>FireMan</h1><img class = "centre" src="../assets/images/objects/sprFireMan.png" alt="sprFireMan">
+<h1>FireMan</h1><img class = "centre" src="../assets/images/objects/sprFireManIdle.png" alt="sprFireManIdle">
 <button data-toggle="collapse" data-target="#BossInformation"><h2>Boss Information</h2></button>
 <div id="BossInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
@@ -20,7 +20,8 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objFireMan<br/><a href="prtEntity.
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>hasTriggeredFall</td><td>false</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>pose</td><td>sprFireMan</td><td><p>sprFireManIdle;</p></td></tr>
+<tr><td>poseImgSpeed</td><td>6/60</td><td></td></tr>
 <tr><td>attackTimer</td><td>0</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td><p>0 = running; 1 = shooting;</p></td></tr>
 <tr><td>spriteRun</td><td>sprFireManRun</td><td></td></tr>
@@ -75,7 +76,7 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objFireMan<br/><a href="prtEntity.
 <tr><td>musicLoopStore</td><td>0</td><td></td></tr>
 <tr><td>musicVolumeStore</td><td>0.8</td><td></td></tr>
 <tr><td>musicTrackNumberStore</td><td>0</td><td></td></tr>
-<tr><td>customPose</td><td>true <i>(*)</i></td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
+<tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
 <tr><td>introLock</td><td>false</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
@@ -110,8 +111,8 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objFireMan<br/><a href="prtEntity.
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0.25</td><td></td></tr>
 <tr><td>ground</td><td>false <i>(*)</i></td><td></td></tr>
-<tr><td>blockCollision</td><td>true</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
-<tr><td>dieToSpikes</td><td>false</td><td></td></tr>
+<tr><td>blockCollision</td><td>1</td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>

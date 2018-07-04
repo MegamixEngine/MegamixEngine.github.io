@@ -16,27 +16,17 @@
 <div><i>Mega Man 5</i></div>  </div><div><h3 class="alt">HP</h3>
 <div>1</div>  </div><div><h3 class="alt">Contact Damage</h3>
 <div>6</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objDarkBarrier</h1>
-objects <b>/</b> Bosses <b>/</b> MM5 <b>/</b> Projectiles <b>/</b> objDarkBarrier<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtEnemyProjectile.html">prtEnemyProjectile</a> <b>&gt;</b> <a href="objDarkBarrier.html">objDarkBarrier</a>
+objects <b>/</b> Bosses <b>/</b> MM5 <b>/</b> Projectiles <b>/</b> objDarkBarrier<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objDarkBarrier.html">objDarkBarrier</a>
 <h2> Description </h2>
 <p><p>A barrier used by Dark Man 4. It repels most kinds of attacks, but can be fired.</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>dir</td><td>0</td><td><p>What direction is it going in?</p></td></tr>
-<tr><td>origX</td><td>0</td><td><p>Set to be Dark Man's centre</p></td></tr>
-<tr><td>limitX</td><td>0</td><td><p>Set to be a certain number away from Dark Man's centre</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>dir</td><td>0</td><td></td></tr>
+<tr><td>origX</td><td>0</td><td></td></tr>
+<tr><td>limitX</td><td>0</td><td></td></tr>
 <tr><td>orbit</td><td>true</td><td><p>Is it currently revolving around Dark Man?</p></td></tr>
-<tr><td>comeBack</td><td>false</td><td><p>Is it coming back to Dark Man?</p></td></tr>
-<tr><td>stopHere</td><td>0</td><td><p>Where to stop when comeBack = true</p></td></tr>
+<tr><td>zoom</td><td>false</td><td></td></tr>
 </table>
-<h2> Inherited from prtEnemyProjectile </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>reflectable</td><td>0 <i>(*)</i></td><td><p>how the projectile interacts with shields.</p>
-
-<p>0: cannot be stopped.</p>
-
-<p>1: can be reflected.</p>
-
-<p>-1: instead of reflecting, is destroyed.</p></td></tr>
-</table>
-<p><i>* value is modified from the default for prtEnemyProjectile.<i></p><h2> Inherited from prtEntity </h2>
+<h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -54,22 +44,21 @@ objects <b>/</b> Bosses <b>/</b> MM5 <b>/</b> Projectiles <b>/</b> objDarkBarrie
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
 <tr><td>killOverride</td><td>true</td><td><p>special case for special kill effects ala BHB or Tornado Blow</p></td></tr>
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
-<tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></p><p>Notes for prtEnemyProjectile:</p><p>
-<p>So you can do stuff like xSpeedAim in Create</p></td></tr>
+<tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftvisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>5 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
-<tr><td>inWater</td><td>-1 <i>(*)</i></td><td></td></tr>
+<tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
 <tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
-<tr><td>dieToSpikes</td><td>false</td><td></td></tr>
+<tr><td>dieToSpikes</td><td>1</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
