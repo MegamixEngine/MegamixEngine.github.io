@@ -20,10 +20,8 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objHeatMan<br/><a href="prtEntity.
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>pose</td><td>sprHeatmanPose</td><td></td></tr>
-<tr><td>poseImgSpeed</td><td>12 / 60</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>hasTriggeredFall</td><td>false</td><td></td></tr>
 <tr><td>attackTimer</td><td>0</td><td></td></tr>
-<tr><td>beginAttackTimer</td><td>false</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>phaseTimer</td><td>0</td><td></td></tr>
 <tr><td>targetX</td><td>0</td><td></td></tr>
@@ -76,7 +74,7 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objHeatMan<br/><a href="prtEntity.
 <tr><td>musicLoopStore</td><td>0</td><td></td></tr>
 <tr><td>musicVolumeStore</td><td>0.8</td><td></td></tr>
 <tr><td>musicTrackNumberStore</td><td>0</td><td></td></tr>
-<tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
+<tr><td>customPose</td><td>true <i>(*)</i></td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
 <tr><td>introLock</td><td>false</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
