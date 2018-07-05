@@ -28,19 +28,25 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> objSharkSubmarineBody<br/><a href=
 <tr><td>hatch2Health</td><td>14;*/</td><td></td></tr>
 </table>
 <h2> Inherited from prtSharkSubmarine </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>visible</td><td>true</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>firstStep</td><td>1</td><td></td></tr>
+<tr><td>visible</td><td>true</td><td></td></tr>
+<tr><td>killed</td><td>false</td><td></td></tr>
+<tr><td>allDead</td><td>false</td><td></td></tr>
+<tr><td>stop</td><td>false</td><td></td></tr>
 <tr><td>speedToMove</td><td>0.5</td><td><p>The absolute value for yspeed;</p></td></tr>
 <tr><td>yHighOffset</td><td>-48</td><td><p>Smallest number yCurrOffset can reach.</p></td></tr>
 <tr><td>yLowOffset</td><td>8 <i>(*)</i></td><td><p>Largest number yCurrOffset can reach.</p></td></tr>
-<tr><td>leftShark</td><td>noone</td><td><p>The shark part that keeps track of all connected shark parts.</p></td></tr>
+<tr><td>globalYHighOffset</td><td>-48</td><td><p>Smallest number yCurrOffset can reach(in scrolling sections).</p></td></tr>
+<tr><td>globalYLowOffset</td><td>16</td><td><p>Largest number yCurrOffset can reach(in scrolling sections).</p></td></tr>
+<tr><td>leftShark</td><td>noone</td><td></td></tr>
+<tr><td>rightShark</td><td>noone</td><td></td></tr>
 <tr><td>attackTimer</td><td>0</td><td></td></tr>
 <tr><td>introTimer</td><td>120</td><td><p>Handled by leftShark</p></td></tr>
 <tr><td>jetTimer</td><td>0</td><td><p>Controls the timing for jet animations.</p></td></tr>
 <tr><td>jetIndex</td><td>0</td><td><p>Controls what image index the jet animations have.</p></td></tr>
-<tr><td>sharkAmount</td><td>0</td><td><p>The number of living connected shark parts.</p></td></tr>
 <tr><td>goingUp</td><td>true</td><td><p>Offset decreases if true and increases if false.</p></td></tr>
 <tr><td>yCurrOffset</td><td>0</td><td><p>Keeps track of the height changes for the shark.</p></td></tr>
-<tr><td>endOfStageBoss</td><td>true</td><td><p>Keeps what useEndStageBehavior is set as.</p></td></tr>
+<tr><td>endOfStageBoss</td><td>false</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtSharkSubmarine.<i></p><h2> Inherited from prtBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
@@ -63,7 +69,9 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> objSharkSubmarineBody<br/><a href=
 <tr><td>cutsceneTimer</td><td>0</td><td></td></tr>
 <tr><td>cutsceneScript</td><td>""</td><td></td></tr>
 <tr><td>quickSpawn</td><td>false</td><td><p>If true, it will act as a regular enemy</p></td></tr>
-<tr><td>useEndStageBehavior</td><td>true</td><td></td></tr>
+<tr><td>destroyOnDeath</td><td>false <i>(*)</i></td><td></td></tr>
+<tr><td>doPlayerExplosion</td><td>true</td><td><p>If true it will use the same death effect as the player</p></td></tr>
+<tr><td>useEndStageBehavior</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransitions</td><td>true</td><td></td></tr>
 <tr><td>hitInvun</td><td>45</td><td></td></tr>
 <tr><td>forceSpreadSettings</td><td>false</td><td></td></tr>
@@ -101,8 +109,9 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> objSharkSubmarineBody<br/><a href=
 <tr><td><span class="cc">healthpointsStart</span></td><td>28 <i>(*)</i></td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
 <tr><td><span class="cc">contactDamage</span></td><td>5 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
-<tr><td><span class="cc">canHit</span></td><td>true</td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
+<tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
+<tr><td><span class="cc">isTargetable</span></td><td>false <i>(*)</i></td><td><p> If false this object will be ignored by the targeting system</p></td></tr>
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
@@ -114,7 +123,7 @@ objects <b>/</b> Bosses <b>/</b> MM9 <b>/</b> objSharkSubmarineBody<br/><a href=
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
 <tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
-<tr><td>shiftvisible</td><td>1 <i>(*)</i></td><td></td></tr>
+<tr><td>shiftvisible</td><td>2 <i>(*)</i></td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
