@@ -74,7 +74,7 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objGutsMan<br/><a href="prtEntity.
 <tr><td>healthBarColorSkip</td><td>1</td><td></td></tr>
 <tr><td>manualColors</td><td>false</td><td></td></tr>
 <tr><td>healthBarHealth</td><td>0</td><td></td></tr>
-<tr><td>healthIndex</td><td>1 <i>(*)</i></td><td></td></tr>
+<tr><td>healthIndex</td><td>-1</td><td><p>If a boss shares a healthbar with another boss set it manually from the create event to the same value(check gemini man or rounder v2 for more details on how to share healthbars)</p></td></tr>
 <tr><td>healthParent</td><td>-1</td><td></td></tr>
 <tr><td>musicStore</td><td>""</td><td><p>Music storage for restarting it after death</p></td></tr>
 <tr><td>musicTypeStore</td><td>""</td><td></td></tr>
@@ -86,7 +86,7 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objGutsMan<br/><a href="prtEntity.
 <tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
 <tr><td>introLock</td><td>false</td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
+<h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>1 <i>(*)</i></td><td><p>boolean, is it a boss</p></p><p>Notes for prtBoss:</p><p>
 <p>used for some prtEntity control stuff</p></td></tr>
