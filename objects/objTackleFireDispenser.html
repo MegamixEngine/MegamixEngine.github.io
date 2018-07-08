@@ -21,9 +21,12 @@ objects <b>/</b> Gimmicks <b>/</b> MM10 <b>/</b> objTackleFireDispenser<br/><a h
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">tag</span></td><td>""</td><td><p> what other tackle fire dispensers refer to this as</p></td></tr>
 <tr><td><span class="cc">dstTag</span></td><td>""</td><td><p> the tackle fire dispenser that the tackle fires emitted should go to</p></td></tr>
 <tr><td><span class="cc">startFull</span></td><td>false</td><td><p> "full" means that tackle fires are within.</p></td></tr>
-<tr><td><span class="cc">tackleFireInterval</span></td><td>10</td><td><p> time between fires in a volley</p></td></tr>
-<tr><td><span class="cc">tackleFireFlightTime</span></td><td>60</td><td><p> time it takes for fires to reach destination</p></td></tr>
-<tr><td><span class="cc">tackleFireWarmupTime</span></td><td>90</td><td><p> time it takes for fires to launch after last fire arrives.</p></td></tr>
+<tr><td><span class="cc">tackleFireInterval</span></td><td>8</td><td><p> time between fires in a volley</p></td></tr>
+<tr><td><span class="cc">tackleFireFlightTime</span></td><td>48</td><td><p> time it takes for fires to reach destination</p></td></tr>
+<tr><td><span class="cc">tackleFireWarmupTime</span></td><td>60</td><td><p> time it takes for fires to launch after last fire arrives.</p></td></tr>
+<tr><td><span class="cc">dispenseOffScreen</span></td><td>false</td><td><p> if this is set to true, timer will increment and can dispense even if off-screen</p>
+
+<p>(do not set the respawnRange / despawnRange</p></td></tr>
 <tr><td>destination</td><td>noone</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>spawnTimer</td><td>-1</td><td></td></tr>
@@ -54,8 +57,10 @@ objects <b>/</b> Gimmicks <b>/</b> MM10 <b>/</b> objTackleFireDispenser<br/><a h
 <tr><td>shiftVisible</td><td>false <i>(*)</i></td><td></p><p>Notes for objTackleFireDispenser:</p><p>
 <p> looks prettier if this is true, but more accurate if false</p></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></p><p>Notes for objTackleFireDispenser:</p><p>
+<p> -- use dispenseOffScreen instead</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for objTackleFireDispenser:</p><p>
+<p> -- use dispenseOffScreen instead</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
