@@ -1,0 +1,39 @@
+<html><title>objShift</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<h1>objShift</h1>
+objects <b>/</b> Gimmicks <b>/</b> General <b>/</b> objShift<br/><i>This object has no parent.</i>
+<h2> Description </h2>
+<p></p>
+<h2> Variables </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">posX</span></td><td>make_array(x)</td><td><p> x-coordinates of path. See object decscription.</p></td></tr>
+<tr><td><span class="cc">posY</span></td><td>make_array(y)</td><td><p> y-coordinates of path. See object description.</p></td></tr>
+<tr><td><span class="cc">posT</span></td><td>make_array(0)</td><td><p> t-coordinates (time) of the path. See object description.</p></td></tr>
+<tr><td><span class="cc">isCyclic</span></td><td>true</td><td><p> if this is false, instead of cycling, the object will reach its destination and</p>
+
+<p>permanently stop.</p></td></tr>
+<tr><td><span class="cc">secX</span></td><td>-1</td><td><p> if this is set, the object is forced to exist in only this section. Otherwise, posX[0],posY[0] will be used.</p></td></tr>
+<tr><td><span class="cc">secY</span></td><td>-1</td><td><p> see secX</p></td></tr>
+<tr><td><span class="cc">layer</span></td><td>1000000</td><td><p> tiles on these layers should be moved (if they are under the object when the room begins).</p>
+
+<p>If this is an array, tiles on all provided layers will be moved</p>
+
+<p>(if they are under the object when the room begins).</p></td></tr>
+<tr><td>timer</td><td>-1</td><td><p>current time value</p></td></tr>
+<tr><td>period</td><td>0</td><td><p>auto-generated statistics:</p></td></tr>
+<tr><td>posCount</td><td>0</td><td></td></tr>
+<tr><td>childCount</td><td>0</td><td></td></tr>
+<tr><td>tileCount</td><td>0</td><td></td></tr>
+<tr><td>MVT_SPEED</td><td>0</td><td></td></tr>
+<tr><td>MVT_SPAWNSHIFT</td><td>1</td><td></td></tr>
+<tr><td>MVT_SPAWNONLY</td><td>1</td><td></td></tr>
+<tr><td>MVT_DIRECT</td><td>3</td><td></td></tr>
+</table>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p>
+</body></div></html>
