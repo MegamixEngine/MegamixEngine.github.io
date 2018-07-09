@@ -1,4 +1,4 @@
-<html><title>objSuperArmBlock2x2</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><title>objSkullElevatorMask</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -9,27 +9,18 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9" style="padding-left:3px;">
-<h1>SuperArmBlock2x2</h1><img class = "centre" src="../assets/images/objects/sprSuperArm2x2.png" alt="sprSuperArm2x2">
+<h1>SkullElevatorMask</h1><img class = "centre" src="../assets/images/objects/sprSkullElevatorMask.png" alt="sprSkullElevatorMask">
 <button data-toggle="collapse" data-target="#GimmickInformation"><h2>Gimmick Information</h2></button>
 <div id="GimmickInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
-<div><i>Mega Man</i></div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objSuperArmBlock2x2</h1>
-objects <b>/</b> Gimmicks <b>/</b> MM1 <b>/</b> objSuperArmBlock2x2<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objSuperArmBlock.html">objSuperArmBlock</a> <b>&gt;</b> <a href="objSuperArmBlock2x2.html">objSuperArmBlock2x2</a>
+<div><i>Mega Man 8</i></div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objSkullElevatorMask</h1>
+objects <b>/</b> Gimmicks <b>/</b> MM8 <b>/</b> Don't Use <b>/</b> objSkullElevatorMask<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objSkullElevatorMask.html">objSkullElevatorMask</a>
 <h2> Description </h2>
-<p></p>
+<p><p>general-purpose moving platform</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
-<h2> Inherited from objSuperArmBlock </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">layer</span></td><td>1000000</td><td><p> set the depth in creation code to change what layer this applies to.</p></td></tr>
-<tr><td>tileN</td><td>0</td><td></td></tr>
-<tr><td>superArmFlashTimer</td><td>0</td><td></td></tr>
-<tr><td>superArmFlashOwner</td><td>noone</td><td></td></tr>
-<tr><td>superArmFlashInterval</td><td>1</td><td></td></tr>
-<tr><td>superArmHoldOwner</td><td>noone</td><td></td></tr>
-<tr><td>superArmDeathOnDrop</td><td>true</td><td></td></tr>
-<tr><td>superArmThrown</td><td>false</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>parent</td><td>-1</td><td></td></tr>
 </table>
-<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
+<h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -43,8 +34,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM1 <b>/</b> objSuperArmBlock2x2<br/><a href=
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>"superArmTarget" <i>(*)</i></td><td></p><p>Notes for objSuperArmBlock:</p><p>
-<p>Super Arm interaction setup</p></td></tr>
+<tr><td>category</td><td>""</td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
@@ -54,8 +44,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM1 <b>/</b> objSuperArmBlock2x2<br/><a href=
 <tr><td>dead</td><td>false</td><td></td></tr>
 <tr><td>shiftVisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
-<tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
