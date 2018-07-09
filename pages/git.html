@@ -1,0 +1,229 @@
+<html><title>Which git client to download?</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
+<body><div class="page">
+<p>Git is an optional way to keep up-to-date with changes made to the engine. Using git means you don't have to
+go through the hassle of manually copying in engine changes or downloading a fresh copy of the engine</p>
+<!--more-->
+
+<h2>Which git client to download?</h2>
+<p>Download the git terminal interface: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+<p>I would recommend <strong>not</strong> using a client with a GUI (graphical user interface). The reason a lot of
+people want to use the GUI clients is because people are
+afraid that they are going to somehow "mess up" with git and break the whole repository permanently. In reality, so long as you
+commit frequently, it's very, very difficult to actually permanently break something.
+Git is very good at storing your saved commits and not losing them.</p>
+<p>So just use the <a href="https://git-scm.com/downloads">git terminal interface</a>. It's very simple,
+despite the fact that you have to type commands. There are only
+4 or 5 commands you really need to know, and you can always look them up if you forget.</p>
+<p>When you download the terminal interface, it will also come with <code>git GUI</code>, a really buggy and
+unfriendly graphical user interface. If you desperately want to use a GUI, use a different program
+than this one.</p>
+<p><strong>On Windows</strong>, when installing, note that the default is to add some options to the right-click
+context menu ("<code>Windows Explorer Integration</code>"). I would recommend having
+<code>Git Bash Here</code> since it makes it easier to clone directories to the folder you want,
+but <strong>if it bothers you to have cumbersome additional right-click options,
+make sure you uncheck both of these!</strong></p>
+<h2>Initial setup</h2>
+<p>Give git your username and email address. These can be absolutely anything you like,
+and do not have to be your real username or email address. Just so long as they're not blank, git will be happy.
+However, people <em>will</em> be able to see these, so don't put anything embarrassing here.</p>
+<pre><code>git config --global user.name &quot;My Username Here&quot;
+git config --global user.email &quot;myemailaddress@example.com&quot;
+</code></pre>
+
+<p>(Note that git will not give you a confirmation message when you enter these in. You can double-check
+ that it took by typing <code>git config --global user.name</code> into the terminal.)</p>
+<p>Also, we highly recommend changing the default text editor unless you want to wrestle with
+<code>vim</code>, a text editor program renown far and wide for its incredibly dense user interface.</p>
+<p>On Windows, the following command changes your editor to be notepad:</p>
+<pre><code>git config --global core.editor notepad
+</code></pre>
+
+<p>If you want a different text editor (e.g. notepad++), check out this guide on <a href="https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows">StackOverflow</a>.</p>
+<p><em>Note: if you ever accidentally open vim, don't panic,
+just press the escape key and type <code>:q!</code> and press enter to quit. Obviously.</em></p>
+<h2>How to download the engine with git</h2>
+<p>First navigate to the folder you want to download it to. (Type <code>pwd</code> in the console to make sure you're in the correct directory. If it says <code>/</code>, you will either need to use the <code>cd</code> command (e.g. <code>cd "Documents and Settings"</code>) or if you installed the "Windows Explorer Integrations" above, you can right-click on a folder on your computer and open git bash that way. The <code>ls</code> command is also helpful to display the contents of the current folder.)</p>
+<p>Once you're in the desired folder, you can then type into the terminal:</p>
+<pre><code>git clone https://github.com/MegamixEngine/MegamixEngine.github.io
+</code></pre>
+
+<p>Swap out the URL in question for the URL of the repo you want to download. Note that
+the windows git bash terminal is too good for <code>ctrl+v</code>; you must use <code>shift+insert</code> to paste.</p>
+<p>If you later change your mind and want the repository to be located elsewhere, you can cut-paste the whole folder to somewhere else you prefer.
+(Just make sure you don't miss the hidden <code>.git</code> subfolder!)</p>
+<h2>How to hook up an existing project folder with git</h2>
+<p>If you downloaded the engine without using git, and you've made a lot of changes, then the process becomes a lot harder.
+It's still possible, however. First, you need to know the version of the engine that downloaded. Then you need to
+clone the engine as in the header above ("How to download the engine with git").</p>
+<p>After the engine is cloned, open the engine directory in git bash and type this:</p>
+<p><code>git tag</code></p>
+<p>Scroll through these until you find the version that you downloaded. It's <strong>very</strong> important to note
+exactly which one you downloaded! Next type this:</p>
+<pre><code>git reset --hard version-1.x
+</code></pre>
+
+<p><code>version-1.x</code> should be replaced with the version tag you want.</p>
+<p>Now, in your file browser, delete everything in the cloned repository folder (if you have show-hidden-files enabled, make sure you do not delete the hidden <code>.git</code> folder. If you don't see this folder, don't worry about it.)
+Finally, copy the contents of <strong>your</strong> project into the cloned repository folder and then open git bash again. Type <code>git status</code> to see
+a list of files that you have added, removed, or edited, and type <code>git diff</code> to manually inspect what lines have been added.
+(Type <code>q</code> to close the <code>diff</code> window.)</p>
+<p>At this point, you can commit your changes with <code>git add --all; git commit -m "began using git with project"</code>. Finally, you
+can pull the latest changes made to the engine since the version you downloaded by typing</p>
+<pre><code>git pull origin master
+</code></pre>
+
+<p>Now this raises the possiblity of a <em>merge conflict</em>, which would be caused by you changing something
+that was changed in a later version of the engine. Read through the remainder of the guide to learn how to deal with these.
+It's important that merge conflicts be dealt with correctly, lest you encounter worse problems later on.</p>
+<h2>How to make commits (save changes to the repo)</h2>
+<p>After you've edited the files you want to edit, saving changes to a repo is a four-step process:
+(0) check everything is okay, (1) tell git what files to commit in the next commit, (2) tell git to make a commit, (3) download any changes made since you last downloaded, (4) upload the commit to git. There's a TLDR at the end.</p>
+<p><strong>Step Zero</strong>: Navigate to the top-level folder in the project and
+run</p>
+<pre><code>git status
+</code></pre>
+
+<p>. It will list all the files that you've edited and also other useful miscellany
+in a very readable format. This is a good thing to do every time
+you want to commit, or any time you're confused because something is not working correctly. If there are
+any unexpected messages at this step, stop and think.</p>
+<p><strong>Step One</strong>: You have to tell git which files should be commited. If you want to commit everything you've changed
+(this is usually the case), just type</p>
+<pre><code>git add --all
+</code></pre>
+
+<p>in the top-level folder.</p>
+<p><strong>Step Two</strong>: You have to create the commit.</p>
+<pre><code>git commit
+</code></pre>
+
+<p>This will open up a text editor! It could open up vim if you didn't configure your text editor. If you accidentally open
+vim (you'll know because the console will clear and everything will become horrible for you), don't panic, just press
+the escape key and type <code>:q!</code> and then enter. Then try changing your editor above.</p>
+<p><strong>Step Three</strong>: Before you can upload your changes, you need to download any changes that have been made recently by your
+team-mates:</p>
+<pre><code>git pull origin master
+</code></pre>
+
+<p>This could trigger a merge! If that happens, see the next section.</p>
+<p><strong>Step Four</strong>: It's finally time to upload your changes.</p>
+<pre><code>git push origin master
+</code></pre>
+
+<p>And you're done!</p>
+<p><strong>TL;DR</strong>:</p>
+<pre><code>git status
+git add --all
+git commit
+git pull
+git push
+</code></pre>
+
+<h2>Merging (AKA suffering)</h2>
+<p>There are four probable things that could happen when you pull. Either</p>
+<ul>
+<li>It will fail because you have uncommitted changes (<em>always commit before pulling!</em>),</li>
+<li>It will do nothing because nobody else has made changes,</li>
+<li>It will have to merge in other changes but there are no conflicts</li>
+<li>There will be conflicts and you'll have to handle them manually</li>
+</ul>
+<p>We'll cover the last two cases.</p>
+<h3>Clean merge (the easy case)</h3>
+<p>In this event, git will automatically make a merge commit.
+It will just open up the text editor (see the above warning about vim!) and it will
+provide you with a default commit message. There's no reason to change this; just save and close the editor.</p>
+<h3>Merge conflicts (it's bad)</h3>
+<p>If git tells you there are conflicts, first do what you should always do in any uncertain situation:</p>
+<pre><code>git status
+</code></pre>
+
+<p>This will tell you what files need to be fixed. Then just open those files manually in a text editor
+and search for these things:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;
+</code></pre>
+
+<p>These are conflict markers. A typical merge conflict will look like this:</p>
+<pre><code>
+Stuff that was automatically merged, blah blah blah
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; MASTER
+
+something your INCONSIDERATE TEAM-MATE did
+
+=======
+
+something YOU did that is much better obviously
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; HEAD
+
+More stuff that was automatically merged, blah blah
+
+</code></pre>
+
+<p>At the end of the day, you'll need to delete the <code>&lt;&lt;&lt;&lt;&lt;&lt;</code> markers or
+your code won't work. However, you should <em>stop and think</em>. If necessary,
+consult the team-mate who is caused the conflict that is now making your life miserable.</p>
+<p>When you're done fixing up the merge commits (make sure you searched for every <code>&lt;&lt;&lt;&lt;&lt;&lt;</code> marker!), just enter this into the terminal:</p>
+<pre><code>git add --all
+git commit
+</code></pre>
+
+<p>This will finalize the merge. Then you can go back to step three of pushing your changes in the previous section.</p>
+<h2>How to avoid merge conflicts</h2>
+<p>There are two good ways to avoid merge conflicts:</p>
+<ol>
+<li>Pull as often as you can! If you pull so frequently that no two people ever work on the same
+file without having pulled the other's changes, then there will never be any merge conflicts, ever.
+This isn't always practical -- sometimes two people will need to edit the same thing at the same time.</li>
+<li>Edit as few files in as few places as possible. In particular, don't do something like find-and-replace or
+reformat or beautify the entire code base without orchestrating it with your team-mates first. Also, try to avoid
+renaming files unless you really need to -- this can sometimes confuse git.</li>
+</ol>
+<h2>Other good practices</h2>
+<ol>
+<li>You can make commits as often as you like, even without pulling/pushing! Any time you make a commit,
+that's a point that you can reset the project back to if needed (see below). The more frequently you commit,
+the better an "undo" history you'll have access to.</li>
+<li>Never commit sensitive data to a repository! Once it's on the repo, it's <em>very difficult</em> to remove. Even if
+you replace something with a later commit, people will always be able to reset to your earlier commit. This
+is also a good reason to think carefully before committing that 3-gigabyte AVI file to the repo as well.</li>
+<li>You may also want to add a <code>.gitignore</code> file to your project if there are files you don't want to commit,
+like backup files or compiled executables. Look this up on Google.</li>
+</ol>
+<h2>Resetting to an earlier commit</h2>
+<p>There are two ways to undo changes in git. One way is to <em>reset</em> to a previous commit,
+the other is to <em>revert</em> a commit, which is a more complicated concept and probably not what
+you are looking for.</p>
+<p>To reset to the most recent commit, just type:</p>
+<pre><code>git reset --hard
+</code></pre>
+
+<p><strong>BE CAREFUL!</strong> This actually <em>is not reversible</em>. What you may want to do instead is to commit your changes and then
+reset to the <em>previous</em> commit:</p>
+<pre><code>git add --all;
+git commit
+git reset HEAD~1
+</code></pre>
+
+<p>This will make sure you can still access your changes later (they won't be uploaded when you push, though.)</p>
+<p>To reset to an even earlier commit, you will need to know the "SHA" of the commit. A SHA is just a
+long ID or name for a commit, and it looks something like <code>8f8ab949</code> or <code>8f8ab94901afc39041fa3f447bb752dbb4036799</code>.
+Use <code>git log</code> to list all the recent commits (up/down to scroll, <code>q</code> to quit), and when you find the one you want
+to reset back to, just type <code>git reset --hard 8f8ab949</code> (just enter the first few digits of the SHA).</p>
+<p>For reference, <em>reverting</em> a commit actually creates a <em>new</em> commmit that undoes the specified commit. This
+is useful if you've already uploaded a change. You can look up how to use it; there are some gotchas. (Don't just
+type <code>git revert 8f8ab949</code>! Instead type <code>git revert 8f8ab949..HEAD</code>.)</p>
+<p>In general: if you want to undo something you've uploaded, use <code>git revert</code>, otherwise use <code>git reset</code> because
+it's simpler.</p>
+<h2>What comes next?</h2>
+<p>The above guide is for the basics. You'll probably learn a lot more by running into problems
+and googling how to solve them. Once you've become a great enough master, you can learn how to use
+branches and how to "rebase" commits as well.</p>
+</body></div></html>
