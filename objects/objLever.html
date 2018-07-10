@@ -18,10 +18,15 @@ objects <b>/</b> Gimmicks <b>/</b> MM4 <b>/</b> objLever<br/><a href="prtEntity.
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>action</td><td>1</td><td></td></tr>
-<tr><td>actionTimer</td><td>0</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">state</span></td><td>0</td><td><p> 0: up, 1: down</p></td></tr>
+<tr><td><span class="cc">uptag</span></td><td>""</td><td><p> tag for the leverfield to activate when up</p></td></tr>
+<tr><td><span class="cc">downtag</span></td><td>""</td><td><p> tag for the leverfield to activate when down</p></td></tr>
+<tr><td><span class="cc">oneShot</span></td><td>false</td><td><p> if set to true, lever can only be flipped once, then is stuck.</p></td></tr>
+<tr><td>touchingPlayer</td><td>false</td><td><p>set to true when the player is touching to prevent toggling back and forth</p></td></tr>
+<tr><td>transition_anim</td><td>0</td><td></td></tr>
+<tr><td>flipped</td><td>false</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -43,7 +48,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM4 <b>/</b> objLever<br/><a href="prtEntity.
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
 <tr><td>respawn</td><td>true</td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
-<tr><td>shiftVisible</td><td>1 <i>(*)</i></td><td></td></tr>
+<tr><td>shiftVisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
@@ -54,7 +59,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM4 <b>/</b> objLever<br/><a href="prtEntity.
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
-<tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
+<tr><td>blockCollision</td><td>false <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>false</td><td></td></tr>
 <tr><td>sinkin</td><td>1</td><td></td></tr>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
