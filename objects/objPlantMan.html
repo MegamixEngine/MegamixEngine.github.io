@@ -28,7 +28,7 @@ objects <b>/</b> Bosses <b>/</b> MM6 <b>/</b> objPlantMan<br/><a href="prtEntity
 <tr><td>imageNoMin</td><td>0</td><td><p>this is the minmum image_indexs of plant man for any given animation. imageNoMin is what the image_index is set to when plant man has finished an animation.</p></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>jumpY</td><td>-8</td><td></td></tr>
-<tr><td>walkX</td><td>2.5</td><td></td></tr>
+<tr><td>walkX</td><td>2.5 + ((global.difficulty == DIFF_HARD) * 0.75)</td><td></td></tr>
 <tr><td>walkDestination</td><td>0</td><td></td></tr>
 <tr><td>delay</td><td>0</td><td></td></tr>
 <tr><td>guard</td><td>0</td><td></td></tr>
