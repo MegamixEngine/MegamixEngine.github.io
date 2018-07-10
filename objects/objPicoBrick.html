@@ -15,25 +15,42 @@
 <div><h3 class="alt">Origin</h3>
 <div><i>Mega Man 2</i></div>  </div><div><h3 class="alt">HP</h3>
 <div>1</div>  </div><div><h3 class="alt">Contact Damage</h3>
-<div>8</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objPicoBrick</h1>
+<div>5</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objPicoBrick</h1>
 objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objPicoBrick<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objPicoBrick.html">objPicoBrick</a>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>hpmax</td><td>0</td><td></td></tr>
 <tr><td>hp</td><td>0</td><td></td></tr>
-<tr><td>priority</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">priority</span></td><td>0</td><td><p> the number in order that the pico bricks go. Since they come in twos, there</p>
+
+<p>should be two bricks each that have the same priority number.</p></td></tr>
+<tr><td><span class="cc">settingTransplant</span></td><td>false</td><td><p> if set to true, this will be the pico brick that settings such as music,</p>
+
+<p>item drops, etc will be read off of.</p></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>phaseTimer</td><td>0</td><td></td></tr>
-<tr><td>moveSpeed</td><td>.9</td><td></td></tr>
+<tr><td>moveSpeed</td><td>.9 + (global.difficulty == DIFF_HARD * .75)</td><td></td></tr>
+<tr><td>music</td><td>"Mega_Man_2.nsf"</td><td><p>Ignore this. This is used for setting transplant</p></td></tr>
+<tr><td>musicType</td><td>"VGM"</td><td></td></tr>
+<tr><td>musicTrackNumber</td><td>17</td><td></td></tr>
+<tr><td>musicVolume</td><td>0.8</td><td></td></tr>
+<tr><td>musicLoop</td><td>true</td><td></td></tr>
+<tr><td>musicLoopSecondsStart</td><td>8.825</td><td></td></tr>
+<tr><td>musicLoopSecondsEnd</td><td>61.575</td><td></td></tr>
+<tr><td>elementName</td><td>""</td><td></td></tr>
+<tr><td>elementScript</td><td>scrNoEffect</td><td></td></tr>
+<tr><td>elementCode</td><td>""</td><td></td></tr>
+<tr><td>useEndStageBehavior</td><td>true</td><td></td></tr>
+<tr><td>lockTransitions</td><td>true</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
 <tr><td><span class="cc">healthpointsStart</span></td><td>1</td><td><p> the amount of damage that must be dealt to the Entity before it dies.</p></td></tr>
 <tr><td>healthpoints</td><td>healthpointsStart</td><td></td></tr>
-<tr><td><span class="cc">contactDamage</span></td><td>8 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
+<tr><td><span class="cc">contactDamage</span></td><td>5 <i>(*)</i></td><td><p> the amount of damage the Entity does to the player on collision.</p></td></tr>
 <tr><td><span class="cc">canHit</span></td><td>false <i>(*)</i></td><td><p> Boolean. If false, the entity won't take damage.</p></td></tr>
 <tr><td><span class="cc">canDamage</span></td><td>true</td><td><p> If false, the entity won't deal damage</p></td></tr>
 <tr><td><span class="cc">isTargetable</span></td><td>true</td><td><p> If false this object will be ignored by the targeting system</p></td></tr>
@@ -68,7 +85,7 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objPicoBrick<br/><a href="prtEntit
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
 <tr><td>plt</td><td>0</td><td></td></tr>
-<tr><td>itemDrop</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>noone <i>(*)</i></td><td></td></tr>
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
