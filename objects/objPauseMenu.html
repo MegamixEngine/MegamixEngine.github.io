@@ -15,11 +15,13 @@ objects <b>/</b> Don't Use <b>/</b> Menu <b>/</b> objPauseMenu<br/><i>This objec
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>visible</td><td>0</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td><p>0: increasing the black rectangle's alpha</p></td></tr>
 <tr><td>option</td><td>0</td><td></td></tr>
+<tr><td>oldOption</td><td>0</td><td></td></tr>
 <tr><td>weaponOffset</td><td>0</td><td></td></tr>
 <tr><td>offsetTimer</td><td>-1</td><td></td></tr>
+<tr><td>weaponVisibleN</td><td>0</td><td><p>get currently visible weapons</p></td></tr>
+<tr><td>visibleWeapons</td><td>min(10, weaponVisibleN)</td><td><p>up to 10 visible</p></td></tr>
 <tr><td>woption</td><td>i</td><td></td></tr>
-<tr><td>visibleWeapons</td><td>10</td><td></td></tr>
-<tr><td>oldWeapon</td><td>option</td><td></td></tr>
+<tr><td>oldWeapon</td><td>global.weapon[0]</td><td></td></tr>
 <tr><td>resetWeapon</td><td>false</td><td><p>Should we, after exiting the menu, reset our weapon to the weapon that was used before the pause menu was opened?</p></td></tr>
 <tr><td>wtank</td><td>0</td><td></td></tr>
 <tr><td>mtank</td><td>0</td><td></td></tr>
