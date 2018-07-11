@@ -17,11 +17,13 @@ objects <b>/</b> Items <b>/</b> objWeaponModifier<br/><a href="prtEntity.html">p
 
 <p>The default is to unlock the weapon.</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">weaponID</span></td><td>0</td><td><p> the ID of the weapon to lock on room start + unlock when touched</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">weapon</span></td><td>0</td><td><p> the weapon object to lock on room start + unlock when touched</p></td></tr>
 <tr><td><span class="cc">lockWeapon</span></td><td>false</td><td><p> if this is set to true, the weapon will be locked instead of unlocked when obtained</p></td></tr>
 <tr><td><span class="cc">lockToWeapon</span></td><td>false</td><td><p> if this is set to true, it'll lock you TO the weapon in this capsule (ala IC, Hardccore Parkour etc) instead of just unlocking it</p></td></tr>
 <tr><td><span class="cc">lockBuster</span></td><td>true</td><td><p> if this is true along with lockToWeapon, the buster will be locked along with all other weapons.</p></td></tr>
 <tr><td><span class="cc">infiniteEnergy</span></td><td>false</td><td><p> if this is set to true, the unlocked weapon will also gain infinite energy</p></td></tr>
+<tr><td><span class="cc">levelReward</span></td><td>false</td><td><p> if this is set to true, will appear as a level reward at the end of the stage</p></td></tr>
+<tr><td><span class="cc">destroyIfUnlocked</span></td><td>false</td><td><p> destroy if already unlocked</p></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtPickup </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>disappear</td><td>-1</td><td><p>Pickup variables</p></td></tr>
