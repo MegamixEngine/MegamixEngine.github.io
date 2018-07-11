@@ -22,6 +22,8 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objGutsMan<br/><a href="prtEntity.
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>pose</td><td>sprGutsIdle</td><td></td></tr>
 <tr><td>poseImgSpeed</td><td>0.1</td><td></td></tr>
+<tr><td><span class="cc">myTileDepth</span></td><td>1000000</td><td><p> hadmode only</p></td></tr>
+<tr><td><span class="cc">isHard</span></td><td>false</td><td><p></p></td></tr>
 <tr><td>attackTimer</td><td>0</td><td></td></tr>
 <tr><td>jumpTimer</td><td>0</td><td></td></tr>
 <tr><td>jumpAmount</td><td>0</td><td></td></tr>
@@ -29,13 +31,17 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objGutsMan<br/><a href="prtEntity.
 <tr><td>phase</td><td>0</td><td><p>0 = nothing; 1 = running; 2 = jumping; 3 = shooting;</p></td></tr>
 <tr><td>getLastXspeed</td><td>xspeed</td><td></td></tr>
 <tr><td>shakeTimer</td><td>0</td><td></td></tr>
+<tr><td>prevDepth</td><td>depth</td><td></td></tr>
 <tr><td>choosePhase</td><td>0</td><td></td></tr>
 <tr><td>lastPhase</td><td>phase</td><td></td></tr>
 <tr><td>block</td><td>noone</td><td></td></tr>
+<tr><td>timer</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtBoss </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
-<tr><td>startIntro</td><td>false</td><td></td></tr>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtBoss </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>blockCollisionStart</td><td>noone</td><td></td></tr>
+<tr><td>gravStart</td><td>0</td><td></td></tr>
+<tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
+<tr><td>startIntro</td><td>true</td><td></td></tr>
 <tr><td>isIntro</td><td>false</td><td></td></tr>
 <tr><td>startFight</td><td>0</td><td></td></tr>
 <tr><td>isFight</td><td>false</td><td></td></tr>
@@ -86,6 +92,7 @@ objects <b>/</b> Bosses <b>/</b> MM1 <b>/</b> objGutsMan<br/><a href="prtEntity.
 <tr><td>musicTrackNumberStore</td><td>0</td><td></td></tr>
 <tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
 <tr><td>introLock</td><td>false</td><td></td></tr>
+<tr><td>visible</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>

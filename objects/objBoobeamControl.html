@@ -25,8 +25,10 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objBoobeamControl<br/><a href="prt
 <tr><td>poseImgSpeed</td><td>0</td><td><p>^</p></td></tr>
 </table>
 <h2> Inherited from prtBoss </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
-<tr><td>startIntro</td><td>false</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>blockCollisionStart</td><td>noone</td><td></td></tr>
+<tr><td>gravStart</td><td>0</td><td></td></tr>
+<tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
+<tr><td>startIntro</td><td>true</td><td></td></tr>
 <tr><td>isIntro</td><td>false</td><td></td></tr>
 <tr><td>startFight</td><td>0</td><td></td></tr>
 <tr><td>isFight</td><td>false</td><td></td></tr>
@@ -48,7 +50,7 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objBoobeamControl<br/><a href="prt
 <tr><td>cutsceneScript</td><td>""</td><td></td></tr>
 <tr><td>quickSpawn</td><td>false</td><td><p>If true, it will act as a regular enemy</p></td></tr>
 <tr><td>destroyOnDeath</td><td>true</td><td></td></tr>
-<tr><td>doPlayerExplosion</td><td>true</td><td><p>If true it will use the same death effect as the player</p></td></tr>
+<tr><td>doPlayerExplosion</td><td>false <i>(*)</i></td><td><p>If true it will use the same death effect as the player</p></td></tr>
 <tr><td>useEndStageBehavior</td><td>true</td><td></td></tr>
 <tr><td>lockTransitions</td><td>true</td><td></td></tr>
 <tr><td>hitInvun</td><td>45</td><td></td></tr>
@@ -78,6 +80,7 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> objBoobeamControl<br/><a href="prt
 <tr><td>musicTrackNumberStore</td><td>0</td><td></td></tr>
 <tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
 <tr><td>introLock</td><td>false</td><td></td></tr>
+<tr><td>visible</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>

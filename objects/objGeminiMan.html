@@ -29,16 +29,24 @@ objects <b>/</b> Bosses <b>/</b> MM3 <b>/</b> objGeminiMan<br/><a href="prtEntit
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>getLastXspeed</td><td>xspeed</td><td></td></tr>
 <tr><td>landTimer</td><td>0</td><td></td></tr>
-<tr><td>clone</td><td>noone</td><td></td></tr>
+<tr><td>clone</td><td>id</td><td></td></tr>
+<tr><td>makeClones</td><td>1</td><td></td></tr>
+<tr><td>maxClones</td><td>0</td><td></td></tr>
+<tr><td>cloneDelayOffset</td><td>60</td><td></td></tr>
+<tr><td>cloneAddedDelay</td><td>45</td><td></td></tr>
+<tr><td>cloneId</td><td>0</td><td></td></tr>
 <tr><td>memYspeed</td><td>0</td><td></td></tr>
 <tr><td>pauseY</td><td>0</td><td></td></tr>
 <tr><td>delay</td><td>0</td><td></td></tr>
 <tr><td>knockbackTimer</td><td>-1</td><td></td></tr>
 <tr><td>jumpToX</td><td>0</td><td></td></tr>
+<tr><td>isHard</td><td>false</td><td></td></tr>
 </table>
 <h2> Inherited from prtBoss </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
-<tr><td>startIntro</td><td>false</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>blockCollisionStart</td><td>noone</td><td></td></tr>
+<tr><td>gravStart</td><td>0</td><td></td></tr>
+<tr><td>active</td><td>false</td><td><p>intro stuff</p></td></tr>
+<tr><td>startIntro</td><td>true</td><td></td></tr>
 <tr><td>isIntro</td><td>false</td><td></td></tr>
 <tr><td>startFight</td><td>0</td><td></td></tr>
 <tr><td>isFight</td><td>false</td><td></td></tr>
@@ -89,6 +97,7 @@ objects <b>/</b> Bosses <b>/</b> MM3 <b>/</b> objGeminiMan<br/><a href="prtEntit
 <tr><td>musicTrackNumberStore</td><td>0</td><td></td></tr>
 <tr><td>customPose</td><td>false</td><td><p>if this is true, boss performs own pre-fight posing animation.</p></td></tr>
 <tr><td>introLock</td><td>false</td><td></td></tr>
+<tr><td>visible</td><td>0</td><td></td></tr>
 </table>
 <p><i>* value is modified from the default for prtBoss.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
