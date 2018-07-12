@@ -8,17 +8,40 @@
 <link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
 <body><div class="page">
 <h1>objShopControl</h1>
-objects <b>/</b> Don't Use <b>/</b> Menu <b>/</b> objShopControl<br/><i>This object has no parent.</i>
+objects <b>/</b> Don't Use <b>/</b> objShopControl<br/><i>This object has no parent.</i>
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>option</td><td>1</td><td><p>cursor position in the room list</p></td></tr>
-<tr><td>endx</td><td>8</td><td><p>how many rooms fit on the screen at once</p></td></tr>
-<tr><td>selected</td><td>0</td><td></td></tr>
-<tr><td>shift</td><td>0</td><td><p>position in the list to start drawing to the screen from</p></td></tr>
-<tr><td>timer</td><td>0</td><td></td></tr>
-<tr><td>quickScrollTimer</td><td>25</td><td></td></tr>
-<tr><td>itemList</td><td>ds_list_create()</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>iconsXOffset</td><td>52 + 12</td><td><p>contants</p></td></tr>
+<tr><td>iconsYOffset</td><td>24</td><td></td></tr>
+<tr><td>iconsXSpacing</td><td>52</td><td></td></tr>
+<tr><td>iconsYSpacing</td><td>34</td><td></td></tr>
+<tr><td>priceXOffset</td><td>iconsXOffset</td><td></td></tr>
+<tr><td>priceYOffset</td><td>iconsYOffset + 16</td><td></td></tr>
+<tr><td>nameXOffset</td><td>0</td><td></td></tr>
+<tr><td>nameYOffset</td><td>176</td><td></td></tr>
+<tr><td>descriptionXOffset</td><td>nameXOffset + 16</td><td></td></tr>
+<tr><td>descriptionYOffset</td><td>nameYOffset + 16</td><td></td></tr>
+<tr><td>boltIconXOffset</td><td>29</td><td></td></tr>
+<tr><td>boltIconYOffset</td><td>97</td><td></td></tr>
+<tr><td>boltCounterXOffset</td><td>boltIconXOffset + 16</td><td></td></tr>
+<tr><td>boltCounterYOffset</td><td>boltIconYOffset + 7</td><td></td></tr>
+<tr><td>playersXOffset</td><td>224</td><td></td></tr>
+<tr><td>playersYOffset</td><td>144</td><td></td></tr>
+<tr><td>playersXSpacing</td><td>24</td><td></td></tr>
+<tr><td>menuWidth</td><td>3</td><td></td></tr>
+<tr><td>menuHeight</td><td>2</td><td></td></tr>
+<tr><td>quickScrollWait</td><td>25</td><td><p>how long until quick scroll activates</p></td></tr>
+<tr><td>quickScrollStutter</td><td>8</td><td><p>how long the cursor pauses before moving again while quick scrolling</p></td></tr>
+<tr><td>cursorX</td><td>0</td><td><p>variables</p></td></tr>
+<tr><td>cursorY</td><td>0</td><td></td></tr>
+<tr><td>cursorImgIndex</td><td>0</td><td></td></tr>
+<tr><td>cursorImgSpd</td><td>0.2</td><td></td></tr>
+<tr><td>horizontalQuickScrollTimer</td><td>quickScrollWait</td><td></td></tr>
+<tr><td>verticalQuickScrollTimer</td><td>quickScrollWait</td><td></td></tr>
+<tr><td>displayBolts</td><td>global.bolts</td><td></td></tr>
+<tr><td>targetBolts</td><td>displayBolts</td><td></td></tr>
+<tr><td>lockControls</td><td>false</td><td></td></tr>
 </table>
 
 </body></div></html>
