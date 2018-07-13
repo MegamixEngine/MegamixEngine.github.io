@@ -22,6 +22,16 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 
 <p>hitInvun: the length of the hit invulnerablilty of the boss, in frames. If this is 1 or lower, they don't have any.</p>
 
+<p>healthParent: Whatever instance ID this is set to, if the boss takes damage its parent(healthParent) and its brothers will also take damage, if this value is different from -1 the healthbar wont be drawn, so leave this untouched in the healthParent</p>
+
+<p>syncIFrames : if using a healthParent and this is true, iFrames will be applied to the parent(healthParent) and its brothers</p>
+
+<p>shareMode : Mode 0: for bosses that share the same healthbar, so if one dies all of them die;</p>
+
+<p>Mode 1: for bosses with individual healthbars that are drawn as one</p>
+
+<p>dieToPits : if true the boss will die if it falls into a pit</p>
+
 <p></p>
 
 <p>music: just the file name of the music you're using for the boss. MUST BE A STRING</p>
@@ -62,8 +72,6 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 
 <p>stopOnFlash: If set to true, the enemy will be affected by timestopping weapons. Default false.</p>
 
-<p>healthParent: Whatever object ID this is set to, that object will take damage instead of this object when it's hit. Object ID, NOT object NAME. Used for stuff like Weapons Archive.</p>
-
 <p></p>
 
 <p>healthBarPrimaryColor[1]: Primary color of the boss' first healthbar. THE [1] IS IMPORTANT. Use the number of the color you want that's on the NES palette reference.</p>
@@ -101,9 +109,10 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 <tr><td>introFade</td><td>0</td><td></td></tr>
 <tr><td>cutsceneTimer</td><td>0</td><td></td></tr>
 <tr><td>cutsceneScript</td><td>""</td><td></td></tr>
-<tr><td>quickSpawn</td><td>false</td><td><p>If true, it will act as a regular enemy</p></td></tr>
+<tr><td>quickSpawn</td><td>false</td><td><p>If true, it will spawn as a regular enemy</p></td></tr>
 <tr><td>destroyOnDeath</td><td>true</td><td></td></tr>
 <tr><td>doPlayerExplosion</td><td>true</td><td><p>If true it will use the same death effect as the player</p></td></tr>
+<tr><td>dieToPits</td><td>true</td><td></td></tr>
 <tr><td>useEndStageBehavior</td><td>true</td><td></td></tr>
 <tr><td>lockTransitions</td><td>true</td><td></td></tr>
 <tr><td>hitInvun</td><td>45</td><td></td></tr>
@@ -124,6 +133,8 @@ objects <b>/</b> Don't Use <b>/</b> Core <b>/</b> Parents <b>/</b> prtBoss<br/><
 <tr><td>healthBarHealth</td><td>0</td><td></td></tr>
 <tr><td>healthIndex</td><td>-1</td><td><p>If a boss shares a healthbar with another boss set it manually from the create event to the same value(check gemini man or rounder v2 for more details on how to share healthbars)</p></td></tr>
 <tr><td>healthParent</td><td>-1</td><td></td></tr>
+<tr><td>syncIFrames</td><td>false</td><td></td></tr>
+<tr><td>shareMode</td><td>0</td><td></td></tr>
 <tr><td>musicStore</td><td>""</td><td><p>Music storage for restarting it after death</p></td></tr>
 <tr><td>musicTypeStore</td><td>""</td><td></td></tr>
 <tr><td>musicLoopStartStore</td><td>0</td><td></td></tr>
