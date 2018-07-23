@@ -16,7 +16,7 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> Weapons <b>/</b> MaGMML2 <b>
 <p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>xst</td><td>image_xscale</td><td></td></tr>
-<tr><td>slashLock</td><td>false</td><td></td></tr>
+<tr><td>slashLock</td><td>false</td><td><p>lock pools</p></td></tr>
 </table>
 <h2> Inherited from prtPlayerProjectile </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>bulletLimitCost</td><td>1</td><td><p>how much this contributes to the bullet limit. >1 used for charge shot</p></td></tr>
@@ -49,7 +49,8 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> Weapons <b>/</b> MaGMML2 <b>
 <tr><td>shiftVisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>64 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></p><p>Notes for objSlashClaw:</p><p>
+<p>don't be despawned by scrolling offscreen</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
@@ -63,7 +64,7 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> Weapons <b>/</b> MaGMML2 <b>
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
 <tr><td>plt</td><td>0</td><td></td></tr>
-<tr><td>itemDrop</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>0</td><td><p>This object will be spawned once the entity dies</p></td></tr>
 <tr><td>stopOnFlash</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>

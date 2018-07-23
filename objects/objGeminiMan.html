@@ -90,7 +90,7 @@ objects <b>/</b> Bosses <b>/</b> MM3 <b>/</b> objGeminiMan<br/><a href="prtEntit
 <tr><td>healthIndex</td><td>-1</td><td><p>If a boss shares a healthbar with another boss set it manually from the create event to the same value(check gemini man or rounder v2 for more details on how to share healthbars)</p></td></tr>
 <tr><td>healthParent</td><td>-1</td><td></p><p>Notes for objGeminiMan:</p><p>
 <p>The parent gemini man acts normally, only its clones need to change this</p></td></tr>
-<tr><td>syncIFrames</td><td>false</td><td></td></tr>
+<tr><td>syncIFrames</td><td>true <i>(*)</i></td><td></td></tr>
 <tr><td>shareMode</td><td>0</td><td></td></tr>
 <tr><td>musicStore</td><td>""</td><td><p>Music storage for restarting it after death</p></td></tr>
 <tr><td>musicTypeStore</td><td>""</td><td></td></tr>
@@ -143,7 +143,7 @@ objects <b>/</b> Bosses <b>/</b> MM3 <b>/</b> objGeminiMan<br/><a href="prtEntit
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
 <tr><td>plt</td><td>0</td><td></td></tr>
-<tr><td>itemDrop</td><td>noone <i>(*)</i></td><td></td></tr>
+<tr><td>itemDrop</td><td>noone <i>(*)</i></td><td><p>This object will be spawned once the entity dies</p></td></tr>
 <tr><td>stopOnFlash</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>false <i>(*)</i></td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></p><p>Notes for prtBoss:</p><p>

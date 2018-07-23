@@ -26,7 +26,7 @@ objects <b>/</b> Enemies <b>/</b> CFTF <b>/</b> Projectiles <b>/</b> objMorningJ
 <tr><td>cFrame</td><td>0</td><td></td></tr>
 </table>
 <h2> Inherited from prtEnemyProjectile </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>reflectable</td><td>1</td><td><p>how the projectile interacts with shields.</p>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>reflectable</td><td>0 <i>(*)</i></td><td><p>how the projectile interacts with shields.</p>
 
 <p>0: cannot be stopped.</p>
 
@@ -34,7 +34,7 @@ objects <b>/</b> Enemies <b>/</b> CFTF <b>/</b> Projectiles <b>/</b> objMorningJ
 
 <p>-1: instead of reflecting, is destroyed.</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for prtEnemyProjectile.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -73,7 +73,7 @@ objects <b>/</b> Enemies <b>/</b> CFTF <b>/</b> Projectiles <b>/</b> objMorningJ
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
 <tr><td>plt</td><td>0</td><td></td></tr>
-<tr><td>itemDrop</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>0</td><td><p>This object will be spawned once the entity dies</p></td></tr>
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>

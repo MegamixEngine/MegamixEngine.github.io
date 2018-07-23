@@ -18,11 +18,12 @@
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objMetall</h1>
 objects <b>/</b> Enemies <b>/</b> MM3 <b>/</b> objMetall<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objMetall.html">objMetall</a>
 <h2> Description </h2>
-<p><p>Tt's an upgrade of the met from Mega Man 2. It now has feet and can walk.</p></p>
+<p><p>It's an upgrade of the Neo Metall from Mega Man 2. It now has feet and can walk.</p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>radius</td><td>4</td><td><p>Enemy specific code</p></td></tr>
 <tr><td>cooldownTimer</td><td>0</td><td><p>Four blocks; the radius that MM needs to enter to trigger the shooting of the met</p></td></tr>
 <tr><td>canShoot</td><td>true</td><td></td></tr>
+<tr><td>canBounce</td><td>true</td><td></td></tr>
 <tr><td>animTimer</td><td>0</td><td></td></tr>
 <tr><td>isFromMiniboss</td><td>false</td><td></td></tr>
 </table>
@@ -65,7 +66,7 @@ objects <b>/</b> Enemies <b>/</b> MM3 <b>/</b> objMetall<br/><a href="prtEntity.
 <tr><td>xcoll</td><td>0</td><td></td></tr>
 <tr><td>ycoll</td><td>0</td><td></td></tr>
 <tr><td>plt</td><td>0</td><td></td></tr>
-<tr><td>itemDrop</td><td>0</td><td></td></tr>
+<tr><td>itemDrop</td><td>0</td><td><p>This object will be spawned once the entity dies</p></td></tr>
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>

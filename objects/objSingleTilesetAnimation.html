@@ -10,25 +10,33 @@
 <h1>objSingleTilesetAnimation</h1>
 objects <b>/</b> Level Objects <b>/</b> Aesthetic <b>/</b> objSingleTilesetAnimation<br/><a href="prtAlwaysActive.html">prtAlwaysActive</a> <b>&gt;</b> <a href="objSingleTilesetAnimation.html">objSingleTilesetAnimation</a>
 <h2> Description </h2>
-<p><p>An alternative to the original tile animator that animates tiles with only one background</p>
+<p><p>Used to animate tilesets in one background file, it animates horizontal and vertical strips</p>
 
-<p>and you can do more than one animation with one object, its recomended to keep the animated tiles in their</p>
+<p>from left to right and from top to bottom.</p>
 
-<p>own layer for better load times(might with a lot of tiles + an object setter, but its a bit faster than the original tileAnimation).</p>
+<p></p>
+
+<p>This object can have more than one animation but the tiles must be in the same layer</p>
+
+<p></p>
+
+<p>An object setter is required for animating chunks of tiles(you don't have to set any object if you</p>
+
+<p>don't want to, just put one in the tileset so its tiles are splited).</p>
 
 <p></p>
 
 <p>How to use</p>
 
-<p>Set up the variables bellow, you need to provide the top left coordinate in the background</p>
-
-<p>from the region the animation starts, as well as the size of the animated region.</p>
-
 <p></p>
 
-<p>Note: This only uses one background per animation, for switching bagrounds use the original objTileAnimation.</p>
+<p>Set animLayer to the layer where the animated tiles are, then set the region of the first frame in the animation</p>
 
-<p>Note2: the tileIDs can't be shared between animations using the same background</p>
+<p>(relative to the background), and animLengths to the number of frames of each animation</p>
+
+<p>Set animType to 0 if the frames are aligned vertically(with the first frame on the top)</p>
+
+<p>or set it to 1 if the frames are aligned horizontally(with the first frame on the left)</p>
 
 <p></p>
 
