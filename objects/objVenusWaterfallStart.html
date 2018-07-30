@@ -17,7 +17,8 @@ objects <b>/</b> Gimmicks <b>/</b> GB V <b>/</b> Don't Use <b>/</b> objVenusWate
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>yDist</td><td>0</td><td><p>Distance to travel before creating waterfall segment</p></td></tr>
 <tr><td>spawner</td><td>noone</td><td></td></tr>
-<tr><td>i</td><td>instance_create(x, y, objVenusWaterfallSegment)</td><td></td></tr>
+<tr><td>water</td><td>instance_create(x, y, objVenusWaterfallSegment)</td><td></td></tr>
+<tr><td>i</td><td>water.id</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -44,7 +45,7 @@ objects <b>/</b> Gimmicks <b>/</b> GB V <b>/</b> Don't Use <b>/</b> objVenusWate
 <tr><td>shiftVisible</td><td>0</td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
-<tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
+<tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>

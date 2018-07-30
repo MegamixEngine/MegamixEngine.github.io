@@ -13,16 +13,17 @@
 </div><div class="col-sm-9 col-sm-pull-3"><h1>objEddie</h1>
 objects <b>/</b> Items <b>/</b> objEddie<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objEddie.html">objEddie</a>
 <h2> Description </h2>
-<p><p>myItem = [objectName]</p>
-
-<p>permanent =</p></p>
+<p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>myItem</td><td>0</td><td></td></tr>
-<tr><td>permanent</td><td>true</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">myItem</span></td><td>0</td><td><p> the object_index of the item Eddie will send out. If not set, he will choose</p>
+
+<p>randomly from his pickup pool</p></td></tr>
+<tr><td><span class="cc">permanent</span></td><td>true</td><td><p> if set to true, Eddie will never respawn once the item is given out</p></td></tr>
+<tr><td><span class="cc">moveTowardsPlayer</span></td><td>true</td><td><p> if set to false, Eddie will stay still and not move towards MM when giving out items</p></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

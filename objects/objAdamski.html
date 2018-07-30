@@ -20,19 +20,14 @@ objects <b>/</b> Enemies <b>/</b> MM9 <b>/</b> objAdamski<br/><a href="prtEntity
 <h2> Description </h2>
 <p><p>An enemy from Galaxy Man's stage. It's a mini UFO that moves in a wave pattern, starting by moving</p>
 
-<p>downwards.</p>
-
-<p></p>
-
-<p>Creation code (all optional):</p>
-
-<p>col = <number> (0 = green (default); 1 = yellow; 2 = pink )</p></p>
+<p>downwards.</p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>sinCounter</td><td>0</td><td></td></tr>
 <tr><td>imageOffset</td><td>0</td><td></td></tr>
-<tr><td>col</td><td>0</td><td></td></tr>
+<tr><td><span class="cc">col</span></td><td>0</td><td><p> color of adamski. (0 = green (default); 1 = yellow; 2 = pink )</p></td></tr>
+<tr><td><span class="cc">playUFOSounds</span></td><td>true</td><td><p> if false, the Wily UFO sound will not play</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

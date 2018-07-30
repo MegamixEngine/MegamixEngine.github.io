@@ -24,8 +24,14 @@ objects <b>/</b> Bosses <b>/</b> MM5 <b>/</b> objDarkMan4<br/><a href="prtEntity
 <tr><td>hasTriggeredFall</td><td>false</td><td></td></tr>
 <tr><td>phase</td><td>4</td><td></td></tr>
 <tr><td>targetPID</td><td>0</td><td></td></tr>
-<tr><td>hasCostume</td><td>1</td><td><p>SET IN CREATION CODE:</p></td></tr>
-<tr><td>_costume</td><td>0</td><td><p>0 = No disguise, 1 = Player disguise, 2 = MM5 Proto Man disguise, 3 = Custom disguise</p></td></tr>
+<tr><td>hasCostume</td><td>1</td><td><p>SET hasCostume IN CREATION CODE:</p>
+
+<p>0 = No disguise, 1 = Player disguise, 2 = MM5 Proto Man disguise, 3 = Custom disguise</p>
+
+<p>For 3, set sprite_index and/or image_index to the sprite/frame you want to use</p>
+
+<p>e.g. hasCostume = 3, sprite_index = sprQuickMan</p></td></tr>
+<tr><td>_costume</td><td>0</td><td></td></tr>
 <tr><td>shots</td><td>0</td><td><p>How many shots has Dark Man fired?</p></td></tr>
 <tr><td>shooting</td><td>false</td><td><p>Is Dark Man shooting?</p></td></tr>
 <tr><td>barrier1</td><td>0</td><td><p>Barrier 1 - used when returning</p></td></tr>
