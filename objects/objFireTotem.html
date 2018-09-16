@@ -20,13 +20,14 @@ objects <b>/</b> Enemies <b>/</b> MM9 <b>/</b> objFireTotem<br/><a href="prtEnti
 <h2> Description </h2>
 <p><p>Fire Totem</p>
 
-<p>Cration code: size -> how tall the totem is</p>
+<p>Creation code: size -> how tall the totem is</p>
 
 <p></p>
 
 <p>Initialize</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>size</td><td>2</td><td><p>Enemy Spcecific code</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">size</span></td><td>2</td><td><p> - size -> how tall Fire Totem is</p></td></tr>
+<tr><td><span class="cc">col</span></td><td>0</td><td><p> - col -> Fire Totem color: 0 (default) = red, 1 = green;</p></td></tr>
 <tr><td>sz</td><td>0</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>timer</td><td>-1</td><td></td></tr>
@@ -34,11 +35,13 @@ objects <b>/</b> Enemies <b>/</b> MM9 <b>/</b> objFireTotem<br/><a href="prtEnti
 <tr><td>animFrameMiddle</td><td>0</td><td></td></tr>
 <tr><td>animFrameHead</td><td>0</td><td></td></tr>
 <tr><td>animFrame</td><td>0</td><td></td></tr>
+<tr><td>headSprite</td><td>sprFireTotemHead</td><td></td></tr>
+<tr><td>middleSprite</td><td>sprFireTotemMiddle</td><td></td></tr>
 <tr><td>shootCooldown</td><td>0</td><td></td></tr>
 <tr><td>shotIndex</td><td>0</td><td></td></tr>
 <tr><td>init</td><td>1</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

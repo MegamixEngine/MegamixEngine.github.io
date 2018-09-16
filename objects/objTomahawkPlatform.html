@@ -20,8 +20,12 @@ objects <b>/</b> Gimmicks <b>/</b> MM6 <b>/</b> objTomahawkPlatform<br/><a href=
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>phase</td><td>2</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
+<tr><td>spd</td><td>abs(yspeed)</td><td></td></tr>
+<tr><td>startDir</td><td>sign(yspeed)</td><td></td></tr>
 <tr><td>timeri</td><td>0</td><td></td></tr>
-<tr><td>dir</td><td>1</td><td></td></tr>
+<tr><td>dir</td><td>startDir</td><td></td></tr>
+<tr><td>drawDir</td><td>dir</td><td></td></tr>
+<tr><td>yo</td><td>dir</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>

@@ -33,6 +33,7 @@ objects <b>/</b> Bosses <b>/</b> GB I-IV <b>/</b> Projectiles <b>/</b> objHunter
 <tr><td>getAngle</td><td>0</td><td></td></tr>
 <tr><td>storeY</td><td>-1</td><td></td></tr>
 <tr><td>horVer</td><td>"h"</td><td></td></tr>
+<tr><td>partnerItemDrop</td><td>-1</td><td><p>this can be set to anything in creation code but -1 makes sure that it doesn't drop any items by default</p></td></tr>
 </table>
 <h2> Inherited from prtBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>blockCollisionStart</td><td>noone</td><td></td></tr>
@@ -58,7 +59,7 @@ objects <b>/</b> Bosses <b>/</b> GB I-IV <b>/</b> Projectiles <b>/</b> objHunter
 <tr><td>introFade</td><td>0</td><td></td></tr>
 <tr><td>cutsceneTimer</td><td>0</td><td></td></tr>
 <tr><td>cutsceneScript</td><td>""</td><td></td></tr>
-<tr><td>quickSpawn</td><td>false</td><td><p>If true, it will spawn as a regular enemy</p></td></tr>
+<tr><td>quickSpawn</td><td>true <i>(*)</i></td><td><p>If true, it will spawn as a regular enemy</p></td></tr>
 <tr><td>destroyOnDeath</td><td>true</td><td></td></tr>
 <tr><td>doPlayerExplosion</td><td>true</td><td><p>If true it will use the same death effect as the player</p></td></tr>
 <tr><td>dieToPits</td><td>true</td><td></td></tr>

@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../assets/styles/default.css" type="text/css">
 <body><div class="page">
 <h1>objWeaponSettings</h1>
-objects <b>/</b> Level Objects <b>/</b> objWeaponSettings<br/><a href="prtAlwaysActive.html">prtAlwaysActive</a> <b>&gt;</b> <a href="objWeaponSettings.html">objWeaponSettings</a>
+objects <b>/</b> Level Objects <b>/</b> objWeaponSettings<br/><a href="prtAlwaysActive.html">prtAlwaysActive</a> <b>&gt;</b> <a href="prtLevelCallbacks.html">prtLevelCallbacks</a> <b>&gt;</b> <a href="objWeaponSettings.html">objWeaponSettings</a>
 <h2> Description </h2>
 <p><p>Allows you to tweak weapons on a per-level basis.</p>
 
@@ -20,6 +20,11 @@ objects <b>/</b> Level Objects <b>/</b> objWeaponSettings<br/><a href="prtAlways
 
 <p>global.infiniteEnergy[whatever] = true or false</p></p>
 <h2> Variables </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">onlyUnlockOnLevelEnd</span></td><td>false</td><td><p> if true weapons wont be unlocked until the level ends</p></td></tr>
+<tr><td>levelStartScript</td><td>scrNoEffect</td><td></td></tr>
+<tr><td>levelEndScript</td><td>scrNoEffect</td><td></td></tr>
+</table>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtLevelCallbacks </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from prtAlwaysActive </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>

@@ -54,6 +54,8 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> objMegaman<br/><a href="prtE
 <tr><td>shootTimer</td><td>0</td><td></td></tr>
 <tr><td>isSlide</td><td>false</td><td></td></tr>
 <tr><td>slideTimer</td><td>0</td><td></td></tr>
+<tr><td>firstSlideMask</td><td>mskMegamanSlide</td><td></td></tr>
+<tr><td>secondSlideMask</td><td>mskMegamanSlide2</td><td></td></tr>
 <tr><td>isHit</td><td>false</td><td></td></tr>
 <tr><td>isShocked</td><td>false</td><td><p>had to resort to this ~dracmeister</p></td></tr>
 <tr><td>shockedTime</td><td>0</td><td><p>for how long?</p></td></tr>
@@ -86,6 +88,12 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> objMegaman<br/><a href="prtE
 <p>is embarked in.</p></td></tr>
 <tr><td>deathTimer</td><td>-1</td><td></td></tr>
 <tr><td>viewPlayer</td><td>1</td><td><p>Camera</p></td></tr>
+<tr><td>jumpCounter</td><td>0</td><td><p>Jump Counter</p></td></tr>
+<tr><td>jumpCounterMax</td><td>1</td><td><p>If you want multiple jumps then increase this</p></td></tr>
+<tr><td>dashSlide</td><td>false</td><td><p>Dash enabled?</p></td></tr>
+<tr><td>dashJumped</td><td>false</td><td></td></tr>
+<tr><td>multiJumpDashCancel</td><td>true</td><td><p>controls whether dash momentum is removed after multiple jumps.</p></td></tr>
+<tr><td>contactDamageMultiplier</td><td>1</td><td><p>you can increase this to multiply the amount of damage mega man takes from a certain object.</p></td></tr>
 <tr><td>spriteX</td><td>0</td><td><p>Animation Initiation</p></td></tr>
 <tr><td>spriteY</td><td>0</td><td></td></tr>
 <tr><td>animNameID</td><td>0</td><td></td></tr>
@@ -96,6 +104,7 @@ objects <b>/</b> Don't Use <b>/</b> Player <b>/</b> objMegaman<br/><a href="prtE
 <tr><td>spriteLoopPoint</td><td>0</td><td></td></tr>
 <tr><td>animSpinOffset</td><td>0</td><td></td></tr>
 <tr><td>animSpinTurn</td><td>1</td><td></td></tr>
+<tr><td>paletteRefresh</td><td>0</td><td></td></tr>
 </table>
 <h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>

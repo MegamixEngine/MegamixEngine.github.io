@@ -17,15 +17,21 @@
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objGunnerJoe</h1>
 objects <b>/</b> Enemies <b>/</b> GB I-IV <b>/</b> objGunnerJoe<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objGunnerJoe.html">objGunnerJoe</a>
 <h2> Description </h2>
-<p></p>
+<p><p>Space: the final frontier. These are the voyages of the starship Gunner Joe.</p>
+
+<p>Its constant mission: to destroy Mega Man. To use homing missiles and diving attacks.</p>
+
+<p>To boldly go where no Joe has gone before!</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>moveTimer</td><td>120</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">radius</span></td><td>64</td><td><p> - how close does Mega Man need to be before Gunner Joe swoops</p></td></tr>
+<tr><td><span class="cc">moveSpeed</span></td><td>1</td><td><p> - how fast Gunner Joe moves horizontally</p></td></tr>
+<tr><td><span class="cc">flySpeed</span></td><td>1</td><td><p> - how fast Gunner Joe moves vetrivally</p></td></tr>
+<tr><td>moveTimer</td><td>120</td><td></td></tr>
 <tr><td>missile</td><td>noone</td><td></td></tr>
-<tr><td>swoop</td><td>false</td><td></td></tr>
-<tr><td>rise</td><td>false</td><td></td></tr>
-<tr><td>canFlip</td><td>true</td><td></td></tr>
+<tr><td>phase</td><td>0</td><td></td></tr>
+<tr><td>goHere</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -39,7 +45,7 @@ objects <b>/</b> Enemies <b>/</b> GB I-IV <b>/</b> objGunnerJoe<br/><a href="prt
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>"flying, floating" <i>(*)</i></td><td></td></tr>
+<tr><td>category</td><td>"flying, joes" <i>(*)</i></td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>

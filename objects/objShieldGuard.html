@@ -16,20 +16,23 @@
 <div><i>Mega Man</i></div>  </div><div><h3 class="alt">HP</h3>
 <div>4</div>  </div><div><h3 class="alt">Contact Damage</h3>
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objShieldGuard</h1>
-objects <b>/</b> Enemies <b>/</b> MM1 <b>/</b> objShieldGuard<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objShieldGuard.html">objShieldGuard</a>
+objects <b>/</b> Enemies <b>/</b> MM1 <b>/</b> objShieldGuard<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objMM4ShieldAttacker.html">objMM4ShieldAttacker</a> <b>&gt;</b> <a href="objShieldGuard.html">objShieldGuard</a>
 <h2> Description </h2>
-<p><p>The Shield Attacker from Powered Up. It's slower and can have its shield knocked off with Charge Shots + other weapons</p></p>
+<p><p>The Shield Attacker from Powered Up. It's slower and can have its shield knocked off with Charge Shots + other weapons.</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>phase</td><td>1</td><td><p>Enemy specific code</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>hasShield</td><td>true</td><td></td></tr>
+</table>
+<h2> Inherited from objMM4ShieldAttacker </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>phase</td><td>1</td><td><p>Enemy specific code</p></p><p>Notes for objShieldGuard:</p><p>
+<p>Enemy specific code</p></td></tr>
 <tr><td>dir</td><td>image_xscale</td><td></td></tr>
 <tr><td>moveSprite</td><td>sprite_index</td><td></td></tr>
-<tr><td>turnSprite</td><td>sprShieldGuardTurn</td><td></td></tr>
-<tr><td>moveSpeed</td><td>1</td><td></td></tr>
-<tr><td>imgSpeed</td><td>0.2</td><td></td></tr>
-<tr><td>turnSpeed</td><td>0.2</td><td></td></tr>
-<tr><td>hasShield</td><td>true</td><td></td></tr>
+<tr><td>turnSprite</td><td>sprShieldGuardTurn <i>(*)</i></td><td></td></tr>
+<tr><td>moveSpeed</td><td>1 <i>(*)</i></td><td></td></tr>
+<tr><td>imgSpeed</td><td>0.2 <i>(*)</i></td><td></td></tr>
+<tr><td>turnSpeed</td><td>0.05 <i>(*)</i></td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for objMM4ShieldAttacker.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

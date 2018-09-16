@@ -20,14 +20,16 @@ objects <b>/</b> Enemies <b>/</b> MM9 <b>/</b> objBigStomper<br/><a href="prtEnt
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>rotationTimer</td><td>0</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">col</span></td><td>0</td><td><p> - Change colour: 0 (default) = orange, 1 = blue, 2 = green</p></td></tr>
+<tr><td>rotationTimer</td><td>0</td><td></td></tr>
 <tr><td>animTable</td><td>makeArray(3, 2, 1, 0, 0, 1, 2, 3, 3, 0)</td><td></td></tr>
 <tr><td>animIter</td><td>5</td><td><p>frames between animation indices</p></td></tr>
 <tr><td>animTimer</td><td>animIter * 3</td><td></td></tr>
 <tr><td>jumpTypes</td><td>2</td><td></td></tr>
 <tr><td>msk</td><td>mskBigStomper</td><td></td></tr>
+<tr><td>init</td><td>1</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

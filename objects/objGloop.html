@@ -47,7 +47,7 @@ objects <b>/</b> Enemies <b>/</b> CFTF <b>/</b> Projectiles <b>/</b> objGloop<br
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>category</td><td>"gloop" <i>(*)</i></td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
@@ -55,7 +55,7 @@ objects <b>/</b> Enemies <b>/</b> CFTF <b>/</b> Projectiles <b>/</b> objGloop<br
 <tr><td>hitterID</td><td>0</td><td><p>the ID of the object that last hit this entity</p></td></tr>
 <tr><td>respawn</td><td>false <i>(*)</i></td><td><p>If this is false, the entity will permanently be destroyed if it is ever dead. If true, it will respawn any time it scrolls on-screen.</p></td></tr>
 <tr><td>dead</td><td>false</td><td></td></tr>
-<tr><td>shiftVisible</td><td>0</td><td></td></tr>
+<tr><td>shiftVisible</td><td>3 <i>(*)</i></td><td></td></tr>
 <tr><td><span class="cc">noFlicker</span></td><td>false</td><td><p> If set to true, depth modulating will be disabled for this object.</p></td></tr>
 <tr><td><span class="cc">respawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity spawns if dead. Set to -1 to make infinite</p></td></tr>
 <tr><td><span class="cc">despawnRange</span></td><td>4</td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>

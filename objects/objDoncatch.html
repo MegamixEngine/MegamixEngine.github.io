@@ -17,16 +17,19 @@
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objDoncatch</h1>
 objects <b>/</b> Enemies <b>/</b> GB V <b>/</b> objDoncatch<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objDoncatch.html">objDoncatch</a>
 <h2> Description </h2>
-<p></p>
+<p><p>A hammerheaded enemy that smacks the ground and sends debris flying up and down. The</p>
+
+<p>debris is also affected by gravity-affecting objects, such as water and 0.5 Grav switches.</p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imageTimerEndpoint</td><td>9</td><td><p>6;</p></td></tr>
-<tr><td>dist</td><td>54</td><td></td></tr>
+<tr><td><span class="cc">moveSpeed</span></td><td>1</td><td><p> - use this to change how fast Doncatch walks</p></td></tr>
+<tr><td><span class="cc">dist</span></td><td>54</td><td><p> - use this to change how close Mega Man has to be for Doncatch to attack</p></td></tr>
 <tr><td>imagePhaseDir</td><td>1</td><td></td></tr>
 <tr><td>imageTimer</td><td>imageTimerEndpoint</td><td></td></tr>
 <tr><td>shooting</td><td>false</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -40,7 +43,7 @@ objects <b>/</b> Enemies <b>/</b> GB V <b>/</b> objDoncatch<br/><a href="prtEnti
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>category</td><td>"rocky" <i>(*)</i></td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>

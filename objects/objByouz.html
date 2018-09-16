@@ -17,14 +17,16 @@
 <div>4</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objByouz</h1>
 objects <b>/</b> Enemies <b>/</b> GB V <b>/</b> objByouz<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objByouz.html">objByouz</a>
 <h2> Description </h2>
-<p></p>
+<p><p>A springy boi that walks on ceilings and jumps up (down?) to stab Mega Man when above him.</p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>imgSpd</td><td>0.2</td><td></td></tr>
 <tr><td>animBack</td><td>true</td><td></td></tr>
 <tr><td>moveTimer</td><td>20</td><td></td></tr>
+<tr><td><span class="cc">moveSpeed</span></td><td>1</td><td><p> - use this to change how fast Byouz moves</p></td></tr>
+<tr><td><span class="cc">jumpSpeed</span></td><td>5</td><td><p> - use this to change how low Byouz jumps</p></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -38,7 +40,7 @@ objects <b>/</b> Enemies <b>/</b> GB V <b>/</b> objByouz<br/><a href="prtEntity.
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>category</td><td>"grounded" <i>(*)</i></td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>

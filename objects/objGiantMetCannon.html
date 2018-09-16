@@ -17,9 +17,19 @@
 <div>0</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objGiantMetCannon</h1>
 objects <b>/</b> Minibosses <b>/</b> GB I-IV <b>/</b> objGiantMetCannon<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objGiantMetCannon.html">objGiantMetCannon</a>
 <h2> Description </h2>
-<p><p>Creation code (all optional):</p></p>
+<p><p>A Giant Met manning a giant cannon (egads, you don't say?!). It can fire either a large</p>
+
+<p>shot, or a homing missile from the back.</p>
+
+<p></p>
+
+<p>Creation code (all optional):</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>curYOffset</td><td>-24</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">randomMissiles</span></td><td>false</td><td><p> - Determines if it can shoot homing missiles AND cannon shots.</p></td></tr>
+<tr><td><span class="cc">shotType</span></td><td>0</td><td><p> - Use this to make it fire ONLY cannon shots (0) or homing missiles (1)</p>
+
+<p>THIS WILL NOT WORK IF randomMissiles IS SET TO TRUE</p></td></tr>
+<tr><td>curYOffset</td><td>-24</td><td></td></tr>
 <tr><td>yOffsetMax</td><td>-24</td><td></td></tr>
 <tr><td>cFrame</td><td>0</td><td></td></tr>
 <tr><td>spriteOffset</td><td>8</td><td><p>animation offsets</p></td></tr>
@@ -30,8 +40,10 @@ objects <b>/</b> Minibosses <b>/</b> GB I-IV <b>/</b> objGiantMetCannon<br/><a h
 <tr><td>attackTimerMax</td><td>246</td><td></td></tr>
 <tr><td>delayTimer</td><td>0</td><td></td></tr>
 <tr><td>delayTimerMax</td><td>32</td><td></td></tr>
+<tr><td>missile1</td><td>noone</td><td></td></tr>
+<tr><td>missile2</td><td>noone</td><td></td></tr>
 </table>
-<h2> Inherited from prtMiniBoss </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>

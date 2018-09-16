@@ -18,14 +18,17 @@ objects <b>/</b> Gimmicks <b>/</b> MM2 <b>/</b> objMM2Conveyor<br/><a href="prtE
 <h2> Description </h2>
 <p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>hasBelt</td><td>false</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">animFrames</span></td><td>2</td><td><p> Total amount of frames per sub image group, 2 by default</p></td></tr>
+<tr><td>animTime</td><td>5</td><td></td></tr>
+<tr><td>hasBelt</td><td>false</td><td></td></tr>
 <tr><td>dir</td><td>sign(image_xscale)</td><td></td></tr>
 <tr><td>xstart</td><td>x</td><td></td></tr>
+<tr><td>ystart</td><td>y</td><td></td></tr>
 <tr><td>spd</td><td>1</td><td><p>The speed the player moves at when standing on the conveyor belt</p></td></tr>
 <tr><td>imgalarm</td><td>0</td><td></td></tr>
 <tr><td>img</td><td>0</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>
@@ -95,6 +98,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM2 <b>/</b> objMM2Conveyor<br/><a href="prtE
 </table>
 <p><i>* value is modified from the default for prtEntity.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Descendents of objMM2Conveyor </h2><ul>
 <li><a href="objSheepConveyor.html">objSheepConveyor</li>
+<li><a href="objMM10Conveyor.html">objMM10Conveyor</li>
 <li><a href="objCFTFConveyor.html">objCFTFConveyor</li>
 <li><a href="objMM6Conveyor.html">objMM6Conveyor</li>
 <ul>

@@ -16,20 +16,19 @@
 <div><i>Mega Man 4</i></div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objCricket</h1>
 objects <b>/</b> Gimmicks <b>/</b> MM4 <b>/</b> objCricket<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objCricket.html">objCricket</a>
 <h2> Description </h2>
-<p><p>hops = ; (how many hops before heading the other direction, -1 will be infinite)</p>
-
-<p>dir = ; (1 = right, -1 left)</p></p>
+<p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>offset</td><td>0</td><td></td></tr>
-<tr><td>dir</td><td>1</td><td></td></tr>
+<tr><td>dir</td><td>image_xscale</td><td></td></tr>
+<tr><td>startDir</td><td>dir</td><td></td></tr>
 <tr><td>init</td><td>1</td><td></td></tr>
-<tr><td>hops</td><td>3</td><td></td></tr>
-<tr><td>startHops</td><td>hops</td><td></td></tr>
+<tr><td><span class="cc">hops</span></td><td>3</td><td><p> how many hops before heading the other direction, -1 will be infinite)</p></td></tr>
+<tr><td>startHops</td><td>-9999</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>active</td><td>false</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

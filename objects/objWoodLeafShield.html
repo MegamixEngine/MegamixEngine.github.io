@@ -21,10 +21,12 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> Projectiles <b>/</b> objWoodLeafSh
 <p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>range</td><td>24</td><td></td></tr>
-<tr><td>mySpeed</td><td>7.5</td><td></td></tr>
 <tr><td>followWood</td><td>true</td><td></td></tr>
 <tr><td>xs</td><td>x</td><td></td></tr>
 <tr><td>ys</td><td>y</td><td></td></tr>
+<tr><td>rotationTimer</td><td>0</td><td></td></tr>
+<tr><td>x</td><td>round(xs + 22 * cos(direction / 57))</td><td></td></tr>
+<tr><td>y</td><td>round(ys + 22 * sin((direction + 180) / 57))</td><td></td></tr>
 </table>
 <h2> Inherited from prtEnemyProjectile </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>reflectable</td><td>0 <i>(*)</i></td><td><p>how the projectile interacts with shields.</p>
@@ -66,7 +68,7 @@ objects <b>/</b> Bosses <b>/</b> MM2 <b>/</b> Projectiles <b>/</b> objWoodLeafSh
 <tr><td>bubbleTimer</td><td>0</td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
-<tr><td>grav</td><td>0.25</td><td></td></tr>
+<tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
 <tr><td>ground</td><td>true</td><td></td></tr>
 <tr><td>blockCollision</td><td>0 <i>(*)</i></td><td><p>should the movement scripts block this object's movement at walls? If false, this object will be able to phase through walls.</p></td></tr>
 <tr><td>dieToSpikes</td><td>false</td><td></td></tr>

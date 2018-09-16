@@ -28,7 +28,10 @@ objects <b>/</b> Enemies <b>/</b> MM9 <b>/</b> objClassicalCannon<br/><a href="p
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
 <h2> Inherited from objNewClassicalCannon </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>angle</td><td>0 + 8 * (image_xscale == -1)</td><td><p>Enemy specfic code</p></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">col</span></td><td>0</td><td><p>Enemy specific code</p>
+
+<p> - Change colours - 0 (default) = green, 1 = blue, 2 = yellow, 3 = red</p></td></tr>
+<tr><td>angle</td><td>0 + 8 * (image_xscale == -1)</td><td></td></tr>
 <tr><td>newAngle</td><td>angle</td><td></td></tr>
 <tr><td>timer</td><td>0</td><td></td></tr>
 <tr><td>phase</td><td>0</td><td></td></tr>
@@ -39,8 +42,13 @@ objects <b>/</b> Enemies <b>/</b> MM9 <b>/</b> objClassicalCannon<br/><a href="p
 <tr><td>animOffset</td><td>0</td><td></td></tr>
 <tr><td>gravDir</td><td>0</td><td></td></tr>
 <tr><td>old</td><td>true <i>(*)</i></td><td></td></tr>
+<tr><td>init</td><td>1</td><td></td></tr>
+<tr><td>greenSprite</td><td>sprClassicalCannon <i>(*)</i></td><td><p>Sprites</p></td></tr>
+<tr><td>blueSprite</td><td>sprClassicalCannonBlue <i>(*)</i></td><td></td></tr>
+<tr><td>yellowSprite</td><td>sprClassicalCannonYellow <i>(*)</i></td><td></td></tr>
+<tr><td>redSprite</td><td>sprClassicalCannonRed <i>(*)</i></td><td></td></tr>
 </table>
-<p><i>* value is modified from the default for objNewClassicalCannon.<i></p><h2> Inherited from prtEntity </h2>
+<p><i>* value is modified from the default for objNewClassicalCannon.<i></p><p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

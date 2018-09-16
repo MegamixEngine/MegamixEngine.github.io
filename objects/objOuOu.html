@@ -17,9 +17,12 @@
 <div>3</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objOuOu</h1>
 objects <b>/</b> Enemies <b>/</b> GB V <b>/</b> objOuOu<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="objOuOu.html">objOuOu</a>
 <h2> Description </h2>
-<p></p>
+<p><p>A robot seal that blows a ball on its nose, bounces it, then throws it at Mega Man.</p>
+
+<p>Don't get close, or it'll run after you.</p></p>
 <h2> Variables </h2>
-<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>imgIndex</td><td>0</td><td></td></tr>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">ballSpeed</span></td><td>3</td><td><p> - How fast Ou-Ou's ball moves when thrown</p></td></tr>
+<tr><td>imgIndex</td><td>0</td><td><p>Enemy specific code</p></td></tr>
 <tr><td>imgSpd</td><td>0.2</td><td></td></tr>
 <tr><td>radius</td><td>4 * 16</td><td></td></tr>
 <tr><td>moveTimer</td><td>60</td><td></td></tr>
@@ -30,7 +33,7 @@ objects <b>/</b> Enemies <b>/</b> GB V <b>/</b> objOuOu<br/><a href="prtEntity.h
 <tr><td>hasAttacked</td><td>false</td><td></td></tr>
 <tr><td>ball</td><td>noone</td><td></td></tr>
 </table>
-<h2> Inherited from prtEntity </h2>
+<p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
 <tr><td>boss</td><td>0</td><td><p>boolean, is it a boss</p></td></tr>
 <tr><td>faction</td><td>3</td><td><p>Used for entities colliding with each other</p></td></tr>

@@ -16,24 +16,39 @@
 <div><i>Mega Man 5</i></div>  </div><div><h3 class="alt">HP</h3>
 <div>20</div>  </div><div><h3 class="alt">Contact Damage</h3>
 <div>6</div>  </div> </div></div><div class="col-sm-9 col-sm-pull-3"><h1>objOctoboss</h1>
-objects <b>/</b> Minibosses <b>/</b> MM5 <b>/</b> objOctoboss<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objOctoboss.html">objOctoboss</a>
+objects <b>/</b> Minibosses <b>/</b> MM5 <b>/</b> objOctoboss<br/><a href="prtEntity.html">prtEntity</a> <b>&gt;</b> <a href="prtMiniBoss.html">prtMiniBoss</a> <b>&gt;</b> <a href="objOctoperOA.html">objOctoperOA</a> <b>&gt;</b> <a href="objOctoboss.html">objOctoboss</a>
 <h2> Description </h2>
 <p><p>Big cctopus enemy that sinks into the ground</p></p>
 <h2> Variables </h2>
+<table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
+<h2> Inherited from objOctoperOA </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>dir</td><td>image_xscale</td><td><p>Enemy specific code</p></td></tr>
-<tr><td>init</td><td>1</td><td></td></tr>
 <tr><td>moveDelay</td><td>0</td><td></td></tr>
-<tr><td>yOffset</td><td>36</td><td></td></tr>
-<tr><td>yOffsetMax</td><td>36</td><td></td></tr>
+<tr><td>yOffset</td><td>36 <i>(*)</i></td><td></td></tr>
+<tr><td>yOffsetMax</td><td>36 <i>(*)</i></td><td></td></tr>
 <tr><td>turnRoundLeft</td><td>0</td><td><p>AI and animation variables</p></td></tr>
 <tr><td>turnRoundRight</td><td>0</td><td></td></tr>
 <tr><td>delay</td><td>0</td><td></td></tr>
 <tr><td>xscaleStorage</td><td>0</td><td></td></tr>
 <tr><td>imageTimer</td><td>1</td><td></td></tr>
 <tr><td>leftStuck</td><td>false</td><td></td></tr>
-<tr><td>rightStuck</td><td>false</td><td></td></tr>
+<tr><td>rightStuck</td><td>true</td><td></td></tr>
+<tr><td>turnerTimerL</td><td>0</td><td></td></tr>
+<tr><td>turnerTimerR</td><td>0</td><td></td></tr>
+<tr><td>detectorL</td><td>noone</td><td></td></tr>
+<tr><td>detectorR</td><td>noone</td><td></td></tr>
+<tr><td>detectorM</td><td>noone</td><td></td></tr>
+<tr><td>detectorXOffset</td><td>40 <i>(*)</i></td><td><p>store variable differences between octoper and octoboss, and any custom octoper parented off this one</p></td></tr>
+<tr><td>detectorYOffset</td><td>32 <i>(*)</i></td><td></td></tr>
+<tr><td>detectorMOffset</td><td>24 <i>(*)</i></td><td></td></tr>
+<tr><td>detectorMXOffset</td><td>24 <i>(*)</i></td><td></td></tr>
+<tr><td>spdY</td><td>0.5 <i>(*)</i></td><td></td></tr>
+<tr><td>detectorMXScale</td><td>3 <i>(*)</i></td><td></td></tr>
+<tr><td>detectorMYScale</td><td>3.5 <i>(*)</i></td><td></td></tr>
+<tr><td>turnRoundLong</td><td>80 <i>(*)</i></td><td></td></tr>
+<tr><td>turnRoundShort</td><td>24 <i>(*)</i></td><td></td></tr>
 </table>
-<h2> Inherited from prtMiniBoss </h2>
+<p><i>* value is modified from the default for objOctoperOA.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
 <tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>
