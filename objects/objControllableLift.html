@@ -57,7 +57,7 @@ objects <b>/</b> Gimmicks <b>/</b> MM7 <b>/</b> objControllableLift<br/><a href=
 <tr><td><span class="cc">despawnRange</span></td><td>-1 <i>(*)</i></td><td><p> distance beyond edge of view at which entity despawns if alive. set to -1 to make infinite</p></td></tr>
 <tr><td>beenOutsideView</td><td>false</td><td><p>in order to respawn, this must be set to true. It is set to true when the spawn co-ordinates of the entity surpass both the despawn and respawn range.</p></td></tr>
 <tr><td>inWater</td><td>0</td><td></td></tr>
-<tr><td>bubbleTimer</td><td>0</td><td></td></tr>
+<tr><td>bubbleTimer</td><td>-1 <i>(*)</i></td><td></td></tr>
 <tr><td>xspeed</td><td>0</td><td></td></tr>
 <tr><td>yspeed</td><td>0</td><td></td></tr>
 <tr><td>grav</td><td>0 <i>(*)</i></td><td></td></tr>
@@ -72,6 +72,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM7 <b>/</b> objControllableLift<br/><a href=
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td>invincible</td><td>false</td><td><p>set this to true to make this enemy invincible no matter what</p></td></tr>
+<tr><td>sparkleTimer</td><td>0</td><td></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>isSolid</td><td>1 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 

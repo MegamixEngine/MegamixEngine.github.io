@@ -49,7 +49,7 @@ objects <b>/</b> Minibosses <b>/</b> MM5 <b>/</b> objOctoperOA<br/><a href="prtE
 <h2> Inherited from prtMiniBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
-<tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>
+<tr><td>rescursiveExplosion</td><td>true</td><td><p>Use this to set whether or not an explosion chain follows death.</p></td></tr>
 <tr><td>killed</td><td>false</td><td></td></tr>
 <tr><td>introSprite</td><td>sprHotDogTeleport</td><td></td></tr>
 <tr><td>introTimer</td><td>288 + 15</td><td><p>288 is the height above, 15 is the extra frames for teleporting in.</p></td></tr>
@@ -71,7 +71,7 @@ objects <b>/</b> Minibosses <b>/</b> MM5 <b>/</b> objOctoperOA<br/><a href="prtE
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>category</td><td>"aquatic, bulky" <i>(*)</i></td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
@@ -101,6 +101,8 @@ objects <b>/</b> Minibosses <b>/</b> MM5 <b>/</b> objOctoperOA<br/><a href="prtE
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>false <i>(*)</i></td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></p><p>Notes for prtMiniBoss:</p><p>
 <p>Shouldn't be able to freeze minibosses</p></td></tr>
+<tr><td>invincible</td><td>false</td><td><p>set this to true to make this enemy invincible no matter what</p></td></tr>
+<tr><td>sparkleTimer</td><td>0</td><td></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>isSolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 

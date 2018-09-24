@@ -9,7 +9,7 @@
 <body><div class="page">
 <div class="row no-gutters">
 <div class="col-sm-3 col-sm-push-9" style="padding-left:3px;">
-<h1>ChangkeyDragon</h1><img class = "centre" src="../assets/images/objects/sprChangkeyDragonHead.png" alt="sprChangkeyDragonHead">
+<h1>ChangkeyDragon</h1><img class = "centre" src="../assets/images/objects/sprChangkeyDragonPreview.png" alt="sprChangkeyDragonPreview">
 <button data-toggle="collapse" data-target="#MinibossInformation"><h2>Miniboss Information</h2></button>
 <div id="MinibossInformation" class="collapse in">
 <div><h3 class="alt">Origin</h3>
@@ -43,7 +43,7 @@ objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> objChangkeyDragon<br/><a href=
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtMiniBoss </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>doesIntro</td><td>false <i>(*)</i></td><td></td></tr>
 <tr><td>lockTransition</td><td>true</td><td></td></tr>
-<tr><td>rescursiveExplosion</td><td>true</td><td></td></tr>
+<tr><td>rescursiveExplosion</td><td>true</td><td><p>Use this to set whether or not an explosion chain follows death.</p></td></tr>
 <tr><td>killed</td><td>false</td><td></td></tr>
 <tr><td>introSprite</td><td>sprChangkeyDragonEyes <i>(*)</i></td><td></td></tr>
 <tr><td>introTimer</td><td>60 <i>(*)</i></td><td><p>288 is the height above, 15 is the extra frames for teleporting in.</p></td></tr>
@@ -65,7 +65,7 @@ objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> objChangkeyDragon<br/><a href=
 <tr><td>pierces</td><td>2</td><td><p>0: destroyed when hits. 1: destroyed unless kills. 2: never destroyed</p></td></tr>
 <tr><td>penetrate</td><td>0</td><td><p>0: reflectable. 1: not reflectable, but no damage. 2: bypasses shields</p></td></tr>
 <tr><td>attackDelay</td><td>0</td><td></td></tr>
-<tr><td>category</td><td>""</td><td></td></tr>
+<tr><td>category</td><td>"fire, flying" <i>(*)</i></td><td></td></tr>
 <tr><td>hitTimer</td><td>0</td><td><p>counts how long it has been since the last time it took damage</p></td></tr>
 <tr><td>iFrames</td><td>0</td><td></td></tr>
 <tr><td>ignoreBullet</td><td>0</td><td><p>special case for ignoring a bullet when reflecting it (thunder beam)</p></td></tr>
@@ -95,6 +95,8 @@ objects <b>/</b> Minibosses <b>/</b> MM9 <b>/</b> objChangkeyDragon<br/><a href=
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>false <i>(*)</i></td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></p><p>Notes for prtMiniBoss:</p><p>
 <p>Shouldn't be able to freeze minibosses</p></td></tr>
+<tr><td>invincible</td><td>false</td><td><p>set this to true to make this enemy invincible no matter what</p></td></tr>
+<tr><td>sparkleTimer</td><td>0</td><td></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>isSolid</td><td>0</td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 

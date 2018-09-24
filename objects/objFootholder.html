@@ -28,12 +28,16 @@ objects <b>/</b> Gimmicks <b>/</b> MM1 <b>/</b> objFootholder<br/><a href="prtEn
 <tr><td>alarmTurn</td><td>0</td><td></td></tr>
 <tr><td>moveTarget</td><td>noone</td><td></td></tr>
 <tr><td>prevMoveTarget</td><td>noone</td><td></td></tr>
+<tr><td>reversePath</td><td>false</td><td></td></tr>
 <tr><td><span class="cc">variation</span></td><td>1</td><td><p> 1: normal, 2: shoots bullets from the sides</p></td></tr>
-<tr><td><span class="cc">mode</span></td><td>0</td><td><p> 0: random stuff, 1: guided movement, it will pick the closest objFootholderguide</p>
+<tr><td><span class="cc">mode</span></td><td>1</td><td><p> 0: random stuff, 1: guided movement, use objFootholderGuide and change the targetMode</p>
 
-<p>with its myFlag and will move towards it</p></td></tr>
+<p>variable to change the way it chooses its targets</p></td></tr>
 <tr><td><span class="cc">mySpeed</span></td><td>1</td><td><p> speed for mode 1</p></td></tr>
-<tr><td><span class="cc">targetMode</span></td><td>0</td><td><p> target behavior for mode 1. 0:random if repeated, 1: always pick nearest target</p></td></tr>
+<tr><td><span class="cc">targetMode</span></td><td>2</td><td><p> target behavior for mode 1. 0:random if repeated, 1: always pick nearest target, 2: move in a sequence using the order</p>
+
+<p>variable in objFootholderGuide</p></td></tr>
+<tr><td><span class="cc">backtrack</span></td><td>false</td><td><p> if targetMode is 2 and this is true, the footholder will follow the path in reverse once it reaches the end of the path</p></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtEntity </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td>frozen</td><td>0</td><td></td></tr>
@@ -78,6 +82,8 @@ objects <b>/</b> Gimmicks <b>/</b> MM1 <b>/</b> objFootholder<br/><a href="prtEn
 <tr><td>stopOnFlash</td><td>true</td><td></td></tr>
 <tr><td>iceTimer</td><td>0</td><td><p>is iced (frozen cold), and how much remaining time to spend iced</p></td></tr>
 <tr><td><span class="cc">canIce</span></td><td>true</td><td><p> is it possible to ice this object (usually doesn't matter if canHit is false)</p></td></tr>
+<tr><td>invincible</td><td>false</td><td><p>set this to true to make this enemy invincible no matter what</p></td></tr>
+<tr><td>sparkleTimer</td><td>0</td><td></td></tr>
 <tr><td>doesTransition</td><td>true</td><td><p>carries mega man through transitions</p></td></tr>
 <tr><td>isSolid</td><td>2 <i>(*)</i></td><td><p>do other entities see this entity as a solid (i.e. a moving platform).</p>
 
