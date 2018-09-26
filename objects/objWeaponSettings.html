@@ -16,13 +16,19 @@ objects <b>/</b> Level Objects <b>/</b> objWeaponSettings<br/><a href="prtAlways
 
 <p></p>
 
-<p>global.weaponLocked[whatever] = true or false</p>
+<p>setWeaponLocked(objWhatever,true/false);</p>
 
-<p>global.infiniteEnergy[whatever] = true or false</p></p>
+<p></p>
+
+<p>Examples:</p>
+
+<p>setWeaponLocked(objBreakDash,true);</p>
+
+<p>setWeaponLocked(objMagnetBeam,true);</p></p>
 <h2> Variables </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr><tr><td><span class="cc">onlyUnlockOnLevelEnd</span></td><td>false</td><td><p> if true weapons wont be unlocked until the level ends</p></td></tr>
-<tr><td>levelStartScript</td><td>scrNoEffect</td><td></td></tr>
-<tr><td>levelEndScript</td><td>scrNoEffect</td><td></td></tr>
+<tr><td><span class="cc">levelStartScript</span></td><td>scrNoEffect</td><td><p> script that runs when the level begins(won't run after respawning)</p></td></tr>
+<tr><td><span class="cc">levelEndScript</span></td><td>scrNoEffect</td><td><p> script that runs when the level ends</p></td></tr>
 </table>
 <p><i>variable names in <span class="cc">bold</span> are safe to set in creation code.<i></p><h2> Inherited from prtLevelCallbacks </h2>
 <table class=centre><tr><th>Name</th><th>Value</th><th>Description</th></tr></table>
